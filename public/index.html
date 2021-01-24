@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discussione</title>
+<meta name="title" name="Discussione">
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="encryption/sjcl.js"></script>
+<script type="text/javascript" src="../node_modules/dompurify/dist/purify.min.js"></script>
+<script src="./js/@ckeditor/ckeditor5-custom/build/ckeditor.js"></script>
+<script src="./js/@ckeditor/ckeditor5-vue/dist/ckeditor.js"></script>
+</head>
+
+<body>
+
+<nav id="topnav">
+  <a class="active" href="javascript:void(document.getElementById('home').classList.toggle('minimized'));">Home</a>
+  <a href="FAQ.html">FAQ</a>  
+  <a href="javascript:alert('implement!');">Add participant</a>
+  <a href="#comments">General comments</a>
+  <a href="#css-details">Edit CSS</a>
+  <a href="javascript:tools();">Tools &#128736;</a>
+  <a href="javascript:void(0);" class="icon" onclick="menuOpen()">&#9776;</a>
+</nav>
+
+<main id="main">
+  <app-home id="home"></app-home>
+  <app-title></app-title>
+  <app-zoom-out id="zoom-out"></app-zoom-out>
+  <app-zoom-in id="zoom-in"></app-zoom-in>
+</main>
+
+
+<script>
+/***	ABANDON HOPE ALL YE WHO ENTER: incomprehensible spaghetti code ahead ***/
+
+// Vue
+
+// # Global
+
+/***
+globalVars explanation:
+
+topicId: String, uuidv4. Topics are what these pages are about, the title + all other pertinent info.
+creator: String, the first author, who created this topic.
+title: String, just the title of the topic, without metadata, order and everything else necessary to present the topic.
+order: {	Object, contains the order of the subtopics.
+	timestamp: int miliseconds, new Date().getTime.
+	comments: Array [{id: String uuidv4, comments: Array, same as this one, but for subcomments}, ...]
+	sections: Array [{id: String uuidv4, comments: Array, same as this one, but for subcomments, sections: Array, same as this one, but for subsections}, ...]
+}
+infos: Objects, keys are info ids and values are their Objects with all the information necessary for infos.
+	infoObject: {
+		id: String, uuidv4
+		content
+		timestamp
+		user
+		[hashtags]
+		[overwritten]
+		[votes]
+	}
+//overwritten: Object -- removed
+deleted: Object, of info ids that were deleted.
+overwritten: Object, of overwritten infos.
+session: Object, contains all relevant information for the session only.
+methods: Object, useful global methods.
+private: Boolean, saves topic as private topic
+
+Neither session nor methods are saved to the server
+***/
+
+Vue.prototype.$globalVars = Vue.observable({
+	"topicId": "",
+	"private": false,
+	"creator": "anonymous",
+	"title": "Topic's title",
+	"order": {
+		comments: [],
+		sections: []
+	},
+	"infos": {},
+	"overwritten": {},
+	"moved": {},
+	"deleted": {},
+	"session": {
+		"user": "anonymous",
+		"openedDetails": null,
+		"counter": 1,
+		"columns": []
+	},
+	"createInfoObject": function() {
+		const newInfoObj = {
+			id: this.uuidv4(),
+			author: this.session.user,
+			timestamp: new Date().getTime(),
+			content: 'add content'
+		};
+		return newInfoObj;
+	},
+	"uuidv4"() { /*https://stackoverflow.com/a/2117523*/
+		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+			return v.toString(16);
+		});
+	}
+});
+
+// Add topicId
+Vue.prototype.$globalVars.topicId = Vue.prototype.$globalVars.uuidv4();
+
+// Add first column, "canonical"
+Vue.prototype.$globalVars.session.columns.push({
+	sectionNr: "canonical",
+	comments: Vue.prototype.$globalVars.order.comments,
+	sections: Vue.prototype.$globalVars.order.sections,				
+});
+
+
+// # HOME
+Vue.component('app-home', {
+	template: `
+	<div id="home">
+		<div>TODO menu</div>
+		<h1 style="padding: 0; margin: 0;">Welcome to Discussione!</h1>
+		<div>Please input your login name:</div>
+		<input v-model="username" style="width: 222px;" placeholder="Or leave it blank to be anonymous">
+		<div>And now either:</div>
+		<button @click="newTopic()" style="padding: 1em;">Start a new topic</button>
+		<div v-if="allTopicsBadlySanitized.length">Or pick one of the topics below. These are the current projects:
+			<ul>
+				<li v-for="obj of allTopicsBadlySanitized" @click="fetchTopic('/topic/' + obj.topicId)" style="color: blue; cursor: pointer;">{{ obj.title + ' (click me)'}}</li>
+			</ul>
+		</div>
+	</div>
+	`,
+	data() {
+		return {
+			username: ''
+		}
+	},
+	computed: {
+		allTopicsBadlySanitized() {
+			// ALERT, SECURITY RISK
+			// VERY UNSAFE HTML injection!!! Attacker can manipulate entry here
+			// Makeshift solution: append this x-data element in the server
+			let allTopicsBadlySanitized = document.getElementById('x-server-data')?.innerHTML;
+			if (!allTopicsBadlySanitized) return [];
+			return JSON.parse(allTopicsBadlySanitized);			
+		}
+	},
+	methods: {
+		newTopic() {
+			// Reset all topic data
+			const g = this.$globalVars;
+			g.topicId = g.uuidv4();
+			g.creator = g.session.user;
+			g.title = "Topic's title";
+			g.order.comments.length = 0;
+			// Rerender comments
+			g.order.comments.pop();
+			g.order.sections.length = 0;
+			// Rerender sections
+			g.order.sections.pop();
+			Vue.set(g, 'infos', {});
+			Vue.set(g, 'overwritten', {});
+			Vue.set(g, 'moved', {});
+			Vue.set(g, 'deleted', {});
+			g.session.openedDetails = null;
+			Vue.set(g.session, 'columns', [{
+				sectionNr: "canonical",
+				comments: Vue.prototype.$globalVars.order.comments,
+				sections: Vue.prototype.$globalVars.order.sections,				
+			}]);
+			
+			// Hide Home screen
+			document.getElementById('home').classList.toggle('minimized');
+		},
+		fetchTopic(url) {
+			fetch(url, {
+				method: 'GET',
+				cache: 'no-cache',
+				headers: {
+				  'Content-Type': 'application/json'
+				}
+			})
+				.then(
+					async (response) => {
+						if (!response.ok) throw Error(response.statusText);
+						
+						const globalVars = this.$globalVars,
+							topicContents = await response.json();
+						
+						for (const [key, value] of Object.entries(topicContents)) { 
+							Vue.set(globalVars, key, value);
+						}
+						
+						// Set username
+						globalVars.session.user = this.username || 'anonymous';
+						// Restart columns
+						this.$globalVars.session.columns.length = 0;
+						this.$globalVars.session.columns.push({
+							sectionNr: "canonical",
+							comments: Vue.prototype.$globalVars.order.comments,
+							sections: Vue.prototype.$globalVars.order.sections,				
+						});
+						// Hide Home screen
+						document.getElementById('home').classList.toggle('minimized');
+					}
+				)
+				.catch((err) => alert('Something went wrong! Is your internet connection working? Error: ' + err));
+		}
+	}
+});
+
+
+// # TITLE
+
+Vue.component('app-title', {
+	template: `
+		<h1 id="title">
+			Title: <span id="title-content">{{ this.$globalVars.title }}</span><span id="title-edit" @click="editTitle();">&#128393;</span>
+		</h1>
+	`,
+	methods: {
+		editTitle: function () {
+			let content = document.getElementById('title-content');
+			content.contentEditable = content.contentEditable === 'true' ? false : true; 
+			content.focus();
+			if (content.contentEditable === 'false') {
+				this.$globalVars.title = content.textContent;
+				alert('needs to save via XHR');
+			}
+		}
+	}
+});
+
+
+// # ZOOM-OUT
+// see https://vuejsexamples.com/vues-drag-and-drop-tree-components/ and also awesome-vue
+
+// ## ZOOM-OUT COMPONENT
+Vue.component('app-zoom-out', {
+	template: `
+	<div>
+		<app-zoom-out-options></app-zoom-out-options>
+		<template v-for="(itemInOrder, index) in $globalVars.order.sections">
+			<app-details-component :detailsItem="{itemInOrder, index, 'parentNr': ''}"></app-details-component>
+		</template>
+	</div>
+  `
+});
+
+// ### ZOOM-OUT TOPBAR
+Vue.component('app-zoom-out-options', {
+	template: `
+	<div class="zoom-out-options">
+		TODO zoom-out options
+	</div>
+  `
+});
+
+// ### DETAILS COMPONENT
+Vue.component('app-details-component', {
+	template: `
+	<details>
+		<summary>
+			<span class="section-nr" @dblclick="openItemsContents" :class="{'has-children': hasChildren}">{{ sectionNr }}</span>
+			<span class="details-content" v-html="content"></span>
+		</summary>
+			<!-- the code below will create a component for all children of this section -->
+			<template v-for="(subitem, subindex) in detailsItem.itemInOrder.sections">
+				<app-details-component :detailsItem="{'itemInOrder': subitem, 'index': subindex, 'parentNr': sectionNr}"></app-details-component>
+			</template>
+	</details>
+	`,
+	props: {
+		detailsItem: {
+			type: Object,
+			required: true
+		}
+	},
+	computed: {
+		sectionNr: function() {
+			let detailsItem = this.detailsItem;
+			return detailsItem.parentNr ? detailsItem.parentNr + '.' + (detailsItem.index + 1) : (detailsItem.index + 1).toString();
+		},
+		content() {
+			return DOMPurify.sanitize(this.$globalVars.infos[this.detailsItem.itemInOrder.id].content);
+		},
+		hasChildren() {
+			return !!this.detailsItem.itemInOrder.sections.length;
+		}
+	},
+	methods: {
+		openItemsContents() {
+			let sectionNr = this.sectionNr,
+				columns = this.$globalVars.session.columns,
+				newColumn;
+			
+			newColumn = { ...this.detailsItem.itemInOrder };
+			newColumn.sectionNr = sectionNr;
+			// Add new column to zoom-in
+			columns.push(newColumn);
+		}
+	}
+});
+
+// # ZOOM-IN
+
+// ## ZOOM-IN COMPONENT
+
+Vue.component('app-zoom-in', {
+	template: `
+		<div>
+			<app-column v-for="(column, index) in this.$globalVars.session.columns" :columnObj="{...column, index}" :key="index"></app-column>
+		</div>
+	`
+});
+
+
+// ### ZOOM-IN TOPBAR
+
+Vue.component('app-zoom-in-topbar', {
+	template: `
+		<div class="topbar">
+			<span v-if="this.sectionNrData.itemInOrder" 
+				class="section-nr" 
+				:class="{'has-children': hasChildren}"
+				@dblclick="$emit('topbar', 'dblclick')"
+			>{{ sectionNrData.sectionNr }}</span>
+			<span v-else-if="this.sectionNrData.column">
+				<span class="column-nr">{{ sectionNrData.sectionNr }}</span>
+				<span v-if="sectionNrData.columnId" class="brief-description" :title="longDescription">{{ briefDescription }}</span>
+			</span>
+			<span v-else>{{ sectionNrData.sectionNr }}</span>
+			<div class="topbar-menu">
+				<div class="pin-button" :class="{selected: pin}" @click="$emit('topbar', 'pin'); pin = !pin">📌</div>
+				<div class="tools-button" :class="{selected: tools}" @click="$emit('topbar', 'showToolsMenu'); tools = !tools">🛠</div>
+				<div class="minimize-button" :class="{selected: minimize}" @click="$emit('topbar', 'minimize'); minimize = !minimize">―</div>
+				<div v-if="sectionNrData.column && sectionNrData.sectionNr != 'canonical'" @click="$emit('topbar', 'close')" class="close-button">✖</div>
+			</div>
+		</div>
+	`,
+	props: {
+		sectionNrData: {
+			type: Object,
+			required: true
+		}
+	},
+	data() {
+		return {
+			pin: false,
+			tools: false,
+			minimize: false
+		}
+	},
+	computed: {
+		longDescription() {
+			// Ignore if it's canonical column
+			if (this.sectionNrData.sectionNr === 'canonical') return '';
+			// Ignore if it's original-section
+			let el = this.$el;
+			while (el != null) {
+				if (el.classList.contains('.original-section')) return '';
+				el = el.parentElement;
+			}
+			
+			let long = this.$globalVars.infos[this.sectionNrData.columnId].content;
+			// Strip all HTML tags and entities
+			long = long.replace( /(<([^>]+)>)|(&.+;)/gi, '');
+			// Limit chars to 500
+			if (long.length > 500) return long.slice(0,500) + '...';
+			return long;
+		},
+		briefDescription() {
+			// Ignore if it's canonical column
+			if (this.sectionNrData.sectionNr === 'canonical') return '';
+			
+			let brief = this.longDescription;
+			// Shorten brief description to 20 chars + '...' (or &hellip; HTML entity)
+			if (brief.length > 23) brief = brief.slice(0,20) + '...';
+			return brief;
+		},
+		hasChildren() {
+			return !!(this.sectionNrData.itemInOrder.comments?.length || this.sectionNrData.itemInOrder.sections?.length);
+		}
+	}
+});
+
+
+
+// ### ZOOM-IN COLUMN
+
+Vue.component('app-column', {
+	template: `
+		<div class="column">
+			<app-zoom-in-topbar 
+				:class="{pinned: pin}"
+				:sectionNrData="{
+					'column': true,
+					'sectionNr': columnObj.sectionNr,
+					'columnId': columnObj.id
+				}" 
+				@topbar="topbarHandler($event)"
+			></app-zoom-in-topbar>
+			<app-column-original-section 
+				v-if="columnObj.sectionNr != 'canonical'"
+				:columnObj="columnObj"
+			></app-column-original-section>
+			<app-column-comments-section 
+				:comments="columnObj.comments" 
+				:columnNr="columnObj.sectionNr" 
+				:class="{minimized: minimize}"
+			></app-column-comments-section>
+			<app-column-subsections 
+				v-if="!columnObj.sectionNr.includes('Com')" 
+				:subsections="columnObj.sections" 
+				:columnNr="columnObj.sectionNr" 
+				:class="{minimized: minimize}"
+			></app-column-subsections>
+		</div>
+	`,
+	data() {
+		return {
+			showToolsMenu: false,
+			pin: false,
+			minimize: false,
+		}
+	},
+	props: {
+		columnObj: {
+			type: Object,
+			required: true
+		}
+	},
+	provide() {debugger;
+		// This has to be a function to use `this`
+		// provide doesn't return reactive data, that's why I'm passing a reactive object instead of columnObj.index
+		// provide simply doesn't work, I'm abandoning it. The example given in Vue's site `Vue.computed` or `computed` aren't functions either. I still need it though to openItemsContents after that particular column
+		return {
+			columnObj: this.columnObj
+		}
+	},
+	methods: {
+		topbarHandler(type) {
+			switch (type) {
+				case 'pin':
+					this.pin = !this.pin;
+					break;
+				case 'minimize':
+					this.minimize = !this.minimize;
+					break;
+				case 'showToolsMenu':
+					this.showToolsMenu = !this.showToolsMenu;
+					break;
+				case 'close':
+					this.closeFunc();
+					break;
+			}
+		},
+		closeFunc() {
+			let el = this.$el;
+			for (var index = 0; (el=el.previousElementSibling); index++);
+			this.$globalVars.session.columns.splice(index,1);
+		}
+	}
+});
+
+// #### ZOOM-IN COLUMN ORIGINAL SECTION
+
+Vue.component('app-column-original-section', {
+	template: `
+		<div class="original-section" :class="{pinned: pin}">
+			<app-zoom-in-topbar 
+				:sectionNrData="{sectionNr: 'Original'}" 
+				@topbar="topbarHandler($event)"
+			
+			></app-zoom-in-topbar>
+			<div class="original-section-content" :class="{minimized: minimize}">
+				<app-item :itemObj="{
+						itemInOrder: null,
+						index: 0,
+						parentNr: columnObj.sectionNr,
+						parentItemInOrder: null,
+						passedItemInfo: itemInfo
+				}"></app-item>
+			</div>
+		</div>
+	`,
+	data() {
+		return {
+			showToolsMenu: false,
+			pin: false,
+			minimize: false,
+		}
+	},
+	props: {
+		columnObj: {
+			type: Object,
+			required: true
+		}
+	},
+	computed: {
+		itemInfo(){
+			const id = this.columnObj.id;
+			return this.$globalVars.infos[id];
+		}
+	},
+	methods: {
+		topbarHandler(type) {
+			switch (type) {
+				case 'pin':
+					this.pin = !this.pin;
+					break;
+				case 'minimize':
+					this.minimize = !this.minimize;
+					break;
+				case 'showToolsMenu':
+					this.showToolsMenu = !this.showToolsMenu;
+					break;
+			}
+		}
+	},
+	mounted() {
+		this.$nextTick(
+			() => {
+				// Since this section begins minimized, it minimize-button should show as selected
+				// Using .classList.add('selected') doesn't work, Vue ignores it
+				this.$el.querySelector('.minimize-button').click();
+			}
+		);
+	}
+});
+
+
+// #### ZOOM-IN COLUMN COMMENTS-SECTION
+
+Vue.component('app-column-comments-section', {
+	template: `
+		<div class="comments-section" :class="{pinned: pin}">
+			<app-zoom-in-topbar 
+				:sectionNrData="{sectionNr: 'Comments'}" 
+				@topbar="topbarHandler($event)"
+			
+			></app-zoom-in-topbar>
+			<app-column-comments-section-content 
+				:class="{minimized: minimize}" 
+				:comments="comments" 
+				:columnNr="columnNr"
+			
+			></app-column-comments-section-content>
+		</div>
+	`,
+	data() {
+		return {
+			showToolsMenu: false,
+			pin: false,
+			minimize: false,
+		}
+	},
+	props: {
+		comments: {
+			type: Array,
+			required: true
+		},
+		columnNr: {
+			type: String,
+			required: true
+		}
+	},
+	methods: {
+		topbarHandler(type) {
+			switch (type) {
+				case 'pin':
+					this.pin = !this.pin;
+					break;
+				case 'minimize':
+					this.minimize = !this.minimize;
+					break;
+				case 'showToolsMenu':
+					this.showToolsMenu = !this.showToolsMenu;
+					break;
+			}
+		}
+	}
+});
+
+// ##### ZOOM-IN COMMENTS-SECTION CONTENT
+Vue.component('app-column-comments-section-content', {
+	template: `
+		<div class="comments-section-content">
+			<template v-if="comments.length">
+				<app-item v-for="(itemInOrder, index) in comments" :itemObj="{
+					itemInOrder,
+					index,
+					'parentNr': columnNr,
+					'parentItemInOrder': comments,
+					'isComment': true
+				}" :key="itemInOrder.id"></app-item>
+			</template>
+			<template v-else>
+				<app-item :itemObj="{'itemInOrder': null, 'index': 0, 'parentNr': columnNr, 'parentItemInOrder': comments, 'isComment': true}"></app-item>
+			</template>
+		</div>
+	`,
+	props: {
+		comments: {
+			type: Array,
+			required: true
+		},
+		columnNr: {
+			type: String,
+			required: true
+		}
+	}
+});
+
+
+// #### ZOOM-IN COLUMN SUBSECTIONS
+
+Vue.component('app-column-subsections', {
+	template: `
+		<div class="subsections" :class="{pinned: pin}">
+			<app-zoom-in-topbar :sectionNrData="{sectionNr: 'Sections'}" @topbar="topbarHandler($event)"></app-zoom-in-topbar>
+			<app-column-subsections-content :class="{minimized: minimize}" :subsections="subsections" :columnNr="columnNr"></app-column-subsections-content>
+		</div>
+	`,
+	data() {
+		return {
+			showToolsMenu: false,
+			pin: false,
+			minimize: false,
+		}
+	},
+	props: {
+		subsections: {
+			type: Array,
+			required: true
+		},
+		columnNr: {
+			type: String,
+			required: true
+		}
+	},
+	methods: {
+		topbarHandler(type) {
+			switch (type) {
+				case 'pin':
+					this.pin = !this.pin;
+					break;
+				case 'minimize':
+					this.minimize = !this.minimize;
+					break;
+				case 'showToolsMenu':
+					this.showToolsMenu = !this.showToolsMenu;
+					break;
+			}
+		}
+	}
+});
+
+// ##### ZOOM-IN COLUMN SUBSECTIONS CONTENT
+
+Vue.component('app-column-subsections-content', {
+	template: `
+		<div class="subsections-content">
+			<template v-if="subsections.length">
+				<app-item v-for="(itemInOrder, index) in subsections" :itemObj="{
+					itemInOrder,
+					index,
+					'parentNr': columnNr,
+					'parentItemInOrder': subsections
+				}" :key="itemInOrder.id"></app-item>
+			</template>
+			<template v-else>
+					<app-item :itemObj="{'itemInOrder': null, 'index': 0, 'parentNr': columnNr, 'parentItemInOrder': subsections}"></app-item>
+				</template>
+			</template>
+		</div>
+	`,
+	props: {
+		subsections: {
+			type: Array,
+			required: true
+		},
+		columnNr: {
+			type: String,
+			required: true
+		}
+	}
+});
+
+
+// ###### ZOOM-IN COLUMN SUBSECTIONS CONTENT ITEM
+// I should probably use provide / inject, beware they're not reactive by default
+
+var appTopbarToolsMenu = {
+	template: `
+		<div class="tools-menu">
+			<button class="close-menu" @click="$emit('toolsMenu','edit')">Edit this item</button>
+			<button class="close-menu" @click="$emit('toolsMenu','addSection')">Create new section underneath this one</button>
+			<button class="close-menu" @click="$emit('toolsMenu','move')">Move this item to another section</button>
+			<button class="close-menu" @click="$emit('toolsMenu','open')">Open this item's content</button>
+			<button @click="openChangeWidth = !openChangeWidth">Change column width
+				<div v-if="openChangeWidth">
+					<button>-</button>
+					<input type="number" min="1" placeholder="1em" style="width: 4em;">
+					<button>+</button>
+				</div>
+			</button>
+			<button class="close-menu" @click="$emit('toolsMenu','delete')">Delete item</button>
+			<button class="close-menu" @click="$emit('toolsMenu','debug')">Debug -- not for use</button>
+		</div>
+	`,
+	data() {
+		return {
+			openChangeWidth: false
+		}
+	},
+	methods: {
+		changeWidth(){
+			$emit('toolsMenu','changeWidth');
+			this.openChangeWidth = !this.openChangeWidth;
+		}
+	}
+};
+
+var appItemAddSection = {
+	template: `
+		<div>
+			<div style="background-color: purple; color: white">Add this new section below:</div>
+			<app-editor @editor="$emit('addSection', $event)"></app-editor>
+		</div>
+	`
+};
+
+var appItemMove = {
+	template: `
+		<form action="javascript:void(0);" @submit.prevent="$emit('moveItem', newSectionNr);" class="move-box" style="background-color:#DDE">
+			<div>Above item will be moved from position {{ sectionNr }} to <input v-model="newSectionNr"  type="text" pattern="[1-9][0-9]*([0-9]*.[1-9][0-9]*)* Com( [1-9][0-9]*([0-9]*.[1-9][0-9]*)*)|(Com )?[1-9][0-9]*([0-9]*.[1-9][0-9]*)*" title="Your section number is invalid" required=""></div>
+
+			<button type="submit" style="color:green;">Move</button><button @click="$emit('moveItem')" style="color:red;">Cancel</button>
+		</form>
+	`,
+	data() {
+		return {
+			newSectionNr: ''
+		}
+	},
+	props: {
+		sectionNr: {
+			type: String,
+			required: true
+		}
+	}
+};
+
+Vue.component('app-item', {
+	template: `
+		<div :id="fullId" class="item" :class="{ pinned: pin }">
+			<app-zoom-in-topbar v-if="!itemObj.passedItemInfo" :sectionNrData="{'itemInOrder': itemObj.itemInOrder, 'sectionNr': sectionNr}" @topbar="topbarHandler($event)"></app-zoom-in-topbar>
+			<app-topbar-tools-menu v-if="showToolsMenu" @toolsMenu="toolsMenuHandler($event)"></app-topbar-tools-menu>
+			<div :class="{minimized: minimize}">
+				<div class="item-content" v-html="itemContent"></div>
+				<app-editor v-if="editor" @editor="editorHandler($event)" :content="itemInfo.content"></app-editor>
+				<app-item-bottombar v-if="itemObj.itemInOrder" :bottombarData="itemInfo"></app-item-bottombar>
+			</div>
+			<app-item-move v-if="move" :sectionNr="sectionNr" @moveItem="moveItem($event)"></app-item-move>
+			<keep-alive>
+				<app-item-add-section v-if="addSection" @addSection="addSectionHandler($event)"></app-item-add-section>
+			</keep-alive>
+		</div>
+	`,
+	props: {
+		itemObj: {
+			/*
+			itemObj="{'itemInOrder', 'index': index, 'parentNr': columnNr, 'parentItemInOrder'}" "..., 'isComment': true}"
+			*/
+			type: Object,
+			required: true
+		}
+	},
+	inject: ['columnObj'],
+	data() {
+		return {
+			//apagar, HTML ids seem useless now
+			fullId: this.itemObj.itemInOrder ? this.itemObj.itemInOrder.id + '-zi-' + this.$globalVars.session.counter++ : '',
+			showToolsMenu: false,
+			pin: false,
+			minimize: false,
+			editor: false,
+			addSection: false,
+			move: false
+		}
+	},
+	computed: {
+		itemInfo() {
+			if (this.itemObj.passedItemInfo) return this.itemObj.passedItemInfo;
+			return this.itemObj.itemInOrder ? this.$globalVars.infos[this.itemObj.itemInOrder.id] : {
+				id: "",
+				content: "&lt;edit this item to add content&gt;"
+			};
+		},
+		sectionNr() {
+			let index = (this.itemObj.index + 1).toString(),
+				parentNr = this.itemObj.parentNr,
+				final;
+			if (parentNr === 'canonical') parentNr = '';
+			if (this.itemObj.isComment) {
+				if (!parentNr.includes('Com')) final = parentNr + ' Com ' + index;
+				else final = parentNr + '.' + index;
+			}
+			else final = parentNr ? parentNr + '.' + index : index;
+			
+			return final.trim();
+		},
+		itemContent() {
+			return DOMPurify.sanitize(this.itemInfo.content);
+		}
+	},
+	methods: {
+		topbarHandler(type) {
+			switch (type) {
+				case 'pin':
+					this.pin = !this.pin;
+					break;
+				case 'minimize':
+					this.minimize = !this.minimize;
+					break;
+				case 'showToolsMenu':
+					this.showToolsMenu = !this.showToolsMenu;
+					
+					//apagar Close menu
+					// Needs this conditional because the way it's closing the menu is by clicking
+					// again the tools-button, so it would unintentionally addEventListener again 
+					// when closing. This is a bad fix though
+					if (this.showToolsMenu) {
+						const closeMenuBound = closeMenu.bind(this);
+						setTimeout(() => document.addEventListener('click', closeMenuBound), 10);
+						function closeMenu(e) {
+							let elem = e.target;
+							
+							// Close if a topbar tools-menu button is clicked
+							if (elem.classList.contains('close-menu')) {
+								return closeThis.call(this);
+							}
+							
+							// bug: if user clicks tools-button, it becomes dblclick, because closeThis clicks it again (user click + closeThis click). So it should only dispatch click if it's not a tools-button that got the click
+							if (elem.classList.contains('tools-button')) return document.removeEventListener('click', closeMenuBound);
+							
+							// Close if something outside menu is clicked
+							while (!elem.classList.contains('tools-menu')) {
+								elem = elem.parentElement;
+								if (elem === null || elem === document.body) return closeThis.call(this);
+							}
+							
+							function closeThis() {
+								document.removeEventListener('click', closeMenuBound);
+								this.$el.querySelector('.tools-button').click();
+							}
+						}
+					}
+					break;
+				case 'dblclick':
+					this.openItemsContents();
+					break;
+			}
+		},
+		toolsMenuHandler(type) {
+			switch (type) {
+				case 'edit':
+					this.editor = !this.editor;
+					break;
+				case 'addSection':
+					// If item is empty, 
+					if (!this.itemObj.itemInOrder) return alert("Can't add section after an empty section! First edit this section to add content");
+					this.addSection = !this.addSection;
+					break;
+				case 'move':
+					// If item is empty
+					if (!this.itemObj.itemInOrder) return alert("Can't move because this item has no content to be moved! Edit it first to add content");
+					
+					this.move = !this.move;
+					break;
+				case 'open':
+					this.openItemsContents();
+					break;
+				case 'changeWidth':
+					this.changeWidth();
+					break;
+				case 'delete':
+					this.deleteItem();
+					break;
+				case 'debug':
+					this.debugItem();
+					break;
+			}
+		},
+		openItemsContents() {
+			if (!this.itemObj.itemInOrder) return alert('You must first edit this item to add content, otherwise it has no content to be opened');
+			let sectionNr = this.sectionNr,
+				columns = this.$globalVars.session.columns,
+				newColumn;
+			
+			newColumn = { ...this.itemObj.itemInOrder };
+			newColumn.sectionNr = sectionNr;debugger;
+			// Add new column to zoom-in, after the present column
+			// columnObj.index is the index of this present column inside $globalVars.session.columns
+			columns.splice(this.columnObj.index + 1, 0, newColumn);
+		},
+		deleteItem() {
+			const parentItemInOrder = this.itemObj.parentItemInOrder,
+				index = this.itemObj.index,
+				sectionNr = this.sectionNr,
+				id = this.itemObj.itemInOrder.id,
+				author = this.$globalVars.session.user,
+				timestamp = new Date().getTime(),
+				{session, uuidv4, createInfoObject, ...topic} = this.$globalVars; // i.e., ignore session and methods, topic is globalVars without them
+			
+			
+			// Begin AJAX preparations
+			// Deep clone order
+			topicClone = JSON.parse(JSON.stringify(topic));
+			// Get itemIndex parentArray pointer in clone object
+			const {parentArray: parentArrayClone} = this.findItem(sectionNr, topicClone.order);
+			
+			parentArrayClone.splice(index, 1);
+			
+			// Add to topicClone deleted
+			topicClone.deleted[id] = {timestamp, author};
+			
+			/*** BEGIN AJAX PROMISE ***/
+			
+			isSaved = fetch('/api/save', {
+				method: 'POST',
+				cache: 'no-cache',
+				headers: {
+				  'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					info: null,
+					topic: topicClone
+				})
+			})
+				.then(
+					res => {
+						if (!res.ok) throw Error(res.statusText);
+						// Update columns
+						// Remove column if it's the deleted item
+						for (let i = 0, columns = this.$globalVars.session.columns; i < columns.length; i++) {
+							if (columns[i].sectionNr.startsWith(sectionNr)) columns.splice(i, 1);
+						}
+						// Update the other column nrs
+						this.updateColumnNrs(sectionNr, -1);
+						// Delete item from order
+						parentItemInOrder.splice(index, 1);
+						// Add to $globalVars deleted
+						Vue.set(this.$globalVars.deleted, this.itemObj.itemInOrder.id, {timestamp, author});
+					}
+				)
+				.catch(
+					(err) => {
+						alert("Sorry! There was an error and this item wasn't deleted (error message: ' " + err.message + " '). Please check your internet connection and try again");
+						console.log('Looks like there was a problem: \n', err);
+					}
+				);
+			/*** END AJAX PROMISE ***/
+		},
+		moveItem(newSectionNr) {
+			// If 'Cancel' is clicked
+			if (!newSectionNr) return this.move = false;
+			
+			newSectionNr = newSectionNr.trim();
+			const sectionNr = this.sectionNr;
+			try {
+					if (sectionNr === newSectionNr) throw "It's moving to the same place";
+					
+					if (!/[1-9][0-9]*([0-9]*.[1-9][0-9]*)* Com( [1-9][0-9]*([0-9]*.[1-9][0-9]*)*)|(Com )?[1-9][0-9]*([0-9]*.[1-9][0-9]*)*/.test(newSectionNr)) throw "invalid section number";
+					
+					if (newSectionNr.startsWith(sectionNr)) throw "Cannot nest section inside of itself";
+				}
+			catch(err) {
+				console.error(err);
+				return alert('The new section you provided is not valid! ' + err);
+			}
+			
+			const parentItemInOrder = this.itemObj.parentItemInOrder,
+				index = this.itemObj.index,
+				id = this.itemObj.itemInOrder.id,
+				author = this.$globalVars.session.user,
+				timestamp = new Date().getTime(),
+				newPositionInOrder = this.findItem(newSectionNr),
+				infos = this.$globalVars.infos,
+				{session, uuidv4, createInfoObject, ...topic} = this.$globalVars; // i.e., ignore session and methods, topic is globalVars without them
+			
+			if (!newPositionInOrder) return alert('The new parent section you provided does not exist!');
+			const {parentArray: newParentItemInOrder, itemIndex: newIndex} = newPositionInOrder;
+			
+			const item = this.itemObj.itemInOrder;
+			let deleteSections = false,
+				addSections = false;
+			
+			//If item to be moved is a section and target is in comments
+			if (item.sections && newSectionNr.includes('Com')) {
+				if (item.sections.length) return alert("Can't move a section that has subsections to the comments! This would erase all subsections");
+				deleteSections = true;
+			}
+			// If item to be moved is a comment and target is in sections
+			if (sectionNr.includes('Com') && !newSectionNr.includes('Com')) addSections = true;
+			
+			// Begin AJAX preparations
+			// Deep clone order
+			topicClone = JSON.parse(JSON.stringify(topic));
+			// Get itemIndex parentArray pointer in clone object
+			const {parentArray: parentArrayClone, itemIndex: itemIndexClone} = this.findItem(sectionNr, topicClone.order),
+				{parentArray: newParentArrayClone, itemIndex: newItemIndexClone} = this.findItem(newSectionNr, topicClone.order);
+			
+			// If item has moved from comments to sections, or vice-versa, a new item has to be created and put in its place
+			let newInfo = null;
+			if (deleteSections || addSections) {
+				newInfo = {...infos[id]};
+				newInfo.id = this.$globalVars.uuidv4();
+				if (deleteSections) delete newInfo.sections;
+				if (addSections) newInfo.sections = [];
+			}
+			
+			const itemToMoveClone = parentArrayClone.splice(itemIndexClone, 1)[0];
+			if (newInfo) itemToMoveClone.id = newInfo.id;
+			newParentArrayClone.splice(newItemIndexClone, 0, itemToMoveClone);
+			
+
+			// Add to $globalVars.moved
+			const movingInfo = {from: sectionNr, to: newSectionNr, timestamp, author};
+			if (deleteSections || addSections) movingInfo.newId = newInfo.id;
+			topicClone.moved[id] = movingInfo;
+			
+			/*** BEGIN AJAX PROMISE ***/
+			
+			isSaved = fetch('/api/save', {
+				method: 'POST',
+				cache: 'no-cache',
+				headers: {
+				  'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					info: newInfo,
+					topic: topicClone
+				})
+			})
+				.then(
+					res => {
+						if (!res.ok) throw Error(res.statusText);
+						
+						// Update columns
+						// Close column (if it's a section that becomes a column or vice-versa, it is rendered incorrectly, so it's better to close it)
+						for (let i = 0, columns = this.$globalVars.session.columns; i < columns.length; i++) {
+							if (columns[i].sectionNr.startsWith(sectionNr)) columns.splice(i, 1);
+						}
+						this.updateColumnNrs(sectionNr, -1);
+						this.updateColumnNrs(newSectionNr, +1);
+						
+						itemToMove = parentItemInOrder.splice(index, 1)[0];
+						if (newInfo) {
+							Vue.set(infos, newInfo.id, newInfo);
+							itemToMove.id = newInfo.id;
+						}
+						newParentItemInOrder.splice(newIndex, 0, itemToMove);
+						this.move = false;
+						
+						// Add to $globalVars.moved
+						Vue.set(this.$globalVars.moved, id, movingInfo);
+					}
+				)
+				.catch(
+					(err) => {
+						alert("Sorry! There was an error and this item couldn't be moved (error message: ' " + err.message + " '). Please check your internet connection and try again");
+						console.log('Looks like there was a problem: \n', err);
+					}
+				);
+			/*** END AJAX PROMISE ***/
+		},
+		debugItem() {
+			const sectionNr = this.sectionNr;
+			
+			if (sectionNr) {
+				let nextItem = this.$globalVars.createInfoObject(),
+					nextItemIndex = this.itemObj.index + 1,
+					orderObj = sectionNr.includes('Com') ? {id: nextItem.id, comments: []} : {id: nextItem.id, comments: [], sections: []};
+				Vue.set(this.$globalVars.infos, nextItem.id, nextItem);
+				this.updateColumnNrs(sectionNr, +1);
+				this.itemObj.parentItemInOrder.splice(nextItemIndex, 0, orderObj);
+			}
+			else return alert('This item is null! First edit this item');
+		},
+		// Event handlers
+		editorHandler(editorData) {
+			// If 'Save' was clicked:
+			if (editorData) {
+				const parentItemInOrder = this.itemObj.parentItemInOrder,
+					sectionNr = this.sectionNr;
+					index = this.itemObj.index,
+					newItem = this.$globalVars.createInfoObject(),
+					isComment = this.itemObj.isComment,
+					infos = this.$globalVars.infos,
+					order = this.$globalVars.order,
+					{session, uuidv4, createInfoObject, ...topic} = this.$globalVars; // i.e., ignore session and methods, topic is globalVars without them
+				
+				newItem.content = editorData;
+				
+				const orderItem = {id: newItem.id, comments: []};
+				if (!isComment) orderItem.sections = [];
+				
+				
+				// Save info
+				// Save the first ever info of a column
+				if (!this.itemObj.itemInOrder) {
+					// Begin AJAX preparations
+					// Deep clone order (I could simply add (without using splice or a method that triggers the reactivity system, e.g. using parentItem[0]=newItem) and then remove from parentArray, but this might introduce some bug)
+					// Deep clone object
+					topicClone = JSON.parse(JSON.stringify(topic));
+					// Get itemIndex parentArray pointer in clone object
+					const {parentArray: parentArrayClone} = this.findItem(sectionNr, topicClone.order);
+					
+					// Add for the first time info to that column in topicClone
+					parentArrayClone.push(orderItem);
+					
+					// Add new info to topicClone infos
+					topicClone.infos[newItem.id] = newItem;
+					
+					/*** BEGIN AJAX PROMISE ***/
+					
+					isSaved = fetch('/api/save', {
+						method: 'POST',
+						cache: 'no-cache',
+						headers: {
+						  'Content-Type': 'application/json'
+						},
+						body: JSON.stringify({
+							info: newItem,
+							topic: topicClone
+						})
+					})
+						.then(
+							res => {
+								if (!res.ok) throw Error(res.statusText);
+								Vue.set(infos, newItem.id, newItem);
+								parentItemInOrder.splice(index, 0, orderItem);
+								this.editor = false;
+							}
+						)
+						.catch(
+							(err) => {
+								alert("Sorry! There was an error and your edit wasn't saved (error message: ' " + err.message + " '). Please check your internet connection and try again");
+								console.log('Looks like there was a problem: \n', err);
+							}
+						);
+					/*** END AJAX PROMISE ***/
+				}				
+				// Overwrite previous info
+				else {
+					const overwrittenItem = this.itemInfo,
+						overwrittenItemId = this.itemObj.itemInOrder.id,
+						author = this.$globalVars.session.user,
+						timestamp = new Date().getTime();
+					
+					// Check first if item was edited
+					if (infos[overwrittenItemId].content === editorData) return this.editor = false;
+				
+					// Add overwritten item id
+					newItem.overwritten = overwrittenItem.overwritten ? overwrittenItem.overwritten.concat(overwrittenItemId) : newItem.overwritten = [overwrittenItemId];
+					
+					
+					// Begin AJAX preparations
+					// Deep clone order (I could simply replace on the server the order: const order = JSON.stringify(this.$globalVars.order).replace(previousItemId, newItem.id); but I'd better not)
+					// Deep clone object
+					topicClone = JSON.parse(JSON.stringify(topic));
+					// Get itemIndex parentArray pointer in clone object
+					const {parentArray: parentArrayClone, itemIndex: itemIndexClone} = this.findItem(sectionNr, topicClone.order);
+					
+					// Add to topicClone.overwritten
+					topicClone.overwritten[overwrittenItemId] = {timestamp, author};
+					
+					// Add new info to topicClone infos
+					topicClone.infos[newItem.id] = newItem;
+					
+					/*** BEGIN AJAX PROMISE ***/
+					
+					// Overwrite previous info for that column
+					parentArrayClone[itemIndexClone].id = newItem.id;
+					
+					isSaved = fetch('/api/save', {
+						method: 'POST',
+						cache: 'no-cache',
+						headers: {
+						  'Content-Type': 'application/json'
+						},
+						body: JSON.stringify({
+							info: newItem,
+							topic: topicClone
+						})
+					})
+						.then(
+							res => {
+								if (!res.ok) throw Error(res.statusText);
+								// Add content to infos
+								Vue.set(infos, newItem.id, newItem);
+								
+								// Replace locally the id of the column in the order
+								// Vue.set(parentItem[index], id, newItem.id);
+								parentItemInOrder[index].id = newItem.id;
+								this.editor = false;
+								
+								// Add to $globalVars overwritten
+								Vue.set(this.$globalVars.overwritten, overwrittenItemId, {timestamp, author, newInfo: newItem.id});
+							}
+						)
+						.catch(
+							(err) => {
+								alert("Sorry! There was an error and your edit wasn't saved (error message: ' " + err.message + " '). Please check your internet connection and try again");
+								console.log('Looks like there was a problem: \n', err);
+							}
+						);
+					/*** END AJAX PROMISE ***/
+				}
+			}
+			// If 'Cancel' was clicked (there's no editorData being sent):
+			else {
+				this.editor = false;
+			}
+		},
+		addSectionHandler(editorData) {
+			// If 'Cancel' was clicked (there's no editorData being sent):
+			if (!editorData) return this.addSection = false;
+			
+			const parentItemInOrder = this.itemObj.parentItemInOrder,
+				index = this.itemObj.index,
+				newItem = this.$globalVars.createInfoObject(),
+				isComment = this.itemObj.isComment,
+				infos = this.$globalVars.infos,
+				oder = this.$globalVars.order,
+				sectionNr = this.sectionNr,
+				{session, uuidv4, createInfoObject, ...topic} = this.$globalVars; // i.e., ignore session and methods, topic is globalVars without them;
+			
+			newItem.content = editorData;
+			
+			// Create new node to be added to topic's 'order'
+			const orderItem = {id: newItem.id, comments: []};
+			if (!isComment) orderItem.sections = [];
+			
+			// Begin AJAX preparations
+			// Deep clone order
+			topicClone = JSON.parse(JSON.stringify(topic));
+			// Get itemIndex parentArray pointer in clone object
+			const {parentArray: parentArrayClone} = this.findItem(sectionNr, topicClone.order);
+			
+			// Add node to cloned 'order'
+			parentArrayClone.splice(index + 1, 0, orderItem);
+			
+			// Add new info to topicClone infos
+			topicClone.infos[newItem.id] = newItem;
+			
+			/*** BEGIN AJAX PROMISE ***/
+			
+			isSaved = fetch('/api/save', {
+				method: 'POST',
+				cache: 'no-cache',
+				headers: {
+				  'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					info: newItem,
+					topic: topicClone
+				})
+			})
+				.then(
+					res => {
+						if (!res.ok) throw Error(res.statusText);
+						// Add content to infos
+						Vue.set(infos, newItem.id, newItem);
+						
+						// Update column nrs
+						// First add +1 to sectionNr (since it'll affect the next item only)
+						let newSectionNr = Math.max(sectionNr.lastIndexOf(' '), sectionNr.lastIndexOf('.'));
+						// index + 2, because the normal already is index + 1 (to start from 1 instead of 0)
+						newSectionNr = newSectionNr > 0 ? sectionNr.slice(0, newSectionNr + 1) + (index + 2) :
+						(index + 2).toString();
+						this.updateColumnNrs(newSectionNr, +1);
+						
+						// Add info to current session
+						Vue.set(infos, newItem.id, newItem);
+						parentItemInOrder.splice(index + 1, 0, orderItem);
+						this.addSection = false;
+					}
+				)
+				.catch(
+					(err) => {
+						alert("Sorry! There was an error and your edit wasn't saved (error message: ' " + err.message + " '). Please check your internet connection and try again");
+						console.log('Looks like there was a problem: \n', err);
+					}
+				);
+			/*** END AJAX PROMISE ***/
+		},
+		updateColumnNrs(sectionNr, add) {
+			/*
+			Update sectionNr of columns
+			
+			sectionNr: String
+			add: int
+			
+			pseudo explanation
+			
+			opcoes:
+			adiciona secao
+			move secao
+			delete secao
+			
+			1 - confere se nr precisa ser alterado ( 1, Com 1, Com 1.1, 1 Com 1, 1 Com 1.1, 1.1, 1.1.2.1.1)
+			2 - isola nr a ser alterado dentro da string
+			3 - adiciona ou subtrai 1
+			3 - 
+			
+			*/
+			let prepend,
+				oldNr;
+			
+			// Find index of last ' ' or '.'
+			let nrIndex = Math.max(sectionNr.lastIndexOf(' '), sectionNr.lastIndexOf('.')) + 1;
+			
+			if (nrIndex === -1) {
+				prepend = append = '';
+				oldNr = Number(sectionNr);
+			}
+			else {
+				prepend = sectionNr.slice(0, nrIndex);
+				oldNr = Number(sectionNr.slice(nrIndex));	
+			}
+
+			let oldParentSection = '',
+				oldSectionNr = '';
+			
+			Vue.prototype.$globalVars.session.columns.forEach((column) => {
+				let columnSectionNr = column.sectionNr;
+				if (columnSectionNr.startsWith(prepend)) {
+					let nrIndexEnd = Math.max(columnSectionNr.indexOf(' ', nrIndex), columnSectionNr.indexOf('.', nrIndex)),
+						columnNr = nrIndexEnd === -1 ? Number(columnSectionNr.slice(nrIndex)) : Number(columnSectionNr.slice(nrIndex, nrIndexEnd)),
+						newNr = columnNr + add;
+					
+					if (columnNr >= oldNr) {
+						// Append rest of the string
+						newNr = prepend + newNr + columnSectionNr.slice(nrIndex + (newNr).toString().length);
+						// Update string (needs to be string for Vue code)
+						column.sectionNr = newNr;
+					}
+				}
+			});
+		},
+		findItem(sectionNr, order=this.$globalVars.order) {
+			/***
+			Finds the item in globalVars.order
+			
+			Inputs
+			sectionNr -- String: sectionsNrs || commentsNrs . 'sectionsNrs' runs through all items of sectionsNrs. In the end, changes sector to commentsNrs if it's a comment. 'commentsNrs' runs only through commentsNrs, no section is involved 
+			order -- Object {comments: Array, sections: Array, timestamp: int}
+			
+			Outputs
+			{parentArray: Array, itemIndex: String} -- Object with the pointer to the parentArray and the index number (itemIndex) of the item
+			***/
+			let sectionsNrs,
+				commentsNrs,
+				sector;
+			
+			if (sectionNr.includes('Com')) {
+				if (sectionNr.startsWith('Com')) {
+					sectionsNrs = null;
+					commentsNrs = sectionNr.replace('Com', '').split('.');
+				}
+				else {
+					[sectionsNrs, commentsNrs] = sectionNr.split('Com');
+					[sectionsNrs, commentsNrs] = [sectionsNrs.split('.'), commentsNrs.split('.')];
+				}
+			}
+			else {
+				commentsNrs = null;
+				sectionsNrs = sectionNr.split('.');
+			}
+			
+			let parentArray;
+			if (sectionsNrs) parentArray = loop(sectionsNrs, 'sections');
+			if (commentsNrs) parentArray = loop(commentsNrs, 'comments', parentArray); 
+			
+			function loop(array, sector, previousPosition=false){
+				try {
+					// previousPosition is required for nrs like "X Com Y", that have both sectionsNrs and commentsNrs
+					let parentArray = previousPosition ? previousPosition.parentArray[previousPosition.itemIndex].comments : order[sector];
+					for (let i = 0, end = array.length - 1; i < end; i++) {
+						let itemIndex = Number(array[i]) - 1; // needs - 1 because array sector starts counting at 1 instead of 0	
+						parentArray = parentArray[itemIndex][sector];
+					}
+					// Last loop
+					let itemIndex = Number(array[array.length - 1]) - 1; // needs - 1 because array sector starts counting at 1 instead of 0		
+					return {parentArray, itemIndex};
+				}
+				catch {
+					// If item does not exist in order
+					return null;
+				}
+			}
+			
+			return parentArray;	
+		}
+	},
+	components: {
+		'app-topbar-tools-menu': appTopbarToolsMenu,
+		'app-item-add-section': appItemAddSection,
+		'app-item-move': appItemMove
+	}
+});
+
+
+// ####### ITEM BOTTOMBAR
+
+Vue.component('app-item-bottombar', {
+	template: `
+		<div class="bottombar">
+			<span title="Watch">&#128065;&#65039;</span>
+			<span title="Subscribe to this information">&#128395;&#65039;</span>
+			<span title="Hastags">#</span>
+			<span title="Author">{{ bottombarData.author }}</span>
+			<span title="Date">{{ new Date(bottombarData.timestamp).toLocaleDateString() }}</span>
+			<span title="Other information" style="background-color: white; display: inline-block; height: 1em; width: 1em; border-radius: 50%; text-align: center">i</span>
+		</div>
+	`,
+	props: {
+		bottombarData: {
+			type: Object,
+			required: true
+		}
+	}
+});
+
+// CK EDITOR
+//Vue.use( CKEditor );
+//apagar https://css-tricks.com/creating-vue-js-component-instances-programmatically/
+var AppEditor = Vue.extend({
+	template: `
+		<div class="editor">
+			<ckeditor 
+				:editor="editor" 
+				:config="editorConfig" 
+				v-model="editorData" 
+				@ready="$el.querySelector('[role=&quot;textbox&quot;]').focus()"
+			></ckeditor>
+			<button @click="$emit('editor', editorData)">Save changes &#9989</button>
+			<button @click="$emit('editor')">Cancel &#10060</button>
+		</div>
+	`,
+	components: {
+		ckeditor: CKEditor.component
+	},
+	data() {
+		return {
+			editor: CKSource.Editor,// or ClassicEditor, with classic build
+			editorData: '<p>Edit this item to add content! ("SHIFT + ENTER" gives a new line, hitting only "ENTER" instead gives a new paragraph)</p>',
+			editorConfig: {
+				// This won't add fontColor etc if the plugins aren't in the build, only subtract stuff
+				// to add stuff needs rebuild: https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html
+				// https://ckeditor.com/ckeditor-5/online-builder/
+				toolbar: {
+					items: [
+						'heading',
+						//'|',
+						'bold',
+						'italic',
+						'underline',
+						'strikethrough',
+						'fontColor',
+						'fontBackgroundColor',
+						'fontSize',
+						'fontFamily',
+						'subscript',
+						'superscript',
+						'removeFormat',
+						'link',
+						//'|',
+						'bulletedList',
+						'numberedList',
+						'todoList',
+						'alignment',
+						'indent',
+						'outdent',
+						//'|',
+						'blockQuote',
+						'code',
+						'codeBlock',
+						'imageInsert',
+						'insertTable',
+						//'mediaEmbed',
+						'specialCharacters',
+						'horizontalLine',
+						//'undo',
+						//'redo',
+						//'MathType',
+						//'CKFinder'
+					]
+				},
+				language: 'en',
+			}
+		}
+	},
+	props: {
+		content: {
+			type: String,
+			required: false
+		}
+	},
+	created() {
+		// Add item's content to the editor textbox, if there is content
+		if (this.content) this.editorData = this.content;
+	}
+});
+
+Vue.component('app-editor', AppEditor);
+
+
+const app = new Vue({
+  el: "#main",
+});
+
+
+/*
+Info appData model:
+
+info.id = string -- UUID
+info.appData.content = string -- info's content, added by user, innerHTML
+info.appData.timestamp = integer -- (new Date()).getTime
+info.appData.author = string -- user
+info.appData.hashtags = object, strings -- multiple hashtags
+info.appData.
+
+Optional:
+
+? better not to use this (because when using a database i wont be able to sort/index easily like this, its best to leave each as a separate property):info.appData.overwritten = array [string originalOverwrittenInfoId, integer overwrittenCount[, string lastOverwrittenInfoId]]
+purpose of overwrittenCount is to know immediately how many edits happened
+
+info.appData.originalOverwrittenInfoId = string -- another id (first overwritten info) or undefined
+info.appData.quotes = object, array [string, string, true] -- has both strings of id (1st element of the array) and originalOverwrittenInfoId (2nd element of the array) of each info it quotes (if there is no originalOverwrittenInfoId yet, this second slot is left empty). It also creates a "isQuotedBy" reference in those infos it quotes. The 3rd element is a truth value to say if the quote still exists or if there is an error where the exact quote cant be found. Important: when a file is overwritten it must copy the isQuotedBy of the overwritten info!
+info.appData.isQuotedBy = object, array [string, string, true] -- this is the reverse of info.appData.quotes
+
+Session specific properties:
+
+globalVars.session.openedDetails = array -- all opened details at that point;
+*/
+
+/*
+column HTML structure
+
+
+CONVENTIONS:
+- use \" for defining strings for the first time, use \' when reusing them
+*/
+
+
+</script>
+
+<style>
+
+/***
+SHARED
+***/
+
+.section-nr.has-children {
+	background-color: #BFB;
+}
+
+/***
+start ZOOM-OUT SECTION
+***/
+
+details {
+	//max-height: 10em;
+	//overflow-y: scroll;
+}
+
+details details {
+  margin-left: 2em;
+}
+
+/***
+end ZOOM-OUT SECTION
+***/
+
+
+/***
+OLD
+***/
+
+:root {
+	--topnav-font-size: 1em;
+	--topnav-height-pad: 0.7em;
+	//--topnav-height: 2em;
+	--topnav-height: calc(var(--topnav-font-size) + var(--topnav-height-pad) * 2); /*this is useful for calculating spacing for anchors*/
+}
+
+body {
+	font-family: Sans-Serif;
+	margin: 0 0 20px 0;
+	word-wrap: break-word;
+}
+
+
+
+/*top navigation menu*/
+/* Add a black background color to the top navigation */
+#topnav {
+    position: fixed;
+	z-index: 10;
+	top: 0;
+	background-color: #333;
+    overflow: hidden;
+	width: 100%;
+	display: flex;
+	align-items: baseline;
+	height: var(--topnav-height);
+	box-sizing: border-box;
+}
+
+/* Style the links inside the navigation bar */
+#topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: var(--topnav-height-pad);
+    text-decoration: none;
+    font-size: var(--topnav-font-size);
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+#topnav .icon {
+    display: none;
+} 
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 750px) {
+  #topnav a:not(:first-child) {display: none;}
+  #topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {  
+  #topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} 
+
+.selected {
+	background-color: gold !important;
+	color: #AAA !important;
+}
+
+
+/***
+general
+***/
+
+.hidden {
+	display: none;
+}
+
+
+#main {
+	margin-top: calc(var(--topnav-height) + 1em);
+}
+
+
+/***
+home
+***/
+
+#home {
+	background-color: #B4F8C8;
+	width: 100%;
+	height: 100%;
+	top: var(--topnav-height);
+	left: 0;
+	position: absolute;
+	z-index: 100;
+	text-align: center;
+}
+
+#home > * {
+	padding: 2em;
+}
+
+#home li {
+	//background-color: #DDD;
+	margin: 1em;
+}
+
+/***
+title
+***/
+
+#title-edit {
+	cursor: pointer;
+}
+
+/***
+zoom-out
+***/
+
+details > details {
+	margin-left: 1em;
+}
+
+details * {
+	font-size: 1em;
+}
+
+summary {
+	border: 1px solid black;
+	//min-width: 10em;
+}
+
+/*
+// for firefox, to remove details triangle
+summary.empty {
+	display: block;
+}
+
+// same, but for chrome
+summary.empty::-webkit-details-marker {
+	display: none;
+}
+*/
+
+#zoom-out {
+	margin-bottom: 3em;
+}
+
+
+/***
+zoom-in
+***/
+
+#zoom-in {
+	display: flex; /*https://stackoverflow.com/a/41209546*/
+	flex-flow: row nowrap;
+	//align-items: flex-start;
+	align-items: stretch;
+	background-color: beige;
+}
+
+#zoom-in > div {
+	flex: 1 0 15em; /*15em roughly = 30 chars*/
+	background-color: #deeff5;
+	margin: 5px;
+}
+
+
+
+
+
+/***
+columns
+***/
+
+.subsections-content > div {
+	margin: 0.6em 0;
+	background-color: lightblue;
+	border: 1px solid black;
+}
+
+.comments-section-content > div {
+	margin: 0.6em 0;
+	background-color: lightyellow;
+	border: 1px solid black;
+}
+
+/* Set comments section title CSS */
+.comments-section > .topbar {
+	background-color: salmon;
+	color: white;
+}
+
+/* Set subsection title CSS */
+.subsections > .topbar {
+	background-color: #33F;
+	color: white;
+}
+
+.comments-section {
+	background-color: #FCC;
+}
+
+.subsections {
+	background-color: #CCF;
+}
+
+.topbar .brief-description {
+	color: #999;
+}
+
+
+
+/***
+toolsMenu
+***/
+
+.tools-menu {
+	display: flex;
+	flex-direction: column;
+	background-color: lightgrey;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+}
+
+.tools-menu > * {
+	border: 4px solid black;
+	background-color: white;
+	margin: 0.5em; 
+}
+
+.open {
+	display: initial;
+}
+
+/***
+items
+***/
+
+.item {
+	/* needs this rule for tools-menu to stay within parents bounds*/
+	position: relative;
+}
+
+.topbar {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.topbar-menu {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	cursor: pointer;
+}
+
+.section-nr {
+	background-color: #EFF;
+	padding-right: 0.5em;
+}
+
+.item-content {
+	//transition: max-height 0.2s ease-out;
+	//max-height: 100%;
+	background-color: white;
+}
+
+
+/***
+items top bar
+***/
+
+.pin-button {
+	//background-color: #EEE;
+}
+
+.pinned {
+	position: sticky;
+	top: var(--topnav-height);
+	z-index: 1;
+}
+
+.minimize-button {
+	background-color: #EEE;	
+}
+
+.minimized {
+	max-height: 0;
+	overflow: hidden;
+	//transition: height 1s ease-out;
+}
+
+
+
+/***
+move-box
+***/
+
+.move-box {
+	border-top: 2px solid purple;
+	//margin-top: 1em;
+}
+
+.move-box input:valid {
+	color: green;
+}
+
+.move-box input:invalid {
+	color: red;
+}
+
+p {
+	margin: 0;
+}
+
+span.details-content > *:first-child {
+	display: inline-block;
+}
+
+.bottombar {
+	font-size: 0.8em;
+	 background-color: #e9ffff;
+}
+
+/***
+ETC
+***/
+
+.original-section {
+	background-color: darkgrey;
+	color: white;
+}
+
+.original-section-content {
+	color: #888;
+}
+
+</style>
+
+
+</style>
+</body>
+
+</html>
