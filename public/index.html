@@ -13,8 +13,8 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="encryption/sjcl.js"></script>
-<script type="text/javascript" src="../node_modules/dompurify/dist/purify.min.js"></script>
+<script src="./purify.min.js"></script>
+<script src="./encryption/sjcl.js"></script>
 <script src="./js/@ckeditor/ckeditor5-custom/build/ckeditor.js"></script>
 <script src="./js/@ckeditor/ckeditor5-vue/dist/ckeditor.js"></script>
 </head>
@@ -41,6 +41,35 @@
 
 <script>
 /***	ABANDON HOPE ALL YE WHO ENTER: incomprehensible spaghetti code ahead ***/
+
+// WebSocket
+// Create WebSocket connection.
+let socket;
+const createSocket = () => {
+	try {
+		socket = new WebSocket('ws://localhost:3000');
+	}
+	catch {
+		socket = new WebSocket('wss://www.discussione.xyz');
+	}
+
+	/* // Connection opened
+	socket.addEventListener('open', function (event) {
+		socket.send('Hello Server!');
+	}); */
+
+	// Listen for messages
+	socket.onmessage = (event) => {
+		console.log('Message from server ', event.data);
+	};
+	
+	return socket;
+};
+
+socket = createSocket();
+
+
+
 
 // Vue
 
@@ -441,7 +470,7 @@ Vue.component('app-column', {
 			required: true
 		}
 	},
-	provide() {debugger;
+	provide() {
 		// This has to be a function to use `this`
 		// provide doesn't return reactive data, that's why I'm passing a reactive object instead of columnObj.index
 		// provide simply doesn't work, I'm abandoning it. The example given in Vue's site `Vue.computed` or `computed` aren't functions either. I still need it though to openItemsContents after that particular column
@@ -911,7 +940,7 @@ Vue.component('app-item', {
 				newColumn;
 			
 			newColumn = { ...this.itemObj.itemInOrder };
-			newColumn.sectionNr = sectionNr;debugger;
+			newColumn.sectionNr = sectionNr;
 			// Add new column to zoom-in, after the present column
 			// columnObj.index is the index of this present column inside $globalVars.session.columns
 			columns.splice(this.columnObj.index + 1, 0, newColumn);

@@ -2,13 +2,11 @@ const express = require('express'),
 	fs = require('fs'),
 	app = express(),
 	path = require('path'),
+	WebSocket = require('ws'),
 	PORT = process.env.PORT || 3000;
 
 const saveTopicIncrementing = require('./scripts/saveTopicIncrementing.js');
 //const readTopics = require('./scripts/readTopics.js');
-
-
-
 
 // Function for incrementing filename when saving it, if it already exists
 const writeFileIncrementing = (filename, data, increment = 0) => {
@@ -35,6 +33,7 @@ app.get('/', (req, res) => {
 			topicIds => {
 				const topicsContents = [];
 				for (const name of topicIds) {
+					if (name === '.gitignore') continue;
 					topicsContents.push(fs.promises.readFile(path.join(dirname, name), 'utf8'));
 				}
 				return Promise.all(topicsContents);
@@ -63,10 +62,12 @@ app.get('/', (req, res) => {
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
+// hack (while there's no webpack): add path to node module 
+app.get('/purify.min.js', function(req, res) {
+	res.sendFile(__dirname + '/node_modules/dompurify/dist/purify.min.js');
+});
 
 // API
-
-
 
 app.get('/topic/:topicId', (req, res, next) => {
 	const topicId = req.params.topicId;
@@ -182,6 +183,34 @@ app.use((err, req, res, next) => {
 });
 
 // 3000
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);
 });
+
+
+// WebSocket
+// 
+// EventEmitter for ws
+const EventEmitter = require('events'),
+	wsemitter = new EventEmitter(),
+	wsemiterFunction = () => {
+		console.log(42);
+	};
+
+
+// Create WebSocket
+const wsserver = new WebSocket.Server({ server:server }); // server:server connects to the express server 'app.listen', named 'server'
+
+wsserver.on('connection', function connection(ws) {
+	ws.send('something'+ new Date().getTime());
+
+	/*
+	ws.on('message', function incoming(data) {
+		console.log(data);
+		ws.send(data + ' ' + new Date().getTime());
+	});
+	*/
+});
+  
+
+
