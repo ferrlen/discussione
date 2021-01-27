@@ -7,6 +7,9 @@ const express = require('express'),
 const saveTopicIncrementing = require('./scripts/saveTopicIncrementing.js');
 //const readTopics = require('./scripts/readTopics.js');
 
+
+
+
 // Function for incrementing filename when saving it, if it already exists
 const writeFileIncrementing = (filename, data, increment = 0) => {
 	const name = `${path.basename(filename, path.extname(filename))}${increment || ""}${path.extname(filename)}`;
@@ -63,12 +66,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // API
 
+
+
 app.get('/topic/:topicId', (req, res, next) => {
 	const topicId = req.params.topicId;
 
 	let location = path.join(__dirname, '/model/topicscache/', topicId);
 	// Check if it's a private information
-	if (req.body.private) location = path.join(__dirname, '/model/topicscache/', topicId);
+	if (req.body.private) location = path.join(__dirname, '/model/private/topicscache/', topicId);
 	
 	return fs.promises.readFile(location, 'utf8')
 		.then(contents => res.send(contents))
