@@ -46,13 +46,9 @@
 // Create WebSocket connection.
 let socket;
 const createSocket = () => {
-	try {
-		socket = new WebSocket('ws://localhost:3000');
-	}
-	catch {
-		socket = new WebSocket('wss://www.discussione.xyz');
-	}
-
+	// Check if app is running locally or on the web
+	socket = location.toString().includes("localhost") ? new WebSocket('ws://localhost:3000') : new WebSocket('wss://www.discussione.xyz');
+	
 	/* // Connection opened
 	socket.addEventListener('open', function (event) {
 		socket.send('Hello Server!');
@@ -62,6 +58,12 @@ const createSocket = () => {
 	socket.onmessage = (event) => {
 		console.log('Message from server ', event.data);
 	};
+	
+	// Reconnect if an error happens (should I use "onclose" instead?)
+	socket.onerror = () => {
+		socket = null;
+		setTimeout(createSocket, 5000);
+	}
 	
 	return socket;
 };
