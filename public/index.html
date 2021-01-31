@@ -43,27 +43,35 @@
 /***	ABANDON HOPE ALL YE WHO ENTER: incomprehensible spaghetti code ahead ***/
 
 // WebSocket
+
+// Annotate which listeners were added, so that if the socket is restarted, it will ask the server again to listen to them
+const listeners = [];
+
 // Create WebSocket connection.
 let socket;
 const createSocket = () => {
 	// Check if app is running locally or on the web
 	socket = location.toString().includes("localhost") ? new WebSocket('ws://localhost:3000') : new WebSocket('wss://www.discussione.xyz');
-	
-	/* // Connection opened
-	socket.addEventListener('open', function (event) {
-		socket.send('Hello Server!');
-	}); */
 
 	// Listen for messages
 	socket.onmessage = (event) => {
 		console.log('Message from server ', event.data);
 	};
 	
-	// Reconnect if an error happens (should I use "onclose" instead?)
-	socket.onerror = () => {
-		socket = null;
+	// Reconnect if it closes
+	socket.onclose = (err) => {
+		//socket = null;
+		if (socket.readyState < 2) socket.close();
 		setTimeout(createSocket, 5000);
-	}
+		console.log(err || 'closed without errors', socket);
+	};
+	
+	// If a socket was closed and was listening to a topicId, tell the server to listen to it again
+	socket.onopen = () => {
+		for (let topicId of listeners) {
+			socket.send(topicId);
+		}
+	};
 	
 	return socket;
 };
@@ -244,6 +252,9 @@ Vue.component('app-home', {
 						});
 						// Hide Home screen
 						document.getElementById('home').classList.toggle('minimized');
+						
+						// Tell server via websocket to push updates here
+						socket.send(this.$globalVars.topicId);
 					}
 				)
 				.catch((err) => alert('Something went wrong! Is your internet connection working? Error: ' + err));

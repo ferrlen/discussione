@@ -182,7 +182,7 @@ app.use((err, req, res, next) => {
 	next(err); // uses Express default error handler
 });
 
-// 3000
+// Because of nginx, I think it's ok to omit host here
 const server = app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);
 });
@@ -192,25 +192,53 @@ const server = app.listen(PORT, () => {
 // 
 // EventEmitter for ws
 const EventEmitter = require('events'),
-	wsemitter = new EventEmitter(),
-	wsemiterFunction = () => {
-		console.log(42);
-	};
+	wsemitter = new EventEmitter();
 
 
 // Create WebSocket
-const wsserver = new WebSocket.Server({ server:server }); // server:server connects to the express server 'app.listen', named 'server'
+const wsserver = new WebSocket.Server({
+	server: server,  // server:server connects to the express server 'app.listen', named 'server'
+	backlog: 100,
+	clientTracking: true
+});
 
 wsserver.on('connection', function connection(ws) {
-	ws.send('something'+ new Date().getTime());
+	// nginx proxy_read_timeout defaults to 1 min, it closes the connection if nothing is by the server
+	// because it's possible that the connection is closed and nodejs doesn't know it, it makes sense
+	// to implement ping/pong to also keep the connection alive
+	ws.isAlive = true;
+	ws.on('pong', function() {this.isAlive = true}); // must not be arrow function, otherwise 'this' won't work
+	// ping will be sent below, to all connections
 
-	/*
-	ws.on('message', function incoming(data) {
-		console.log(data);
-		ws.send(data + ' ' + new Date().getTime());
+	ws.send('apagar connected '+ new Date());
+	
+	const wsemitterFunction = (change) => {
+		ws.send(change);
+	};
+
+	// EventEmitter adds the same function over and over, even if it's a named function, so we must check if it has been added already
+	const added = {};
+
+	ws.on('message', function incoming(topicId) {
+		if (!added[topicId]) {
+			wsemitter.on(topicId, wsemitterFunction);
+			added[topicId] = true;
+		}
+		ws.send('received, time ' + new Date());
 	});
-	*/
+		
+	ws.on('close', () => {
+		for (let topicId in added) {
+			wsemitter.off(topicId, wsemitterFunction);
+		}
+	});
 });
+
+const interval = setInterval(function ping() {
+	wsserver.clients.forEach(function each(ws) {
+		if (ws.isAlive === false) return ws.close(4000, 'did not receive a ping on time');
   
-
-
+	  	ws.isAlive = false;
+	  	ws.ping();
+	});
+}, 45000);
