@@ -1,0 +1,388 @@
+
+/***
+SHARED
+***/
+
+.section-nr.has-children {
+	background-color: #BFB;
+}
+
+/***
+start ZOOM-OUT SECTION
+***/
+
+details {
+	//max-height: 10em;
+	//overflow-y: scroll;
+}
+
+details details {
+  margin-left: 2em;
+}
+
+/***
+end ZOOM-OUT SECTION
+***/
+
+
+/***
+OLD
+***/
+
+:root {
+	--topnav-font-size: 1em;
+	--topnav-height-pad: 0.7em;
+	--topnav-height: 50px; /*this is useful for calculating spacing for anchors*/
+}
+
+body {
+	font-family: Sans-Serif;
+	margin: 0 0 20px 0;
+	word-wrap: break-word;
+}
+
+
+
+/*top navigation menu*/
+/* Add a black background color to the top navigation */
+#topnav {
+    position: fixed;
+	z-index: 10;
+	top: 0;
+	background-color: #333;
+    overflow: hidden;
+	width: 100%;
+	display: flex;
+	align-items: baseline;
+	height: var(--topnav-height);
+	box-sizing: border-box;
+}
+
+/* Style the links inside the navigation bar */
+#topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: var(--topnav-height-pad);
+    text-decoration: none;
+    font-size: var(--topnav-font-size);
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+#topnav .icon {
+    display: none;
+} 
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 750px) {
+  #topnav a:not(:first-child) {display: none;}
+  #topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {  
+  #topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} 
+
+.selected {
+	background-color: gold !important;
+	color: #AAA !important;
+}
+
+
+/***
+general
+***/
+
+.hidden {
+	display: none;
+}
+
+
+html, body {
+  height: 100%;
+}
+#app {
+	height:100%;
+	display: flex;
+  flex-direction: column;
+}
+main {
+	padding-top: var(--topnav-height);
+	background-color: #B4F8C8;
+  flex: 1 0 auto;
+}
+#main-footer {
+  flex-shrink: 0;
+}
+
+/***
+home
+***/
+
+
+#home > * {
+	padding: 2em;
+}
+
+#home li {
+	//background-color: #DDD;
+	margin: 1em;
+}
+
+/***
+title
+***/
+
+#title-edit {
+	cursor: pointer;
+}
+
+/***
+zoom-out
+***/
+
+details > details {
+	margin-left: 1em;
+}
+
+details * {
+	font-size: 1em;
+}
+
+summary {
+	border: 1px solid black;
+	//min-width: 10em;
+}
+
+/*
+// for firefox, to remove details triangle
+summary.empty {
+	display: block;
+}
+
+// same, but for chrome
+summary.empty::-webkit-details-marker {
+	display: none;
+}
+*/
+
+#zoom-out {
+	margin-bottom: 3em;
+}
+
+
+/***
+zoom-in
+***/
+
+#zoom-in {
+	display: flex; /*https://stackoverflow.com/a/41209546*/
+	flex-flow: row nowrap;
+	//align-items: flex-start;
+	align-items: stretch;
+	background-color: beige;
+}
+
+#zoom-in > div {
+	flex: 1 0 15em; /*15em roughly = 30 chars*/
+	background-color: #deeff5;
+	margin: 5px;
+}
+
+
+
+
+
+/***
+columns
+***/
+
+.subsections-content > div {
+	margin: 0.6em 0;
+	background-color: lightblue;
+	border: 1px solid black;
+}
+
+.comments-section-content > div {
+	margin: 0.6em 0;
+	background-color: lightyellow;
+	border: 1px solid black;
+}
+
+/* Set comments section title CSS */
+.comments-section > .topbar {
+	background-color: salmon;
+	color: white;
+}
+
+/* Set subsection title CSS */
+.subsections > .topbar {
+	background-color: #33F;
+	color: white;
+}
+
+.comments-section {
+	background-color: #FCC;
+}
+
+.subsections {
+	background-color: #CCF;
+}
+
+.topbar .brief-description {
+	color: #999;
+}
+
+
+
+/***
+toolsMenu
+***/
+
+.tools-menu {
+	display: flex;
+	flex-direction: column;
+	background-color: lightgrey;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+}
+
+.tools-menu > * {
+	border: 4px solid black;
+	background-color: white;
+	margin: 0.5em; 
+}
+
+.open {
+	display: initial;
+}
+
+/***
+items
+***/
+
+.item {
+	/* needs this rule for tools-menu to stay within parents bounds*/
+	position: relative;
+}
+
+.topbar {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.topbar-menu {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	cursor: pointer;
+}
+
+.section-nr {
+	background-color: #EFF;
+	padding-right: 0.5em;
+}
+
+.item-content {
+	//transition: max-height 0.2s ease-out;
+	//max-height: 100%;
+	background-color: white;
+}
+
+
+/***
+items top bar
+***/
+
+.pin-button {
+	//background-color: #EEE;
+}
+
+.pinned {
+	position: sticky;
+	top: var(--topnav-height);
+	z-index: 1;
+}
+
+.minimize-button {
+	background-color: #EEE;	
+}
+
+.minimized {
+	max-height: 0;
+	overflow: hidden;
+	//transition: height 1s ease-out;
+}
+
+
+
+/***
+move-box
+***/
+
+.move-box {
+	border-top: 2px solid purple;
+	//margin-top: 1em;
+}
+
+.move-box input:valid {
+	color: green;
+}
+
+.move-box input:invalid {
+	color: red;
+}
+
+p {
+	margin: 0;
+}
+
+span.details-content > *:first-child {
+	display: inline-block;
+}
+
+.bottombar {
+	font-size: 0.8em;
+	 background-color: #e9ffff;
+}
+
+/***
+ETC
+***/
+
+.original-section {
+	background-color: darkgrey;
+	color: white;
+}
+
+.original-section-content {
+	color: #888;
+}
