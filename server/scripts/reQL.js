@@ -17,7 +17,7 @@ const dbMigrate = () => {
   connection.then((conn, err) => {
     if (err) throw err;
     rdbConn = conn;
-    
+    console.log(conn)
   })
 
   // Creates DB, as needed.
