@@ -1,0 +1,33 @@
+# Our main todo type
+type Topics {
+  TContent: TContent!
+	info: [Info!]!
+}
+
+type TContent {
+	id: ID!
+	private: Boolean,
+	appearsIn: topics!
+}
+
+type Info {
+	id: ID!
+	author: String!
+	createdAt: DateTime @default(expr: $now)
+	content: String
+}
+
+
+type Query {
+  # Get one todo item
+	topics: [topics]
+}
+
+type Mutation {
+	getDateTime() : String!
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

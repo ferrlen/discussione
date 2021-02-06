@@ -1,12 +1,34 @@
 const express = require('express'),
 	fs = require('fs'),
-	app = express(),
 	path = require('path'),
 	WebSocket = require('ws'),
-	PORT = process.env.PORT || 3000;
+	reQL = require('./scripts/reQL'),
+	config = require('./config'),
+	saveTopicIncrementing = require('./scripts/saveTopicIncrementing.js'),
+	gql = require('graphql-tag'),
+	{ graphqlHTTP } = require('express-graphql');
 
-const saveTopicIncrementing = require('./scripts/saveTopicIncrementing.js');
-//const readTopics = require('./scripts/readTopics.js');
+
+
+const app = express();
+
+const schema = gql`
+type Query {
+  me: User
+}
+ 
+type User {
+  id: ID
+  name: String
+}
+`;
+app.use('/graphql', graphqlHTTP({
+	schema: schema,
+	graphiql: true,
+	context: async () => {
+			return {db: reQL.connectToDB()}
+	}
+}))
 
 // Function for incrementing filename when saving it, if it already exists
 const writeFileIncrementing = (filename, data, increment = 0) => {
@@ -16,6 +38,8 @@ const writeFileIncrementing = (filename, data, increment = 0) => {
 	  throw ex;
 	});
   }
+
+
 
 app.use(express.json());
 
@@ -183,8 +207,10 @@ app.use((err, req, res, next) => {
 });
 
 // Because of nginx, I think it's ok to omit host here
-const server = app.listen(PORT, () => {
-	console.log(`Listening on port ${PORT}`);
+const server = app.listen(config.WEB_PORT, () => {
+	console.log(`Listening on port ${config.WEB_PORT}`);
+	console.log(`🚀 Check out the GraphQL Playground @ http://localhost:${config.WEB_PORT}/graphql`)
+
 });
 
 
