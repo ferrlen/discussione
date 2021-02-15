@@ -149,7 +149,6 @@ function saveInfo(req, res, next) {
 	// Check if it's a private information
 	if (req.body.private) dirname = path.join(__dirname, '/model/private/infos', filename);
 
-	if (!info) return next();
 	fs.promises.writeFile(dirname, infoString, {flag: 'wx'})
 		.then((fulfilled) => next(), (err) => next(err));
 }
