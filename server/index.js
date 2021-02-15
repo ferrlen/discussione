@@ -138,8 +138,11 @@ function superBackup(req, res, next) {
 }
 
 function saveInfo(req, res, next) {
-	const info = req.body.info,
-		filename = info?.id,
+	const info = req.body.info;
+
+	if (!info) return next();
+
+	const	filename = info?.id,
 		infoString = JSON.stringify(info);
 
 	let dirname = path.join(__dirname, '/model/infos/', filename);
