@@ -114,15 +114,17 @@ function superBackup(req, res, next) {
 }
 
 function saveInfo(req, res, next) {
-	const info = req.body.info,
-		filename = info?.id,
+	const info = req.body.info;
+
+	if (!info) return next();
+
+	const	filename = info?.id,
 		infoString = JSON.stringify(info);
 
 	let dirname = path.join(__dirname, '/model/infos/', filename);
 	// Check if it's a private information
 	if (req.body.private) dirname = path.join(__dirname, '/model/private/infos', filename);
 
-	if (!info) return next();
 	fs.promises.writeFile(dirname, infoString, {flag: 'wx'})
 		.then((fulfilled) => next(), (err) => next(err));
 }
