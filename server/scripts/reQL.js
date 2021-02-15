@@ -17,7 +17,6 @@ const dbMigrate = () => {
   connection.then((conn, err) => {
     if (err) throw err;
     rdbConn = conn;
-    
   })
 
   // Creates DB, as needed.
@@ -76,11 +75,22 @@ const rdbConnect = async function () {
     throw err;
   }
 };
-const connectToDB = async function () {
+const connectToDB = async () => {
+  console.log('run');
   if (rdbConn != null) {
     return rdbConn;
   }
   return await rdbConnect();
 };
+const test = async () => {
+  const conn = await connectToDB();
+  r.table('test').run(conn, function(err, cursor) {
+    if (err) throw err;
+    cursor.toArray().then((res) => {
+      console.log(res[0])
+    });
+  });
+}
+exports.test = test;
 exports.dbMigrate = dbMigrate;
 exports.connectToDB = connectToDB;

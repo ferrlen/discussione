@@ -1,0 +1,41 @@
+version: '2'
+services:
+  node: 
+    container_name: discussione-node
+    tty: true 
+    build: 
+      context: ./server/
+      dockerfile: ../dockerfiles/node.Dockerfile
+    command: >
+      sh -c "npm run migrate &&
+             npm run start"
+       
+    volumes:
+      - ./server:/usr/app/server
+      - /usr/app/server/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - frontend 
+    environment:
+      - DB_HOST=discussione-db
+      - DB_PORT=28015
+  db:
+    container_name: discussione-db
+    image: rethinkdb:2.4.1
+    ports:
+     - "28015"
+     - "8080:8080"
+  frontend:
+    tty: true
+    build:
+      context: ./client/
+      dockerfile: ../dockerfiles/frontend.Dockerfile
+    volumes:
+      - ./client:/usr/app/client
+      - /usr/app/client/node_modules
+    ports:
+      - "8090:8090"
+    command: npm run serve
+    depends_on:
+      - db 

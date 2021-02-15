@@ -1,2 +1,5 @@
 .history
 rethinkdb_data
+
+#swap files
+.*.sw?

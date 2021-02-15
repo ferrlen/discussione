@@ -9,37 +9,18 @@
 -
 -
 
-### Tech
-
-* Module 1
-* Module 2
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework 
-
-### Initial setup (to be containerized?)
-- Install RethinkDB
-- 
 ### Installation
 
-Install rethinkdb
+- Clone repository
+- Install Docker
 
-Install the dependencies and devDependencies and start the server.
+### Setup
 
-```sh
-$ rethinkdb
+From project root..
+- run ```sh
+docker-compose up
 ```
 
-To start server
-```sh
-$ cd discussione/server
-$ npm run start
-```
-
-```sh
-$ cd discussione/client
-$ npm run serve
-```
-For production environments...
 ### Development
 
 Want to contribute? Great!

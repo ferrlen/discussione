@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "node -e 'require(\"./scripts/reQL\").dbMigrate()'"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0",
+    "nodemon": "^2.0.7",
     "rethinkdb": "^2.4.2",
     "uuid": "^8.3.2",
     "ws": "^7.4.2"
