@@ -1,0 +1,38 @@
+{
+  "name": "discussione-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "lint": "eslint --fix main.js",
+    "format": "prettier -w ."
+  },
+  "dependencies": {
+    "@vuelidate/core": "^2.0.0-alpha.30",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "vite-plugin-restart": "0.0.2",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.0-0",
+    "vuelidate": "^0.7.6",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "@vitejs/plugin-vue": "^1.9.4",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vite-plugin-windicss": "^1.4.12",
+    "vue-tsc": "^0.3.0"
+  }
+}
