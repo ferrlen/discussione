@@ -24,9 +24,6 @@ export default {
   components: {
     TreeViewNode,
   },
-  computed: {
-    getCaretUrl: () => new URL("/caret-down.svg", import.meta.url).href,
-  },
 };
 </script>
 <style scoped>
