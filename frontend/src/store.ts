@@ -1,19 +1,19 @@
 import { createStore } from "vuex";
 
 export interface State {
-  topic: Object;
+  topicTree: Array<any>;
 }
 
 export default createStore<State>({
   state() {
     return {
-      topic: {},
+      topicTree: [],
     };
   },
 
   mutations: {
-    createTopic(state, topic) {
-      state.topic = topic;
+    createTopicTree(state, tree) {
+      state.topicTree = tree;
     },
   },
 });

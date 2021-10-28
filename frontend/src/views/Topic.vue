@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>Title: {{ title }}</h1>
-    <span id="title-edit">🖉 {{ count }}</span>
-    <TreeView />
+    <span id="title-edit">🖉</span>
+    <TreeView :tree="globalTopicTree" />
     <BlockView />
   </div>
 </template>
@@ -12,6 +12,7 @@ import TreeView from "@/components/tree_view/TreeView.vue";
 import BlockView from "@/components/block_view/BlockView.vue";
 import store from "@/store.ts";
 import SampleTopicData from "@/sampleTopicData.json";
+import topicHelper from "@/lib/topicHelper.js";
 
 export default defineComponent({
   name: "Topic",
@@ -20,25 +21,29 @@ export default defineComponent({
     BlockView,
   },
   setup() {
+    // TODO: Use real data instead of Sample data for templating purposes
     const topic = SampleTopicData[2];
+    const tree = topicHelper.buildTopicTree(topic);
 
     (() => {
-      store.commit("createTopic", topic);
+      store.commit("createTopicTree", tree);
     })();
-    // const createOrderedSchema = (t) => {
-    //   for (let i = 0; i < Object.keys(t.order.sections).length; i++) {
 
-    //   }
-    // }
-    const cTopic = computed(() => store.state.topic);
+    const globalTopicTree = computed(() => store.state.topicTree);
     return {
-      cTopic,
+      topic,
+      globalTopicTree,
     };
   },
   computed: {
     title() {
-      return this.cTopic.title;
+      return this.topic.title;
     },
   },
 });
 </script>
+<style scoped>
+div {
+  text-align: left;
+}
+</style>

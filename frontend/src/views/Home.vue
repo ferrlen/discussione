@@ -1,29 +1,35 @@
 <template>
-  <div id="home" >
+  <div id="home">
     <div>TODO menu</div>
-    <h1 style="padding: 0; margin: 0;">Welcome to Discussione!</h1>
+    <h1 style="padding: 0; margin: 0">Welcome to Discussione!</h1>
     <div>Please input your login name:</div>
-    <input v-model="username" style="width: 222px;" placeholder="Or leave it blank to be anonymous">
+    <input
+      v-model="username"
+      style="width: 222px"
+      placeholder="Or leave it blank to be anonymous"
+    />
     <div class="form-group" :class="{ 'form-group--error': v$.newTopic.$error }">
-      <button @click="createTopic" style="padding: 1em;">Start a new topic</button>
+      <button @click="createTopic" style="padding: 1em">Start a new topic</button>
       <div>
-        <input class="form__input"
+        <input
+          class="form__input"
           v-model="state.newTopic"
-          style="width: 222px;"
-          placeholder="New Topic Name">
-          <div class="input-errors" v-for="error of v$.newTopic.$errors" :key="error.$uid">
-            <span v-if="error.$validator == 'required'" class="error-msg">
-              Topic Name is Required
-            </span>
-            <span v-else class="error-msg">{{ error.$message }}</span>
-          </div>
+          style="width: 222px"
+          placeholder="New Topic Name"
+        />
+        <div class="input-errors" v-for="error of v$.newTopic.$errors" :key="error.$uid">
+          <span v-if="error.$validator == 'required'" class="error-msg">
+            Topic Name is Required
+          </span>
+          <span v-else class="error-msg">{{ error.$message }}</span>
+        </div>
       </div>
-
     </div>
-    <div v-if="topics.length">Or pick one of the topics below. These are the current projects:
+    <div v-if="topics.length">
+      Or pick one of the topics below. These are the current projects:
       <nav>
         <router-link v-for="(obj, i) of topics" :key="i" :to="`/topic/${obj.slug}`">
-          {{ obj.title + ' (click me)'}}
+          {{ obj.title + " (click me)" }}
         </router-link>
       </nav>
     </div>
@@ -31,15 +37,15 @@
 </template>
 
 <script>
-import { reactive } from 'vue';
-import { useVuelidate } from '@vuelidate/core';
-import { required } from 'vuelidate/lib/validators';
+import { reactive } from "vue";
+import { useVuelidate } from "@vuelidate/core";
+import { required } from "vuelidate/lib/validators";
 
 export default {
-  name: 'Home',
+  name: "Home",
   setup() {
     const state = reactive({
-      newTopic: '',
+      newTopic: "",
     });
     const rules = {
       newTopic: {
@@ -51,7 +57,7 @@ export default {
   },
   data() {
     return {
-      username: '',
+      username: "",
       topics: [],
     };
   },

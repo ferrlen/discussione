@@ -29,6 +29,8 @@
   },
   "plugins": ["vue", "@typescript-eslint"],
   "rules": {
+    "no-plusplus": "off",
+    "no-console": "warn",
     "import/extensions": [
       "error",
       "ignorePackages",

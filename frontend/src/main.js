@@ -1,8 +1,9 @@
 import Vuelidate from "vuelidate";
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
+import routes from "./router/routes.js";
 import store from "@/store.ts";
 import "./main.css";
 
-createApp(App).use(store).use(Vuelidate).use(router).mount("#app");
+const app = createApp(App).use(store).use(Vuelidate).use(routes);
+app.mount("#app");
