@@ -314,7 +314,7 @@ Vue.component('app-details-component', {
 	template: `
 	<details>
 		<summary>
-			<span class="section-nr" @dblclick="openItemsContents" :class="{'has-children': hasChildren}">{{ sectionNr }}</span>
+			<span class="section-nr" @dblclick="openItemsContents" :class="{'has-children': hasChildren}">{{ sectionNr }}</span><span @dblclick="openItemsContents"  v-if="commentCount" class="comment-count">{{commentCount}}</span>
 			<span class="details-content" v-html="content"></span>
 		</summary>
 			<!-- the code below will create a component for all children of this section -->
@@ -339,6 +339,9 @@ Vue.component('app-details-component', {
 		},
 		hasChildren() {
 			return !!this.detailsItem.itemInOrder.sections.length;
+		},
+		commentCount() {
+			return this.detailsItem.itemInOrder.comments.length;
 		}
 	},
 	methods: {
@@ -1930,7 +1933,13 @@ items
 	//max-height: 100%;
 	background-color: white;
 }
-
+.section-nr, .comment-count {
+	cursor: pointer;
+}
+.comment-count {
+	background-color: yellow;
+	padding: 0 5px;
+}
 
 /***
 items top bar
