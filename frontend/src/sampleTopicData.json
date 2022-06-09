@@ -1,0 +1,1681 @@
+[
+  {
+    "topicId": "071a4506-5e30-4c9d-b706-ca5e336b3cf6",
+    "private": false,
+    "creator": "anonymous",
+    "title": "Topic's title",
+    "order": {
+      "comments": [
+        {
+          "id": "dd3879d0-44f9-4ced-bec0-3cc91ad20304",
+          "comments": []
+        }
+      ],
+      "sections": []
+    },
+    "infos": {
+      "dd3879d0-44f9-4ced-bec0-3cc91ad20304": {
+        "id": "dd3879d0-44f9-4ced-bec0-3cc91ad20304",
+        "author": "anonymous",
+        "timestamp": 1626128558400,
+        "content": "&lt;p&gt;Hello hello hello&lt;/p&gt;"
+      }
+    },
+    "overwritten": {},
+    "moved": {},
+    "deleted": {}
+  },
+  {
+    "topicId": "55f88972-c19c-4c39-b5ae-7855e4d68556",
+    "private": false,
+    "creator": "anonymous",
+    "title": "Topic's title",
+    "order": {
+      "comments": [],
+      "sections": [
+        {
+          "id": "15e8de4f-ec5a-4c40-8039-d3d5fee20ec6",
+          "comments": [],
+          "sections": [
+            {
+              "id": "e3bda910-2d0a-4179-9254-018a9bc9e943",
+              "comments": [],
+              "sections": [
+                {
+                  "id": "969b82de-47cc-482e-9523-ed2816c37ebb",
+                  "comments": [],
+                  "sections": [
+                    {
+                      "id": "8040de94-e271-4a7c-b7c0-8434ad5dc23f",
+                      "comments": [],
+                      "sections": []
+                    },
+                    {
+                      "id": "38edb198-c225-4dc0-8118-d429e4fe6c4d",
+                      "comments": [],
+                      "sections": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "d6bb3563-b686-4c2d-b5f2-e6a24082cf00",
+          "comments": [],
+          "sections": [
+            {
+              "id": "c4ec7493-1259-4539-8138-3018f6a5c764",
+              "comments": [],
+              "sections": [
+                {
+                  "id": "dc334679-4555-4033-8927-4da7c98165d4",
+                  "comments": [],
+                  "sections": []
+                },
+                {
+                  "id": "d41caa2f-5489-486d-9dc3-f9fb693419a0",
+                  "comments": [],
+                  "sections": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cf74e836-3412-4ccc-9316-dfb13820a047",
+          "comments": [],
+          "sections": [
+            {
+              "id": "37537509-c2a7-4c03-bc10-49755feef4a0",
+              "comments": [
+                {
+                  "id": "4643170a-f4a1-4d7c-9b12-ba1e32643cb7",
+                  "comments": []
+                }
+              ],
+              "sections": [
+                {
+                  "id": "94f45852-9b73-4227-b43a-ad8389b2bcd0",
+                  "comments": [
+                    {
+                      "id": "783d7bdf-10d7-4be5-89d6-efbd82e4fe98",
+                      "comments": []
+                    }
+                  ],
+                  "sections": [
+                    {
+                      "id": "d9bfdf97-a972-49d7-a653-469146b040b8",
+                      "comments": [],
+                      "sections": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cad7db6b-b2fd-47e2-867f-de5315542423",
+              "comments": [],
+              "sections": [
+                {
+                  "id": "9498de43-deb3-4699-8e6e-eeb3a685f2ae",
+                  "comments": [],
+                  "sections": [
+                    {
+                      "id": "2e9b78f1-f4e6-4018-870c-20b291cfa96e",
+                      "comments": [],
+                      "sections": []
+                    }
+                  ]
+                },
+                {
+                  "id": "f378bb8a-6ac7-4c0a-886d-eed0ee2e3d7c",
+                  "comments": [],
+                  "sections": [
+                    {
+                      "id": "bc36fbc2-b926-46d0-9d05-e29cef67eb6f",
+                      "comments": [],
+                      "sections": []
+                    },
+                    {
+                      "id": "db3dc82c-f06d-42c6-bdea-abdc518502a1",
+                      "comments": [
+                        {
+                          "id": "aa88610b-b16d-478e-84ce-684166ba740f",
+                          "comments": []
+                        }
+                      ],
+                      "sections": []
+                    },
+                    {
+                      "id": "68f2dc46-75d6-404a-b85b-52fb59662237",
+                      "comments": [],
+                      "sections": [
+                        {
+                          "id": "c7e68e24-44d6-4e90-b6fc-3b7b8cdd958b",
+                          "comments": [],
+                          "sections": []
+                        },
+                        {
+                          "id": "788ac2f4-e3b4-455f-ab69-def6eece451f",
+                          "comments": [],
+                          "sections": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "9a20df87-5b79-459c-b707-3b1c96985f0e",
+                      "comments": [
+                        {
+                          "id": "83692091-00a2-4a05-82f3-897df4fac3c7",
+                          "comments": []
+                        },
+                        {
+                          "id": "5613d755-7942-49a7-bb49-c6795650ec3d",
+                          "comments": []
+                        }
+                      ],
+                      "sections": [
+                        {
+                          "id": "88a8c545-db20-4e51-9649-63fd9f969447",
+                          "comments": [
+                            {
+                              "id": "c1520fee-5837-4104-aebd-547668dd146b",
+                              "comments": [
+                                {
+                                  "id": "2f3aadad-ca0a-4f81-8657-7411b0d16c65",
+                                  "comments": []
+                                }
+                              ]
+                            }
+                          ],
+                          "sections": []
+                        },
+                        {
+                          "id": "ad44dacc-d7ef-411f-8cf3-d7025a29619f",
+                          "comments": [],
+                          "sections": []
+                        },
+                        {
+                          "id": "0f5a497e-e606-4e7a-b492-e4e39499cc4c",
+                          "comments": [
+                            {
+                              "id": "7b5d250b-4857-4ec4-9c05-e2d542b0ab61",
+                              "comments": []
+                            }
+                          ],
+                          "sections": [
+                            {
+                              "id": "8f4c4f91-ba59-41b0-ae55-abd24e3c71b9",
+                              "comments": [
+                                {
+                                  "id": "8d46e08b-1540-4600-947e-cc5929b4f22a",
+                                  "comments": []
+                                }
+                              ],
+                              "sections": [
+                                {
+                                  "id": "42a165d7-e6a9-41fa-b2b5-bd063b56c95f",
+                                  "comments": [],
+                                  "sections": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "7a1d7586-a9b1-4904-ac13-e0251329d13c",
+                      "comments": [],
+                      "sections": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "infos": {
+      "15e8de4f-ec5a-4c40-8039-d3d5fee20ec6": {
+        "id": "15e8de4f-ec5a-4c40-8039-d3d5fee20ec6",
+        "author": "anonymous",
+        "timestamp": 1613373356136,
+        "content": "&lt;p&gt;Schema&lt;/p&gt;"
+      },
+      "f094e258-3fbb-4808-940e-7e152d3690d2": {
+        "id": "f094e258-3fbb-4808-940e-7e152d3690d2",
+        "author": "anonymous",
+        "timestamp": 1613373383329,
+        "content": "&lt;p&gt;model for item&lt;/p&gt;&lt;p&gt;https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer&lt;/p&gt;"
+      },
+      "d30d0aee-889e-48dd-991c-82e56f6ff3bf": {
+        "id": "d30d0aee-889e-48dd-991c-82e56f6ff3bf",
+        "author": "anonymous",
+        "timestamp": 1613373400463,
+        "content": "&lt;p&gt;model for entities&lt;/p&gt;&lt;p&gt;https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer&lt;/p&gt;",
+        "overwritten": ["f094e258-3fbb-4808-940e-7e152d3690d2"]
+      },
+      "e3bda910-2d0a-4179-9254-018a9bc9e943": {
+        "id": "e3bda910-2d0a-4179-9254-018a9bc9e943",
+        "author": "anonymous",
+        "timestamp": 1613373471326,
+        "content": "&lt;p&gt;full spec&lt;/p&gt;&lt;p&gt;https://www.mediawiki.org/wiki/Wikibase/DataModel&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "f094e258-3fbb-4808-940e-7e152d3690d2",
+          "d30d0aee-889e-48dd-991c-82e56f6ff3bf"
+        ]
+      },
+      "88bd1a4a-148f-4266-ac86-9c0cf79a9f9e": {
+        "id": "88bd1a4a-148f-4266-ac86-9c0cf79a9f9e",
+        "author": "anonymous",
+        "timestamp": 1613373494599,
+        "content": "&lt;p&gt;https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer&lt;/p&gt;"
+      },
+      "969b82de-47cc-482e-9523-ed2816c37ebb": {
+        "id": "969b82de-47cc-482e-9523-ed2816c37ebb",
+        "author": "anonymous",
+        "timestamp": 1613373506557,
+        "content": "&lt;p&gt;spec for entities&lt;br&gt;https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer&lt;/p&gt;",
+        "overwritten": ["88bd1a4a-148f-4266-ac86-9c0cf79a9f9e"]
+      },
+      "8040de94-e271-4a7c-b7c0-8434ad5dc23f": {
+        "id": "8040de94-e271-4a7c-b7c0-8434ad5dc23f",
+        "author": "anonymous",
+        "timestamp": 1613373629239,
+        "content": "&lt;p&gt;JSON wikibase representation&lt;/p&gt;&lt;p&gt;https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_json.html&lt;/p&gt;"
+      },
+      "d6bb3563-b686-4c2d-b5f2-e6a24082cf00": {
+        "id": "d6bb3563-b686-4c2d-b5f2-e6a24082cf00",
+        "author": "anonymous",
+        "timestamp": 1613373671251,
+        "content": "&lt;p&gt;Tasks&lt;/p&gt;"
+      },
+      "c4ec7493-1259-4539-8138-3018f6a5c764": {
+        "id": "c4ec7493-1259-4539-8138-3018f6a5c764",
+        "author": "anonymous",
+        "timestamp": 1613373698919,
+        "content": "&lt;p&gt;Wikibase integration&lt;/p&gt;"
+      },
+      "78973378-bdf2-445b-a557-edcd91fe29a4": {
+        "id": "78973378-bdf2-445b-a557-edcd91fe29a4",
+        "author": "anonymous",
+        "timestamp": 1613373868031,
+        "content": "&lt;p&gt;types=&gt;&lt;/p&gt;&lt;p&gt;https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_datatypes.html&lt;/p&gt;"
+      },
+      "3a8806f4-c4c4-43aa-aa03-993be176adf5": {
+        "id": "3a8806f4-c4c4-43aa-aa03-993be176adf5",
+        "author": "anonymous",
+        "timestamp": 1613374175367,
+        "content": "&lt;p&gt;TL;DR entity types=&gt;&lt;/p&gt;&lt;p&gt;https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_datatypes.html&lt;/p&gt;",
+        "overwritten": ["78973378-bdf2-445b-a557-edcd91fe29a4"]
+      },
+      "38edb198-c225-4dc0-8118-d429e4fe6c4d": {
+        "id": "38edb198-c225-4dc0-8118-d429e4fe6c4d",
+        "author": "anonymous",
+        "timestamp": 1613374195971,
+        "content": "&lt;p&gt;TL;DR entity types=&gt;&lt;/p&gt;&lt;p&gt;https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_entitytypes.html&lt;/p&gt;",
+        "overwritten": [
+          "78973378-bdf2-445b-a557-edcd91fe29a4",
+          "3a8806f4-c4c4-43aa-aa03-993be176adf5"
+        ]
+      },
+      "dc334679-4555-4033-8927-4da7c98165d4": {
+        "id": "dc334679-4555-4033-8927-4da7c98165d4",
+        "author": "anonymous",
+        "timestamp": 1613374325277,
+        "content": "&lt;p&gt;as a api for fetching async data&lt;/p&gt;"
+      },
+      "0cc121c2-4cd2-4715-8f69-a6e614c3f487": {
+        "id": "0cc121c2-4cd2-4715-8f69-a6e614c3f487",
+        "author": "anonymous",
+        "timestamp": 1613374461115,
+        "content": "&lt;p&gt;the ”Discussione“ data model&lt;/p&gt;"
+      },
+      "d41caa2f-5489-486d-9dc3-f9fb693419a0": {
+        "id": "d41caa2f-5489-486d-9dc3-f9fb693419a0",
+        "author": "anonymous",
+        "timestamp": 1613374587932,
+        "content": "&lt;p&gt;pre scraped document model&nbsp;&lt;/p&gt;"
+      },
+      "eba0afc4-a8a9-4caa-9aa1-55090d932ddf": {
+        "id": "eba0afc4-a8a9-4caa-9aa1-55090d932ddf",
+        "author": "anonymous",
+        "timestamp": 1613374782912,
+        "content": "&lt;p&gt;app changes to accommodate feature request&lt;/p&gt;"
+      },
+      "d0d41fcd-a994-4a46-8c35-db0ddda6f8ac": {
+        "id": "d0d41fcd-a994-4a46-8c35-db0ddda6f8ac",
+        "author": "anonymous",
+        "timestamp": 1613374860426,
+        "content": "&lt;p&gt;app changes to accommodate feature request&lt;/p&gt;"
+      },
+      "37537509-c2a7-4c03-bc10-49755feef4a0": {
+        "id": "37537509-c2a7-4c03-bc10-49755feef4a0",
+        "author": "anonymous",
+        "timestamp": 1613374917156,
+        "content": "&lt;p&gt;the ”Discussione“ data model&lt;/p&gt;",
+        "overwritten": ["d0d41fcd-a994-4a46-8c35-db0ddda6f8ac"]
+      },
+      "cad7db6b-b2fd-47e2-867f-de5315542423": {
+        "id": "cad7db6b-b2fd-47e2-867f-de5315542423",
+        "author": "anonymous",
+        "timestamp": 1613374935304,
+        "content": "&lt;p&gt;UI/UX&lt;/p&gt;"
+      },
+      "e386c9f0-644e-457f-85e3-dfca2e667acd": {
+        "id": "e386c9f0-644e-457f-85e3-dfca2e667acd",
+        "author": "anonymous",
+        "timestamp": 1613374990500,
+        "content": "&lt;p&gt;.&lt;/p&gt;",
+        "overwritten": ["0cc121c2-4cd2-4715-8f69-a6e614c3f487"]
+      },
+      "cf74e836-3412-4ccc-9316-dfb13820a047": {
+        "id": "cf74e836-3412-4ccc-9316-dfb13820a047",
+        "author": "anonymous",
+        "timestamp": 1613375028061,
+        "content": "&lt;p&gt;app requirements&lt;/p&gt;",
+        "overwritten": ["eba0afc4-a8a9-4caa-9aa1-55090d932ddf"]
+      },
+      "4643170a-f4a1-4d7c-9b12-ba1e32643cb7": {
+        "id": "4643170a-f4a1-4d7c-9b12-ba1e32643cb7",
+        "author": "anonymous",
+        "timestamp": 1613375159505,
+        "content": "&lt;p&gt;Object design from patterns to details&lt;/p&gt;"
+      },
+      "3372b86a-064d-4d9e-ac7a-d1605947e3b4": {
+        "id": "3372b86a-064d-4d9e-ac7a-d1605947e3b4",
+        "author": "anonymous",
+        "timestamp": 1613375217362,
+        "content": "&lt;p&gt;relational metadata&lt;/p&gt;"
+      },
+      "94f45852-9b73-4227-b43a-ad8389b2bcd0": {
+        "id": "94f45852-9b73-4227-b43a-ad8389b2bcd0",
+        "author": "anonymous",
+        "timestamp": 1613375270795,
+        "content": "&lt;p&gt;types of relational metadata&lt;/p&gt;",
+        "overwritten": ["3372b86a-064d-4d9e-ac7a-d1605947e3b4"]
+      },
+      "9498de43-deb3-4699-8e6e-eeb3a685f2ae": {
+        "id": "9498de43-deb3-4699-8e6e-eeb3a685f2ae",
+        "author": "anonymous",
+        "timestamp": 1613375349436,
+        "content": "&lt;p&gt;shortcuts for content management&lt;/p&gt;"
+      },
+      "f378bb8a-6ac7-4c0a-886d-eed0ee2e3d7c": {
+        "id": "f378bb8a-6ac7-4c0a-886d-eed0ee2e3d7c",
+        "author": "anonymous",
+        "timestamp": 1613375398455,
+        "content": "&lt;p&gt;Representations&lt;/p&gt;"
+      },
+      "bc36fbc2-b926-46d0-9d05-e29cef67eb6f": {
+        "id": "bc36fbc2-b926-46d0-9d05-e29cef67eb6f",
+        "author": "anonymous",
+        "timestamp": 1613375446106,
+        "content": "&lt;p&gt;Table&lt;/p&gt;"
+      },
+      "db3dc82c-f06d-42c6-bdea-abdc518502a1": {
+        "id": "db3dc82c-f06d-42c6-bdea-abdc518502a1",
+        "author": "anonymous",
+        "timestamp": 1613375468233,
+        "content": "&lt;p&gt;Tree&lt;/p&gt;"
+      },
+      "68f2dc46-75d6-404a-b85b-52fb59662237": {
+        "id": "68f2dc46-75d6-404a-b85b-52fb59662237",
+        "author": "anonymous",
+        "timestamp": 1613375491388,
+        "content": "&lt;p&gt;List&lt;/p&gt;"
+      },
+      "604de30c-d3ce-4788-8394-029a3a689b7d": {
+        "id": "604de30c-d3ce-4788-8394-029a3a689b7d",
+        "author": "anonymous",
+        "timestamp": 1613375658660,
+        "content": "&lt;p&gt;Nodes&lt;/p&gt;"
+      },
+      "83692091-00a2-4a05-82f3-897df4fac3c7": {
+        "id": "83692091-00a2-4a05-82f3-897df4fac3c7",
+        "author": "anonymous",
+        "timestamp": 1613375953690,
+        "content": "&lt;p&gt;Arguably ”tree“ (4.2.2.2) is a subset of nodes&lt;/p&gt;"
+      },
+      "783d7bdf-10d7-4be5-89d6-efbd82e4fe98": {
+        "id": "783d7bdf-10d7-4be5-89d6-efbd82e4fe98",
+        "author": "anonymous",
+        "timestamp": 1613376145314,
+        "content": "&lt;p&gt;I would really like to create a custom link between metadata relations and their representations (children of 4.2.2)&lt;/p&gt;"
+      },
+      "a17282d3-77d2-4870-84ec-7a26b7627600": {
+        "id": "a17282d3-77d2-4870-84ec-7a26b7627600",
+        "author": "anonymous",
+        "timestamp": 1613376483172,
+        "content": "&lt;p&gt;Cross-section i.e slice i.e “level”&nbsp;&lt;/p&gt;"
+      },
+      "9a20df87-5b79-459c-b707-3b1c96985f0e": {
+        "id": "9a20df87-5b79-459c-b707-3b1c96985f0e",
+        "author": "anonymous",
+        "timestamp": 1613376567206,
+        "content": "&lt;p&gt;Nodes (network)&lt;/p&gt;",
+        "overwritten": ["604de30c-d3ce-4788-8394-029a3a689b7d"]
+      },
+      "d47fa07e-86b2-46ed-8912-bb95023286d8": {
+        "id": "d47fa07e-86b2-46ed-8912-bb95023286d8",
+        "author": "anonymous",
+        "timestamp": 1613376784709,
+        "content": "&lt;p&gt;.&lt;/p&gt;",
+        "overwritten": ["a17282d3-77d2-4870-84ec-7a26b7627600"]
+      },
+      "4de7bbd0-f205-4a49-8818-3b19c6ee7a21": {
+        "id": "4de7bbd0-f205-4a49-8818-3b19c6ee7a21",
+        "author": "anonymous",
+        "timestamp": 1613376882349,
+        "content": "&lt;p&gt;simple network (1 dimension; ex tag, level)&lt;/p&gt;",
+        "overwritten": [
+          "a17282d3-77d2-4870-84ec-7a26b7627600",
+          "d47fa07e-86b2-46ed-8912-bb95023286d8"
+        ]
+      },
+      "605ec2ab-924e-4fe2-8a55-6870f325d18c": {
+        "id": "605ec2ab-924e-4fe2-8a55-6870f325d18c",
+        "author": "anonymous",
+        "timestamp": 1613377143485,
+        "content": "&lt;p&gt;https://www.google.ca/search?q=node+representation&amp;tbm=isch&amp;ved=2ahUKEwiNq5mKuuvuAhVMDq0KHY5MA00Q2-cCegQIABAA&amp;oq=node+representation&amp;gs_lcp=CgNpbWcQDFAAWABgxCFoAHAAeACAAQCIAQCSAQCYAQCqAQtnd3Mtd2l6LWltZw&amp;sclient=img&amp;ei=US4qYM2-K8yctAWOmY3oBA&amp;bih=1526&amp;biw=1261&amp;client=safari&amp;hl=en-ca&lt;/p&gt;"
+      },
+      "5613d755-7942-49a7-bb49-c6795650ec3d": {
+        "id": "5613d755-7942-49a7-bb49-c6795650ec3d",
+        "author": "anonymous",
+        "timestamp": 1613377164625,
+        "content": "&lt;p&gt;&lt;a href=\"https://www.google.ca/search?q=node+representation&amp;tbm=isch&amp;ved=2ahUKEwiNq5mKuuvuAhVMDq0KHY5MA00Q2-cCegQIABAA&amp;oq=node+representation&amp;gs_lcp=CgNpbWcQDFAAWABgxCFoAHAAeACAAQCIAQCSAQCYAQCqAQtnd3Mtd2l6LWltZw&amp;sclient=img&amp;ei=US4qYM2-K8yctAWOmY3oBA&amp;bih=1526&amp;biw=1261&amp;client=safari&amp;hl=en-ca\"&gt;https://www.google.ca/search?q=node+representation&amp;tbm=isch&amp;ved=2ahUKEwiNq5mKuuvuAhVMDq0KHY5MA00Q2-cCegQIABAA&amp;oq=node+representation&amp;gs_lcp=CgNpbWcQDFAAWABgxCFoAHAAeACAAQCIAQCSAQCYAQCqAQtnd3Mtd2l6LWltZw&amp;sclient=img&amp;ei=US4qYM2-K8yctAWOmY3oBA&amp;bih=1526&amp;biw=1261&amp;client=safari&amp;hl=en-ca&lt;/a&gt;&lt;/p&gt;",
+        "overwritten": ["605ec2ab-924e-4fe2-8a55-6870f325d18c"]
+      },
+      "0b27814a-6a95-4722-8413-5022ab68a717": {
+        "id": "0b27814a-6a95-4722-8413-5022ab68a717",
+        "author": "anonymous",
+        "timestamp": 1613377183430,
+        "content": "&lt;p&gt;simple network (1 dimension; &nbsp;custom tag, level)&lt;/p&gt;",
+        "overwritten": [
+          "a17282d3-77d2-4870-84ec-7a26b7627600",
+          "d47fa07e-86b2-46ed-8912-bb95023286d8",
+          "4de7bbd0-f205-4a49-8818-3b19c6ee7a21"
+        ]
+      },
+      "f5a97010-a36c-44d5-9a3e-44d2b8f8e994": {
+        "id": "f5a97010-a36c-44d5-9a3e-44d2b8f8e994",
+        "author": "anonymous",
+        "timestamp": 1613377480801,
+        "content": "&lt;p&gt;simple network (1 dimension; ex &nbsp;custom tag, level)&lt;/p&gt;&lt;figure class=\"image\"&gt;&lt;img src=\"data:image/png;base64,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\"&gt;&lt;/figure&gt;",
+        "overwritten": [
+          "a17282d3-77d2-4870-84ec-7a26b7627600",
+          "d47fa07e-86b2-46ed-8912-bb95023286d8",
+          "4de7bbd0-f205-4a49-8818-3b19c6ee7a21",
+          "0b27814a-6a95-4722-8413-5022ab68a717"
+        ]
+      },
+      "88a8c545-db20-4e51-9649-63fd9f969447": {
+        "id": "88a8c545-db20-4e51-9649-63fd9f969447",
+        "author": "anonymous",
+        "timestamp": 1613377572852,
+        "content": "&lt;p&gt;simple network (n-nodes / 1 dimension → simple join; ex &nbsp;custom tags, level)&lt;/p&gt;&lt;figure class=\"image\"&gt;&lt;img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAESCAYAAABHDeioAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAABIKgAASCoBKlQbugAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACAASURBVHic7d15vF3T/f/x1zsx1UyIxNAgmipVM1VVWlVKK6ozFcW3P61WlaK0RUSpsQi+HX5Voq0WHRJaRQ3VkhprKiKRGpMIQRqEjJ/vH2snbm7uTe49a62zz97n83w8ziMh9372Jzf3fO7aa6/1WTIznOsNSe8FhgDrAQO7eK0FCHgVmFK8Jnf6/UTgATOb3+z8XXXJC5ZbGknLALsA+wFDgUGJQk8FrgXGALeY2VuJ4rqa8oLluiRpJWAvQoHaB1gz8yVfB24kFK8/mdmrma/nKsgLlluEpHcBpwP7AsuXlMY84Gbge2Z2f0k5uBbkBcsBIKk/cDJwOLBMyeksYMBvCYXrqbKTceXzgtXmJK0IHAMcD6xScjrdmQ1cAvzAzF4pOxlXHi9YbUpSX+BQ4FTCk70qmA78EBjpE/TtyQtWG5K0IfAHYOtyM2nYU8D+ZvZg2Ym45upTdgKuuSTtAtxDdYsVwEbAHZI+XXYirrm8YLURSYcBtwBrl51LAisB10g6uexEXPP4LWEbKOarzgOOKjuXTK4Gvmxmb5adiMvLC1bNSVoduAr4WNm5ZPYvYKiZPV92Ii4fL1g1Jmk14A7gvWXn0iSTgfeb2XNlJ+Ly8DmsmpLUh7Dosl2KFcC6wLXF2jJXQ16w6utswl7AdrMVMEqSyk7EpecFq4YkDQO+XXYeJfoMcFLZSbj0fA6rZiTtCNxOeRuXW4UBnzazP5adiEvHC1aNSFoPuJfqbLXJ7Q3gA2b2cNmJuDS8YNVEMcl+N7Bd2bm0mGeALczstbITcfF8Dqs+DsaLVVcGAceWnYRLw0dYNSBpBWACsH7ZuRSmE5rw9Ss7kcIbwGAzm1p2Ii5OqzRqc3G+STnFajZwK6Ev+zhgEjDJzN6AhYV03SK3wcDehKUWKzc5z5WAU4Ajmnxdl5iPsCpO0hqEE2jWaOJlbwd+AlxvZjN684mSlgc+AhwGNLPbwlxgMzOb0MRrusR8Dqv6TqR5xephYG8z283MftvbYgVgZrPM7C9m9hlgB+C25Fl2bRlCr3pXYT7CqjBJGwDjgRUyX+o14EjglznOEZS0F/BzwjmHue1oZvc04TouAx9hVdtw8herpwhrmUblOvTUzG4Atic0FsztzCZcw2XiI6yKkrQsMA1YNeNl/k5YLT4t4zUWKibpLwUOyHypQWb2bOZruAx8hFVdu5G3WI0F9mhWsQIws7fM7EDg15kvNTRzfJeJF6zq2i9j7OeAT5nZ7IzXWJL/Ae7LGD/n185l5LeEFSXpOfKsvZoJ7Fz2iTSS1icUrXUyhJ8L9DezVzPEdhn5CKuCJG1HvoWix5RdrACKVscHZwq/DLBPptguIy9Y1ZRrDuZxwvKClmBmNwI3ZQrv81gV5LeEFSTpYWCLDKGHmtm1GeI2TNJWhAMmUncQfR1Yy8xmJY7rMvIRVsUUi0VzFKs7W61YARS3p1dmCL0ysEuGuC4jL1jVMyRT3EszxU0hV24bZYrrMvGCVT3rZog5H/hThrip/API8UQvx9fSZeQFq3pyvMnGmtlLGeImYWZzgeszhPaCVTFesKonR7/2Vh5dLXBdhphesCrGC1b15ChY4zPETO2xDDGb0R3CJeQFq3pyFKznM8RMbXKGmD7CqhgvWNWTo2BNyhAzKTN7GUi9ZmptSd4mvEK8YFVP6tuYeUBVDmdIPcrqQ569ii4TL1gVIkmk/zebX7yqYF6GmP4eqBD/x6oQC/uoUt++LQv0Txwzl9RzTkZ1RpcOL1hVNCVDzJZ/WiZpdWDFxGGnldjzyzXAC1b15ChYrXIA65LkeKKX48mjy8gLVvXkKFiDM8RM7d0ZYnrBqhgvWNWTo2DtnSFmap/IELPll3O4RXnBqp4cBWvXYo6oJUnqQ56C5SOsivGCVT053mTLAh/PEDeV95PnSaYXrIrxglU9EzLFPSxT3BQOzRT3mUxxXSbeIrmCJI0jzyT0HmZ2c4a4DZO0GfAw0Ddx6DcJLZJnJo7rMvIRVjWNzhT3rGI1fSs5i/TFCuAmL1bV4wWrmsZkirsN8PlMsXtN0q7kmWyHfF9Dl5HfElZQMQqaDAzIEP5lYEczm5ghdo9JWgu4F9gwQ/h5wAAzm5YhtsvIR1gVVOwpzNGBE6AfcJ2k1TLFXypJywK/I0+xgtAS2otVBXnBqq5c81gA7wGukpRj7qgnRgK7Zoyf82vnMvJbwoqStDzh9m2ljJf5M/BFM3st4zUWKprpjQS+lvlSm5R9y+sa4yOsiipOLM59eMQ+wFhJ2c/vk9SPcCx97mJ1jxer6vIRVoVJGgI8CuRu8/sS8CUzuylHcEk7Ek533jhH/E52N7Nbm3Adl4GPsCrMzMYDP2/CpdYGbpT0F0lbpgoqaRNJVwN30ZxidYMXq2rzEVbFSRoAPEneuayO5gO/AS4Dbi8OOe2xYiPzTsAwwpabZh0CMR/YxsweatL1XAZesGpA0mnA90u49KuEifkxhO0zk83s9U65vYPQfG9TYCiwL+Uc/PArMzuohOu6hLxg1YCkVYCJhFu3ss0g9JmaR2i9vEa56QDheLB3m5lvdq44n8OqgWLZwQ/KzqOwKmEd13tpjWIF8L9erOrBR1g1IWk5wm1Zji4OVfYS8J7iIFZXcT7Cqoni9Jd9gell59JCZgP7e7GqDy9YNVIsc/gCeQ4craIjzOyOspNw6fgtYQ1JOhr4Udl5lOx5M9ug7CRcWj7CqiEzOx+4vOw8SrZ+0U/L1YiPsGqq2Bz9MDCk7FxK9Hcz86JVIz7Cqq++wMplJ1GyD0navewkXDpesOrru+Q53r1qRpSdgEvHbwlrSNLGwGPA8mXn0iL2MrMby07CxfMRVj2djxerjnyUVRNesGpG0l6EBaTubTtI2qfsJFw8vyWskWJ7ziO095PB7txvZtuVnYSL4yOsevkWXqy6s62koWUn4eL4CKsmJA0ExlPPpQwGTCX+HMaHgK3Nv+kry0dY9XE29SxWtwHbA/sliLUlsH+COK4kXrBqQNLOwJcShJoM7A7cQhjVlOleYG8z+4iZ3W9mdwPXJ4g7vDg521WQ3xJWXNEj/T5g6wThvmRmvy7irk9oaTwU2A1YNkH8JZkP/JPQbnm0mU3o/AGStiMUslhfMLOrEsRxTeYFq+IkHQ78JEGoO83sg91cYzVgb8Jt2V6ErqIpvAX8lVCkrjOzF5f2CZLGEL9sYxywuZnNj4zjmswLVoVJWpMw0d4vMtR8YDsze6AH11wO2AXYiLD1Z8FrveLX/iw61TCNcKs5qdOvzxFO3XmjN4lK2gr4FxB7W7dwNOmqwwtWhUm6BDgiQaifmFmSE5eL4+b7E47vmlqcUJ2UpN8TP3k+gdA62ZsdVogXrIoqDjS9n9CVIcYrwJAqtRGWtAVhiULsKOvLZjYqQUquSfwpYXVdRHyxAjipSsUKwMweAa5JEOrkYkToKsILVgVJ+iJhHinWQ8BPE8Qpw6mEubcYGwMHJ8jFNYnfElaMpJWAJwiT3LE+ZGb/SBCnFJJ+DRwQGeYZ4F1mNidBSi4zH2FVz/dJU6x+U+ViVRhB/AlBg4DDEuTimsBHWBUiaRPgUWC5yFBvEI5unxSfVbkkjQKGRYZ5jjDKSv5E06XlI6xquYD4YgXwgzoUq8JpwNzIGBsAX0mQi8vMR1gVUTSg+1OCUE8SVnnPThCrJUi6FDg0MsxkYLCZvZUgJZeJj7AqoFhdfkGicN+qU7Eq/ACInTRfF/hqglxcRl6wquEYYJMEcf5sZn9OEKelmNlTwGUJQp0gacUEcVwmfkvY4iStR1jGsFJkqNmEW8En47NqPZLeSdhuEzvHd5yZnZsgJZeBj7Ba3znEFyuAH9W1WAGY2bPAzxOEOr5Y6+ZakI+wWpikXYC/Jwg1ibCMoVedEaqmGI1OJP6IsxPN7MwEKbnEfITVoiT1JewXTOG4uhcrgGKpRoqtRsdKWiVBHJeYF6zWdTihB3msf5jZbxLEqYozgTcjY/QDjkqQi0vMbwlbkKR+hMZ8a0aGmgdsa2YPxWdVHZLOIzxZjTEd2NDM/psgJZeIj7Ba0+nEFyuAn7ZbsSqcBcyMjLE6cHSCXFxCPsJqMZK2JhwqEfvD5GVCY75X4rOqHklnAcdHhplBGGW9miAll4CPsFrPRaT5d/leuxarwjnA65ExVgW+nSAXl4gXrBYi6UvAzglCPQD8/wRxKsvMpgEjE4T6ZjGn6FqAF6wWUTxGPztRuCP9CCsAziPc1sVYBTguQS4uAS9YreMkYGCCOL8yszsTxKm84pY4xabxb0jqnyCOi+ST7i1A0hDgEeL3wb1OmGifEp9VPUhaHXiK8NQvxnlmdmyClFwEH2G1hgtJ05jvNC9WizKz6cD5CUIdIWlAgjgugo+wSiZpX8JR7bHGA1vUsNdVNEmrEkZZsWvbLjSzbyVIyTXIR1glkrQ8aX76AxzlxaprZjaDMAEf6/Big7UriResch1LOBsv1nVmdkOCOHU2EpgWGWMF4LsJcnEN8lvCkkjaABgHxHa4nEVozDcxPqt6k3Q8YdtOjNnAJmb2XIKUXC/5CKs85xJfrADO9WLVYxcDL0bGWI5wNqQrgY+wSiBpN+C2BKGeJzTmi93o2zYkHUP8fNYcwvKRp+Mzcr3hI6wmKxrzpdgyAnCsF6te+zEQu/RjWcJCX9dkXrCa7whgiwRxbjezqxLEaStm9iahyV+sYZIGJ4jjesFvCZtI0tqE9VKxq67nAVub2SPxWbWfYjnJRCB2icIVZnZwgpRcD/kIq7nOIL5YAfzYi1XjzGwW4d8i1oHFtirXJD7CahJJ2wF3E/9DYhphwtebykUoTtOeALwzMtSVZnZggpRcD/gIqwkkiXSN+b7rxSpesSvg9AShviDpPQniuB7wgtUcw4D3J4hzP3BpgjguuIywxzBGH2B4fCquJ/yWMLNi4+0TQOxOfwN2NrN/xmflFpB0KPE/BAzY0ucV8/MRVn4nE1+sAH7pxSqLK4AnI2MIH2U1hY+wMpK0KfAwYaFhjNcIE+0vxGflOpM0DBgVGcaAbczswQQpuW74CCuvkcQXK4ARXqyy+jXhtj2GgFMT5OKWwEdYmUj6FPCHBKHGAe8zszkJYrluSDqAULhibW9m9yWI47rgBSsDSSsAjwMbJgi3p5ndlCCOWwJJfQh99TeLDHW9me2TICXXBb8lzON40hSr0V6smqM4Fi3FLd3eklIsYXFd8BFWYpIGEUZX74gM9RawmZnFrhNyPVQs8H2I+M3pN5nZnglScp34CCu984gvVgDneLFqLgs/vYcnCPUxSSlO8Had+AgrIUm7AzcnCPUs8B7vddV8xSjrX8BWkaFuNbPdE6TkOvARViKSlsEb81VeMco6JUGoj0jaNUEc14EXrHS+QfwTJoDbzOyaBHFcg8zsWiDF0oQRCWK4DvyWMAFJ/QmN+VaLDDUX2MrMHo3PysWQtDfw5wSh9jCzFNMEDh9hpfJD4osVwCVerFqDmV1P6F8Wy1e/J+QjrEiSdgDuImzNiPESYb/g9PisXAqSPgbcmCDUx/2g2zR8hBWhQ2O+2GIFcKIXq9ZSLNq9M0EoH2Ul4gUrziHADgni3Av8IkEcl97JCWLsIOkTCeK0Pb8lbJCk1QgT7f0jQxmwk5mlmC9xGUj6GxC7ROFfZrZtgnTamo+wGjec+GIFMMqLVctLMcraRtJ+CeK0NR9hNUDS5sCDwDKRoWYQJtqnxmflcpJ0MxC7cv0hwnmS/qZrkI+wGjOS+GIFMNyLVWWkGGVtCXw6QZy25SOsXpL0GSDFSvTHCY355iaI5ZpA0g1AbBeGRwn/7vMTpNR2fITVC5LeQejGkMI3vVhVTopR1ubA5xLEaUtesHrnBOJPCgb4g2/XqB4zu4c023VOKTqcul7yW8IekrQh4TZuhchQbxIa8z0dGceVQNK2pNkYfZCZ/SpBnLbiVb7nzie+WAGc7cWquszsfmBMglAnS+qbIE5b8RFWD0jaA0jRW/0ZQmO+NxPEciWRtCXwAPFbsg4xs8vjM2ofPsJaCknLkq4x3zFerKrPzB4izRFuJxWNH10PecFaum8CmyaIc7OZpfgmd61hOGFbVYyNgS9HZ9JG/JZwCSQNIJwIvGpkqLnAlmb2WHxWrlVI+i3w+cgwzxB2O8xOkFLt+Qhryc4kvlgBXOTFqpZOBWIXgA4CDk2QS1vwEVY3isMwxxI/sToVeLeZ/Tc+K9dqJP0KODAyzPPAJmY2K0FKteYjrC4Ui/ouJl1jPi9W9TUCmBcZY33gKwlyqT0vWF07DEjRu+hu4PIEcVyLMrPxQIoFoN+VlGKdX635LWEnklYHJgBrRYYyYEczuzc+K9fKJA0GxhHfweNoM7sgQUq15SOsxY0gvlgBXObFqj2Y2URgVIJQJ0haMUGc2vIRVgeStiCsYI7dMvFfwqPqF+OzclVQ7DUdDywbGep4MzsnOqGa8hHWokYSX6wATvFi1V6K/aEpDhI5TtLKCeLUkhesgqTPAbslCPUocEmCOK56TgdiF4CuDRyZIJda8ltCoJg3GAdskCDc7mZ2a4I4roIkXQx8PTLMK8CGZvZagpRqxUdYwXdJU6x+58Wq7f0QeCsyxprAtxLkUjttP8KStDHwGLB8ZKg3gU3N7Nn4rFyVSboAOCoyzHTCKMsXHXfgI6zQmC+2WAGc6cXKFc4k/ACLsTpwTIJcaqWtR1iS9gL+kiDUU4S2x7G3Aq4mJJ0LfDsyzAzCKOvVBCnVQtuOsCQtB1yYKNwxXqxcJ2cDb0TGWBU4NkEutdG2BYswqTkkQZybzGx0gjiuRop1eBcnCPVNSSl2XtRCW94SShpIWJUcu0BvDuFQzHHxWbm6kdQPeJr477Ozzew78RlVX7uOsM4m/psIYKQXK9cdM3uZNNMOX5fUP0Gcymu7EZaknYE7EoR6gdCYb0aCWK6mJK1BGGXFdq79kZnFTuJXXluNsIrGfBclCneCFyu3NMUTvvMThPpaccZAW2urgkXo6rh1gjh3AVckiOPaw/mEhaAx3gGcmCCXSmubW0JJaxIm2vtFhpoP7FCcAOxcj0g6idBrLcYsYLCZTUqQUiW10wjrNOKLFcClXqxcAy4gbGqOsTxh32vbaosRVnG0+P3E97qaDrzLzKbFZ+XajaQTgTMiw8wmfA+25TawdhlhXUSaxnwne7FyES4CXoqMsRzwvQS5VFLtC5akLwK7JAj1CPC/CeK4NmVmrwMp2h8fImmjBHEqp9a3hJJWIhw1v16CcB82s78liOPaWNEs8j/AOpGhfmFmhyVIqVLqPsL6PmmK1dVerFwKZjYTOCtBqGGSNkkQp1JqO8Iq/jEfJdzzx5hJaMz3XHxWzkFxYOp/gIGRoa4ws4MTpFQZdR5hXUB8sQI4w4uVS6loRfTDBKEOlPTuBHEqo5YjLEn7AH9KEOo/hMZ8sxLEcm4hScsDTwLrR4b6jZkdkCClSqjdCKtozJfquO+jvVi5HIrvq9g1WQCfl7RZgjiVULuCRWhLm2Iy8gYzuzZBHOe6cynwTGSMPsDw+FSqoVa3hJLWIyxjWCky1BzgvWY2Pj4r57on6SvAzyLDGLClmT2SIKWWVrcR1jnEFyuAC7xYuSa5nHCISQwBp8an0vpqM8KStAvw9wShphAa8/mpu64pJB0C/CIyjAHbmtkDCVJqWbUYYUnqS7rGfMd7sXJN9kvCE8MYbTHKaukRVtEhdB3CArtlCG2Jp5jZnE4fdwRwSYJLjgU+aK38RXG1JOkg0jSF3N7M7uvhNfsCAwjvL/H2+2tugjyyKL1gFY319gQ2BtYtXusVvw5g8S4LBkwDJgGTgZeBzxA6MsaYD2xX9yG1a01F8XgUiF0I+hcz27tD3LWBvYANWfz9tQ6L32XNJ3SUWPD+WvDrs8CNZjYlMr8opRQsSe8E9iteuxBGT2X7qZl9tewkXPsqOotcmSDUZwkFaijwAdJN/RhwDzAGGG1mjyeK22NNK1iS3sfbRSpFX/WUXiU0RXu57ERc+yqmQB4BqrIQdAIwunj9sxlTKdkLlqSPEs4BbLUi1dE3zCzFHJhzUSR9Fri67DwaMJHQvvmanIUrW8GStDWhjcYeWS6QzsPANmY2r+xEnJMk4EHgfWXn0qB7ge+Y2W05gidf1iBpI0m/JvRQb/ViBXCkFyvXKorRyfCy84iwPXCrpOuLaaCkkhUsSWtJugAYBxxAeExaBd+Q9K6yk3Cug9FA1Z9Wfxx4QNIVkgalCprkllDS9oQnB7ENycryJnCwmV1TdiLOAUj6JFCXzfczgC+a2fWxgaJHWJI+D9xOdYsVhDVcV0kaXswhOFcqM7uOMB9UB6sC10n6dmyghguWglOB3xK/aLMVCDgFuLo4KMC50hQLSUtdpJlYH+BcSZcVPesa0tAtYfGGHkVYYV5HDwBDvTWyK4OkNYCrqMZDq0aMBT5lZi/29hN7XbAkbUCYFNymtxermKnA/mY2tuxEXPsoerRfB9T9QdCzwL5m9lBvPqlXBUvSOsB9xPehrorZwG5m9s+yE3H1J2kwcBewVtm5NMlrwAfM7N89/YQez2EVTfP/QPsUKwin7vxBUjv9nV0JJK1KeCrYLsUKYBXCZHyP/869mXT/GWEjZbsZAIzxiXiXS7GH8Eqqs4cwpQ2B30taticf3KOCJek7wLCIpKpuG+CyspNwtXUmsE/ZSZToQ/Swn91S57Ak7Qv8kZp0J410ipmNKDsJVx+ShhGeuDs4ysxGLukDlliwJG1BeAS5cuLEqsqAz5rZ78tOxFWfpJ2A24Dly86lRcwDPm5mf+3uA7otWMU95b+BIXlyq6yZhNOgY8+Tc21M0irAeMIcqXvbdGCImb3U1R8u6Tbva3ix6sqKVHs3vWsNx+DFqiurE/pqdanLEVbxiHUi5T9inUvYnjCZsCZqQU/qsrcCzQe2aoeDK116kvoT3l9lT7XMJry/JhGmOxa8v8q+RZ1NOGrv6c5/0F0v9eMop1g9R1iLMobQWO8lM5vf+YOKrQtDCE9W9gW2bGaShJHp2YQWGs711kmUU6wmEt5b1wKPAdO66g4qqR+wKfAJwvur2cstlgNOAw7q/AeLjbAkDSSckdasdUdzCGu8Lm30xJriUIsDgeMJQ8pm+aiZ3dLE67mKK1azPw70aN1RArMISwYu682K8o6KnIcRbmObVWiN0An4wUX/r9kiL+AnxQfnfs0ndHoY3DmHRl/AmsCPCP9Izfg73E9R9P3lr568iu/5Zr2/fgUMSpj7AOCnhKmaZvwdbuicwyIjrGLj5b/Jf+zWc4TlAXfnCC5pI8LK4ffniN/JgWaW4mgmV3OStiMck5W759p/gM+Z2f05gkvanHBQRjNuFRe5i+n8lHA4+YvVWMLptFmKFYCZPQXsRjgCPLdTmnANVw8/IH+x+huwQ65iBWBmjwI7AX/OdY0OTu/4HwsLVrG5+ROZL3458GEzm5r5OpjZLDMbBpxAGF7mMkRS3VvtuEjFCcwfzXyZnwIfsyacr2lmMwgT8udmvtSOkjZe8B8dR1gfIe+E2tVmdoiZzc54jcWY2VmEpzI5Dc0c31XfJ4C+GeOPMrOvmtmcjNdYhJnNN7PjgAszX2rh+6tjwdov4wXvB76cMf4Smdnp5D2cMufXztVDzu+RO4D/lzH+0nwb+EvG+Au/djKzBYc3TibPytsphDmrSRli91jRHuYO8p1AvXExd+bcIorvvWnkWfD8FGHOalqG2D1WLDYfC2yeIfw8YICZTVswwtqRfNsEjiy7WAGY2UzCWpLFFqIm4reFrjsfI9/ujK+UXaxg4ZzWl8kzX9yXYn59QcHK9Wa721qos4GFhXOXZwrvBct1J9f3xk3WQguXzew+INfZnkPh7VvCxwlL8VPbzcxuzxC3YZLWAyaQ/ifePGCdZjyhcdVRdBOdSvqtbgZsaw3uDslF0iaEbT+pV/LPBNbqU2xryVGsbmq1YgVQ3J5elCF0X8KTVuc62oI8+3KvabViBWBmT5KnO++KwAf7AIMzBIewLaBV5crND6twnW289A9pSFu+v5YhzxHz82jOKtiGmNkjkp4CNkoceoOi8WHH1cwxvy/78z1W/OdvR3ozgW67craAOwlPRVOPLAfmKlh3mNkrGeKmdC1wVOKYRxcv53K6yczeKjuJ7pjZfEl/Iv3ay4F9yFOwWnZ01UEVcnSuKzkXaaaSI8dsBWtChpipVSFH57ryn7IT6IEcOQ7sQ2iJmtrkDDFTm1J2As41qPSF2D2QI8d1c42wWr5gmdkswNdMuSp6vuwEemAqodFfSgP6AOskDmrAC4lj5tLyhdW5Tl4zs9fKTmJpLJzFkPouZoU+hBMqUhKhiXwVVCVP5xao0vds8tN3+pBnNLRehpg55Ji/cy6n5SWVffzeUklaDlg7cdgZfcgz+bxBhphJFSfvrlJ2Hs41oAoDgoGkbwc9pQ955nGqsEXFR1euqqrw/sqR4+RcI6xmH2zaiPeVnYBzDWr2waaNyJHjlFwFK/dhFil4/ypXVZ8sO4EeyJFjtoI1RNK7MsRNQtIywN5l5+Fcg3Zu5Yn3oiX0HhlCZ5vDgtb+KbALsEbZSTjXoD609vtrT2CFDHFf6AOMJ0+f88Mk5TzWKMbhZSfgXKRW/h7OldvEBS2S/wF8MMMF/sfMLs0Qt2GStgXuJf0j17nAVYReYAsa8XdsyL+038f+ea6PbdVYZV23kVgnAv1J7zOtdGYCgKTdgZszhH6Roh8WwBjyFKxTJV1pZm9miN2oM8lzXPgYM/tShriu4iStTzi7L7UzJI0xs9R79hpSHBd4dqbw15nZ/AWn5ozOdJH1yPMP1RBJe5LvuPBcX0NXfbm+N4YAX80UuxEHAttkij0ailNzACQ9Sp61E3OBPc3s1gyxe0zSIOAe8gzN5wL9zezVDLFdxRUn57xA+q0qAG8RYE2QJQAABeFJREFUTqe6O0PsHpO0BaE1co7dI28Aa5nZWx2Pqs/1U2AZ4Jri+J9SSFoZuI48xQrg716sXHeKzgXXZQq/AjCmOP2qFJL6E/5+uba63bigJXTHgjUm08UA1gSulbR6xmt0qXhSeSXhuKVccn7tXD3k/B5Zh/D+avreWEkrAH8EBmW8zMKvXcdbQhG6BOZo6LfAOGBfM2tKe2JJqxFOos2xiK2jQWb2bOZruAqT9A7gJWCljJd5BPikmT2T8RoLSRpAKCY7ZLzMXMIBxa9AhxGWhcqV+6yzTYG7JeUuIEgaDNxF/mJ1qxcrtzTFk/IrM19mC+AeSTtlvg6StiLMCecsVgB/7HgC18IRVpHEGsBE8q8CnweMAM5JveShGCkeAFwI9EsZuxs7mdldTbiOqzhJ6xIOP1kx86VmAd8DLi5agSdTbGv7CnAOeUeLEEZXmy1yR2Zmi7yA4wkL3prxmgQcBvTtnEcjL2Av4MEm5v+7FHn7q31ewBlN/P58GjgI6JMo9/2BJ5qY/yWdc1hkhAULJ9HG09wmfI8BPycsvuzV8UDFJtB9gEOAXTPk1p05wObWpPk4Vw/FvOpEmjP6X+Bh4FJgtPVy+kLSOoR9i4cB78+QW3feAAab2dRF8ulcsAAkHQL8okmJdfYoYSLvYcLG7EnFr3OBAYTFqOsSFs3tA3wAKGPP4iVm9o0SrusqTtLRwI9KuvwDhPfXY7z93ppMGNEM5O3316aENlE7kmdnyNKMMLNTOv/P7gpWH+Ah4L1NSKynjHK+cF15jVD9Xyo7EVc9Rb/zJ4ANS06lo1Z6f71IeH+93vkP+nTxwVhY6HZC7qx6qVW+mABne7FyjTKz2cBJZefRSSu9v07rqlhBNyOshX8o/RHYL1dWFTUB2NrM3ig7EVddxV3M7eRpOlBlDwI7mNmcrv5waQVrVcJapvfkya1ypgM7mtn4shNx1SdpbUKro5yrxKtkKrC9mT3X3Qd0eUu4gJnNAPYFXlnSx7WJecAXvFi5VIpphaGEJ2Ltbjbw6SUVK1hKwQIwsyeBzxGe0rWz483sxrKTcPViZg8BB7NoA8B29DUzu3NpH7TUggVgZrcAR0WnVF2jzKysx9Cu5ix0DR1Rdh4lutDMerSMaolzWIt9sPRjWqthWDPcReg3lHSLg3MdFVvKfkdYTd5O/gp83Mzm9eSDe1uwlgWuJ1/XzlbzNPABM8txFJpzi5C0EnAr+TcUt4p/A7uY2fSefkKPbgkXKB417g38pJeJVdHthCcWXqxcUxRLZT5MaIlUd9cDO/emWEEvCxaEomVmXwOOJDw5q6OfAXuY2bSyE3HtxcxmAp8HTqG+E/HnEfp2zejtJ/bqlnCxTw59ra4Gmt5JNJO5wNFmdnHZiTgn6dPAFeRvR9Mss4DDzWxUowGiChaApHcT+jm37NH0PfQq8Dkzy3GmmnMNKRrlXUtzu6fkMBXY38zGxgTp9S1hZ2b2BGFH9/WxsUr0MGE7gBcr11LM7EFge+BvJacS4x7CfHBUsYIEBQvAzF41s30I+w7HpYjZJFOBrwPbFgtknWs5RU+ojwBfBHrVL65kzwOHErryLnEFe09F3xIuFjCcUnMoMJzQV6cVvQ6cC5zX3a5w51pR0Zrmq8D3yXPOYQrTgR8CI604niuV5AVrYWBpReBbhJbLq2W5SO/NITwBHGFmL5adjHONKo70Og44hvy91XvqLeBi4AzLdE5ntoK18AJSP0JD/IOAtbJerHszCQfFnuK3fq5OiqO2TibcLpb1tP41wtqxU3vbgrm3sheshRcKt4o7E+a59gM2ynzJaYSnl2OAmyzx6TzOtZJiF8puhPfWvsD6mS/5AuH9NRq4pVlb15pWsBa7sPQ+3i5eWycKO5FQoEYDY3u6P8m5upG0HaF1zX6ka3X+BOG9NQa4y0ooHqUVrEWSCOe1bURogt/Va31gOcJThykdXpM7/P55v91zbnGSNiD0j+/qvbUu4f0llvz+etbMnm5y6ov5P3ODbR6Rwq8tAAAAAElFTkSuQmCC\"&gt;&lt;/figure&gt;",
+        "overwritten": [
+          "a17282d3-77d2-4870-84ec-7a26b7627600",
+          "d47fa07e-86b2-46ed-8912-bb95023286d8",
+          "4de7bbd0-f205-4a49-8818-3b19c6ee7a21",
+          "0b27814a-6a95-4722-8413-5022ab68a717",
+          "f5a97010-a36c-44d5-9a3e-44d2b8f8e994"
+        ]
+      },
+      "c1520fee-5837-4104-aebd-547668dd146b": {
+        "id": "c1520fee-5837-4104-aebd-547668dd146b",
+        "author": "anonymous",
+        "timestamp": 1613377826779,
+        "content": "&lt;p&gt;custom tags can technically be thought of as 2 dimensional&lt;/p&gt;&lt;ul&gt;&lt;li&gt;node group&lt;/li&gt;&lt;li&gt;&nbsp;node (tag) relation&lt;br&gt;&nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;where the image has grup of 3 nodes joined by 1 common tag&lt;/p&gt;"
+      },
+      "d33b0112-67c9-4a77-90ea-5800099b8b93": {
+        "id": "d33b0112-67c9-4a77-90ea-5800099b8b93",
+        "author": "anonymous",
+        "timestamp": 1613378405583,
+        "content": "&lt;p&gt;n-nodes / 2 dimension&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;"
+      },
+      "ef8721be-82f2-4958-9fbf-778daa74ca43": {
+        "id": "ef8721be-82f2-4958-9fbf-778daa74ca43",
+        "author": "anonymous",
+        "timestamp": 1613378610262,
+        "content": "&lt;p&gt;n-nodes / 2 dimension&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;figure class=\"image\"&gt;&lt;img src=\"data:image/webp;base64,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\"&gt;&lt;/figure&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": ["d33b0112-67c9-4a77-90ea-5800099b8b93"]
+      },
+      "0f5a497e-e606-4e7a-b492-e4e39499cc4c": {
+        "id": "0f5a497e-e606-4e7a-b492-e4e39499cc4c",
+        "author": "anonymous",
+        "timestamp": 1613378748614,
+        "content": "&lt;p&gt;complex networks&lt;/p&gt;"
+      },
+      "c7e68e24-44d6-4e90-b6fc-3b7b8cdd958b": {
+        "id": "c7e68e24-44d6-4e90-b6fc-3b7b8cdd958b",
+        "author": "anonymous",
+        "timestamp": 1613378799947,
+        "content": "&lt;p&gt;Ordered list&lt;/p&gt;"
+      },
+      "788ac2f4-e3b4-455f-ab69-def6eece451f": {
+        "id": "788ac2f4-e3b4-455f-ab69-def6eece451f",
+        "author": "anonymous",
+        "timestamp": 1613378814250,
+        "content": "&lt;p&gt;unordered list&lt;/p&gt;"
+      },
+      "aa88610b-b16d-478e-84ce-684166ba740f": {
+        "id": "aa88610b-b16d-478e-84ce-684166ba740f",
+        "author": "anonymous",
+        "timestamp": 1613378957697,
+        "content": "&lt;p&gt;”zoom out”&lt;/p&gt;"
+      },
+      "ad44dacc-d7ef-411f-8cf3-d7025a29619f": {
+        "id": "ad44dacc-d7ef-411f-8cf3-d7025a29619f",
+        "author": "anonymous",
+        "timestamp": 1613379117610,
+        "content": "&lt;p&gt;Tree network → n-nodes / 2 dimension; Ex. tree (4.2.2.2), simple network (4.2.2.4.1) + direction&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;figure class=\"image\"&gt;&lt;img src=\"data:image/webp;base64,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\"&gt;&lt;/figure&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "d33b0112-67c9-4a77-90ea-5800099b8b93",
+          "ef8721be-82f2-4958-9fbf-778daa74ca43"
+        ]
+      },
+      "0ce015c9-da1e-4578-9eb8-92ef017d092d": {
+        "id": "0ce015c9-da1e-4578-9eb8-92ef017d092d",
+        "author": "anonymous",
+        "timestamp": 1613379209819,
+        "content": "&lt;p&gt;References&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\"https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf\"&gt;https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf&lt;/a&gt;&nbsp;&lt;/li&gt;&lt;/ul&gt;"
+      },
+      "6dc79591-1231-4e19-a2b0-10e689dc48c1": {
+        "id": "6dc79591-1231-4e19-a2b0-10e689dc48c1",
+        "author": "anonymous",
+        "timestamp": 1613379444678,
+        "content": "&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Clusters&lt;br&gt;https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf&lt;/p&gt;"
+      },
+      "96b295fc-5afa-4ce0-aaf8-52401e3f0bef": {
+        "id": "96b295fc-5afa-4ce0-aaf8-52401e3f0bef",
+        "author": "anonymous",
+        "timestamp": 1613379503753,
+        "content": "&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Clusters (concept of distance)&lt;br&gt;https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf&lt;/p&gt;",
+        "overwritten": ["6dc79591-1231-4e19-a2b0-10e689dc48c1"]
+      },
+      "d9d92b4e-739b-45c9-9602-2fb05bc51d53": {
+        "id": "d9d92b4e-739b-45c9-9602-2fb05bc51d53",
+        "author": "anonymous",
+        "timestamp": 1613379536882,
+        "content": "&lt;p&gt;nearest neighbour classification? KNN&lt;/p&gt;"
+      },
+      "8d46e08b-1540-4600-947e-cc5929b4f22a": {
+        "id": "8d46e08b-1540-4600-947e-cc5929b4f22a",
+        "author": "anonymous",
+        "timestamp": 1613379563284,
+        "content": "&lt;p&gt;&nbsp;neighbour classification? KNN&lt;/p&gt;",
+        "overwritten": ["d9d92b4e-739b-45c9-9602-2fb05bc51d53"]
+      },
+      "af7f58ee-ab6a-4dd7-83b0-45773f4ee213": {
+        "id": "af7f58ee-ab6a-4dd7-83b0-45773f4ee213",
+        "author": "anonymous",
+        "timestamp": 1613379852528,
+        "content": "&lt;p&gt;Citation dump&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\"https://arxiv.org/pdf/1704.03165.pdf\"&gt;https://arxiv.org/pdf/1704.03165.pdf&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\"https://www.oclc.org/content/dam/research/publications/2019/oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf\"&gt;https://www.oclc.org/content/dam/research/publications/2019/oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf&lt;/a&gt;&lt;br&gt;&nbsp;&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": ["0ce015c9-da1e-4578-9eb8-92ef017d092d"]
+      },
+      "0c40676c-d170-4b0d-8ced-839445ee8de8": {
+        "id": "0c40676c-d170-4b0d-8ced-839445ee8de8",
+        "author": "anonymous",
+        "timestamp": 1613379860747,
+        "content": "&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Clusters (concept of distance)&lt;br&gt;&lt;a href=\"https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf\"&gt;https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "6dc79591-1231-4e19-a2b0-10e689dc48c1",
+          "96b295fc-5afa-4ce0-aaf8-52401e3f0bef"
+        ]
+      },
+      "acac6b6c-31c9-4e1b-971b-2c6a70aa982f": {
+        "id": "acac6b6c-31c9-4e1b-971b-2c6a70aa982f",
+        "author": "anonymous",
+        "timestamp": 1613379896379,
+        "content": "&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Clusters (concept of distance)&lt;br&gt;&lt;a href=\"https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf\"&gt;https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf&lt;/a&gt; (fig 1.)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "6dc79591-1231-4e19-a2b0-10e689dc48c1",
+          "96b295fc-5afa-4ce0-aaf8-52401e3f0bef",
+          "0c40676c-d170-4b0d-8ced-839445ee8de8"
+        ]
+      },
+      "5ec8eeff-dce3-4b4e-ae19-251566b50763": {
+        "id": "5ec8eeff-dce3-4b4e-ae19-251566b50763",
+        "author": "anonymous",
+        "timestamp": 1613380099398,
+        "content": "&lt;p&gt;Citation dump&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\"https://linkurio.us/blog/graph-viz-101-visual-representation-graphs/\"&gt;https://linkurio.us/blog/graph-viz-101-visual-representation-graphs/&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0167865520303135?via%3Dihub\"&gt;https://www.sciencedirect.com/science/article/abs/pii/S0167865520303135?via%3Dihub&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\"https://arxiv.org/pdf/1704.03165.pdf\"&gt;https://arxiv.org/pdf/1704.03165.pdf&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\"https://www.oclc.org/content/dam/research/publications/2019/oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf\"&gt;https://www.oclc.org/content/dam/research/publications/2019/oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf&lt;/a&gt;&lt;br&gt;&nbsp;&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "0ce015c9-da1e-4578-9eb8-92ef017d092d",
+          "af7f58ee-ab6a-4dd7-83b0-45773f4ee213"
+        ]
+      },
+      "4f3fa1c5-96c0-4cca-8ea2-ba15a3252ca2": {
+        "id": "4f3fa1c5-96c0-4cca-8ea2-ba15a3252ca2",
+        "author": "anonymous",
+        "timestamp": 1613380199971,
+        "content": "&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Clusters ( distance/similarity , forces of attraction/repulsion )&lt;br&gt;&lt;a href=\"https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf\"&gt;https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf&lt;/a&gt; (fig 1.)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "6dc79591-1231-4e19-a2b0-10e689dc48c1",
+          "96b295fc-5afa-4ce0-aaf8-52401e3f0bef",
+          "0c40676c-d170-4b0d-8ced-839445ee8de8",
+          "acac6b6c-31c9-4e1b-971b-2c6a70aa982f"
+        ]
+      },
+      "b6e2e687-0a93-452c-9e88-28f88a7fb75b": {
+        "id": "b6e2e687-0a93-452c-9e88-28f88a7fb75b",
+        "author": "anonymous",
+        "timestamp": 1613380474107,
+        "content": "&lt;p&gt;“the abstractation”&lt;/p&gt;&lt;p&gt;(dependency inversion principle)&lt;/p&gt;&lt;p&gt;See architecture for ”standard Streams”&lt;/p&gt;"
+      },
+      "33249ee8-84e0-41c7-8d04-2c9c7ec7b13d": {
+        "id": "33249ee8-84e0-41c7-8d04-2c9c7ec7b13d",
+        "author": "anonymous",
+        "timestamp": 1613380532087,
+        "content": "&lt;p&gt;“the abstractation”&lt;/p&gt;&lt;p&gt;(dependency inversion principle)&lt;/p&gt;&lt;p&gt;See architecture for ”standard Streams”&lt;/p&gt;&lt;p&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Standard_streams\"&gt;https://en.wikipedia.org/wiki/Standard_streams&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": ["b6e2e687-0a93-452c-9e88-28f88a7fb75b"]
+      },
+      "2e9b78f1-f4e6-4018-870c-20b291cfa96e": {
+        "id": "2e9b78f1-f4e6-4018-870c-20b291cfa96e",
+        "author": "anonymous",
+        "timestamp": 1613380575954,
+        "content": "&lt;p&gt;Keybindings&lt;/p&gt;"
+      },
+      "7c9e8b3e-3550-4b8b-bb5a-4f293eaeab08": {
+        "id": "7c9e8b3e-3550-4b8b-bb5a-4f293eaeab08",
+        "author": "anonymous",
+        "timestamp": 1613380747681,
+        "content": "&lt;p&gt;Does this not also introduce “degrees” of similarity by inference&lt;/p&gt;"
+      },
+      "2f3aadad-ca0a-4f81-8657-7411b0d16c65": {
+        "id": "2f3aadad-ca0a-4f81-8657-7411b0d16c65",
+        "author": "anonymous",
+        "timestamp": 1613380799150,
+        "content": "&lt;p&gt;Does this not also introduce “degrees” of similarity by inference&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;”6 degrees of kevin bacon”&lt;/p&gt;",
+        "overwritten": ["7c9e8b3e-3550-4b8b-bb5a-4f293eaeab08"]
+      },
+      "8f4c4f91-ba59-41b0-ae55-abd24e3c71b9": {
+        "id": "8f4c4f91-ba59-41b0-ae55-abd24e3c71b9",
+        "author": "anonymous",
+        "timestamp": 1613381005097,
+        "content": "&lt;p&gt;Clusters ( distance/similarity , forces of attraction/repulsion )&lt;br&gt;&lt;a href=\"https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf\"&gt;https://datasociety.net/wp-content/uploads/2018/09/DS_Alternative_Influence.pdf&lt;/a&gt; (fig 1.)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "6dc79591-1231-4e19-a2b0-10e689dc48c1",
+          "96b295fc-5afa-4ce0-aaf8-52401e3f0bef",
+          "0c40676c-d170-4b0d-8ced-839445ee8de8",
+          "acac6b6c-31c9-4e1b-971b-2c6a70aa982f",
+          "4f3fa1c5-96c0-4cca-8ea2-ba15a3252ca2"
+        ]
+      },
+      "dad58fd0-2d35-4859-b747-791a5e80974b": {
+        "id": "dad58fd0-2d35-4859-b747-791a5e80974b",
+        "author": "anonymous",
+        "timestamp": 1613381366844,
+        "content": "&lt;p&gt;“builder” (w. Library of primative types)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;define:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;“type“ and value&lt;/li&gt;&lt;li&gt;expressions&lt;/li&gt;&lt;li&gt;tests&lt;/li&gt;&lt;li&gt;representations&lt;br&gt;&nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;https://i0.wp.com/linkurio.us/wp-content/uploads/2014/05/Network_visualization_20130107_map.jpg?ssl=1&lt;/p&gt;"
+      },
+      "42a165d7-e6a9-41fa-b2b5-bd063b56c95f": {
+        "id": "42a165d7-e6a9-41fa-b2b5-bd063b56c95f",
+        "author": "anonymous",
+        "timestamp": 1613381530860,
+        "content": "&lt;p&gt;“builder” (see 110. http://www.uml.org.cn/c++/pdf/designpatterns.pdf)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;with support of predefined Library of primative types)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;define:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;“type“ and value&lt;/li&gt;&lt;li&gt;expressions&lt;/li&gt;&lt;li&gt;tests&lt;/li&gt;&lt;li&gt;representations&lt;br&gt;&nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;https://i0.wp.com/linkurio.us/wp-content/uploads/2014/05/Network_visualization_20130107_map.jpg?ssl=1&lt;/p&gt;",
+        "overwritten": ["dad58fd0-2d35-4859-b747-791a5e80974b"]
+      },
+      "7b5d250b-4857-4ec4-9c05-e2d542b0ab61": {
+        "id": "7b5d250b-4857-4ec4-9c05-e2d542b0ab61",
+        "author": "anonymous",
+        "timestamp": 1613381672992,
+        "content": "&lt;p&gt;Unvetted citation dump&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\"https://linkurio.us/blog/graph-viz-101-visual-representation-graphs/\"&gt;https://linkurio.us/blog/graph-viz-101-visual-representation-graphs/&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0167865520303135?via%3Dihub\"&gt;https://www.sciencedirect.com/science/article/abs/pii/S0167865520303135?via%3Dihub&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\"https://arxiv.org/pdf/1704.03165.pdf\"&gt;https://arxiv.org/pdf/1704.03165.pdf&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\"https://www.oclc.org/content/dam/research/publications/2019/oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf\"&gt;https://www.oclc.org/content/dam/research/publications/2019/oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf&lt;/a&gt;&lt;br&gt;&nbsp;&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "0ce015c9-da1e-4578-9eb8-92ef017d092d",
+          "af7f58ee-ab6a-4dd7-83b0-45773f4ee213",
+          "5ec8eeff-dce3-4b4e-ae19-251566b50763"
+        ]
+      },
+      "f579d5ff-7aa6-4db2-9d3a-1ed70552e1c9": {
+        "id": "f579d5ff-7aa6-4db2-9d3a-1ed70552e1c9",
+        "author": "anonymous",
+        "timestamp": 1613382004643,
+        "content": "&lt;p&gt;UML&lt;/p&gt;&lt;p&gt;https://support.bizzdesign.com/download/attachments/39814380/uml_comp_class_diagram_en.png?version=1&amp;modificationDate=1560269471660&amp;api=v2&lt;/p&gt;"
+      },
+      "7a1d7586-a9b1-4904-ac13-e0251329d13c": {
+        "id": "7a1d7586-a9b1-4904-ac13-e0251329d13c",
+        "author": "anonymous",
+        "timestamp": 1613382015603,
+        "content": "&lt;p&gt;UML&lt;/p&gt;&lt;p&gt;&lt;a href=\"https://support.bizzdesign.com/download/attachments/39814380/uml_comp_class_diagram_en.png?version=1&amp;modificationDate=1560269471660&amp;api=v2\"&gt;https://support.bizzdesign.com/download/attachments/39814380/uml_comp_class_diagram_en.png?version=1&amp;modificationDate=1560269471660&amp;api=v2&lt;/a&gt;&lt;/p&gt;",
+        "overwritten": ["f579d5ff-7aa6-4db2-9d3a-1ed70552e1c9"]
+      },
+      "79f208c6-eb12-4d45-b5b0-187c1007a217": {
+        "id": "79f208c6-eb12-4d45-b5b0-187c1007a217",
+        "author": "anonymous",
+        "timestamp": 1613417638173,
+        "content": "&lt;p&gt;“the abstraction”&lt;/p&gt;&lt;p&gt;(dependency inversion principle)&lt;/p&gt;&lt;p&gt;See architecture for ”standard Streams”&lt;/p&gt;&lt;p&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Standard_streams\"&gt;https://en.wikipedia.org/wiki/Standard_streams&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "b6e2e687-0a93-452c-9e88-28f88a7fb75b",
+          "33249ee8-84e0-41c7-8d04-2c9c7ec7b13d"
+        ]
+      },
+      "d9bfdf97-a972-49d7-a653-469146b040b8": {
+        "id": "d9bfdf97-a972-49d7-a653-469146b040b8",
+        "author": "anonymous",
+        "timestamp": 1613418291243,
+        "content": "&lt;p&gt;create rich abstraction&lt;/p&gt;&lt;p&gt;(design according to dependency inversion principle)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;See design of ”standard Streams” for beautiful reference&lt;/p&gt;&lt;p&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Standard_streams\"&gt;https://en.wikipedia.org/wiki/Standard_streams&lt;/a&gt;&lt;br&gt;&nbsp;&lt;/p&gt;&lt;p&gt;A look at DiP &amp; Standard streams (pg 50-55)=&gt; &lt;a href=\"https://github.com/sdcuike/Clean-Code-Collection-Books/blob/master/Clean%20Architecture%20A%20Craftsman's%20Guide%20to%20Software%20Structure%20and%20Design.pdf\"&gt;https://github.com/sdcuike/Clean-Code-Collection-Books/blob/master/Clean%20Architecture%20A%20Craftsman's%20Guide%20to%20Software%20Structure%20and%20Design.pdf&lt;/a&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": [
+          "b6e2e687-0a93-452c-9e88-28f88a7fb75b",
+          "33249ee8-84e0-41c7-8d04-2c9c7ec7b13d",
+          "79f208c6-eb12-4d45-b5b0-187c1007a217"
+        ]
+      },
+      "ad360189-4ebb-4f62-81ee-69b0bbfd0f76": {
+        "id": "ad360189-4ebb-4f62-81ee-69b0bbfd0f76",
+        "author": "anonymous",
+        "timestamp": 1613419005988,
+        "content": "&lt;p&gt;test&lt;/p&gt;"
+      },
+      "05c8ba8d-6dfd-4d7c-b184-d088fb739fd6": {
+        "id": "05c8ba8d-6dfd-4d7c-b184-d088fb739fd6",
+        "author": "anonymous",
+        "timestamp": 1613419005988,
+        "content": "&lt;p&gt;test&lt;/p&gt;"
+      },
+      "cbe7b6eb-4661-4349-b577-6d2643305794": {
+        "id": "cbe7b6eb-4661-4349-b577-6d2643305794",
+        "author": "anonymous",
+        "timestamp": 1613419005988,
+        "content": "&lt;p&gt;test&lt;/p&gt;",
+        "sections": []
+      }
+    },
+    "overwritten": {
+      "f094e258-3fbb-4808-940e-7e152d3690d2": {
+        "timestamp": 1613373400463,
+        "author": "anonymous",
+        "newInfo": "d30d0aee-889e-48dd-991c-82e56f6ff3bf"
+      },
+      "d30d0aee-889e-48dd-991c-82e56f6ff3bf": {
+        "timestamp": 1613373471327,
+        "author": "anonymous",
+        "newInfo": "e3bda910-2d0a-4179-9254-018a9bc9e943"
+      },
+      "88bd1a4a-148f-4266-ac86-9c0cf79a9f9e": {
+        "timestamp": 1613373506557,
+        "author": "anonymous",
+        "newInfo": "969b82de-47cc-482e-9523-ed2816c37ebb"
+      },
+      "78973378-bdf2-445b-a557-edcd91fe29a4": {
+        "timestamp": 1613374175368,
+        "author": "anonymous",
+        "newInfo": "3a8806f4-c4c4-43aa-aa03-993be176adf5"
+      },
+      "3a8806f4-c4c4-43aa-aa03-993be176adf5": {
+        "timestamp": 1613374195971,
+        "author": "anonymous",
+        "newInfo": "38edb198-c225-4dc0-8118-d429e4fe6c4d"
+      },
+      "d0d41fcd-a994-4a46-8c35-db0ddda6f8ac": {
+        "timestamp": 1613374917156,
+        "author": "anonymous",
+        "newInfo": "37537509-c2a7-4c03-bc10-49755feef4a0"
+      },
+      "0cc121c2-4cd2-4715-8f69-a6e614c3f487": {
+        "timestamp": 1613374990500,
+        "author": "anonymous",
+        "newInfo": "e386c9f0-644e-457f-85e3-dfca2e667acd"
+      },
+      "eba0afc4-a8a9-4caa-9aa1-55090d932ddf": {
+        "timestamp": 1613375028061,
+        "author": "anonymous",
+        "newInfo": "cf74e836-3412-4ccc-9316-dfb13820a047"
+      },
+      "3372b86a-064d-4d9e-ac7a-d1605947e3b4": {
+        "timestamp": 1613375270795,
+        "author": "anonymous",
+        "newInfo": "94f45852-9b73-4227-b43a-ad8389b2bcd0"
+      },
+      "604de30c-d3ce-4788-8394-029a3a689b7d": {
+        "timestamp": 1613376567206,
+        "author": "anonymous",
+        "newInfo": "9a20df87-5b79-459c-b707-3b1c96985f0e"
+      },
+      "a17282d3-77d2-4870-84ec-7a26b7627600": {
+        "timestamp": 1613376784709,
+        "author": "anonymous",
+        "newInfo": "d47fa07e-86b2-46ed-8912-bb95023286d8"
+      },
+      "d47fa07e-86b2-46ed-8912-bb95023286d8": {
+        "timestamp": 1613376882349,
+        "author": "anonymous",
+        "newInfo": "4de7bbd0-f205-4a49-8818-3b19c6ee7a21"
+      },
+      "605ec2ab-924e-4fe2-8a55-6870f325d18c": {
+        "timestamp": 1613377164625,
+        "author": "anonymous",
+        "newInfo": "5613d755-7942-49a7-bb49-c6795650ec3d"
+      },
+      "4de7bbd0-f205-4a49-8818-3b19c6ee7a21": {
+        "timestamp": 1613377183430,
+        "author": "anonymous",
+        "newInfo": "0b27814a-6a95-4722-8413-5022ab68a717"
+      },
+      "0b27814a-6a95-4722-8413-5022ab68a717": {
+        "timestamp": 1613377480801,
+        "author": "anonymous",
+        "newInfo": "f5a97010-a36c-44d5-9a3e-44d2b8f8e994"
+      },
+      "f5a97010-a36c-44d5-9a3e-44d2b8f8e994": {
+        "timestamp": 1613377572852,
+        "author": "anonymous",
+        "newInfo": "88a8c545-db20-4e51-9649-63fd9f969447"
+      },
+      "d33b0112-67c9-4a77-90ea-5800099b8b93": {
+        "timestamp": 1613378610262,
+        "author": "anonymous",
+        "newInfo": "ef8721be-82f2-4958-9fbf-778daa74ca43"
+      },
+      "ef8721be-82f2-4958-9fbf-778daa74ca43": {
+        "timestamp": 1613379117610,
+        "author": "anonymous",
+        "newInfo": "ad44dacc-d7ef-411f-8cf3-d7025a29619f"
+      },
+      "6dc79591-1231-4e19-a2b0-10e689dc48c1": {
+        "timestamp": 1613379503753,
+        "author": "anonymous",
+        "newInfo": "96b295fc-5afa-4ce0-aaf8-52401e3f0bef"
+      },
+      "d9d92b4e-739b-45c9-9602-2fb05bc51d53": {
+        "timestamp": 1613379563284,
+        "author": "anonymous",
+        "newInfo": "8d46e08b-1540-4600-947e-cc5929b4f22a"
+      },
+      "0ce015c9-da1e-4578-9eb8-92ef017d092d": {
+        "timestamp": 1613379852528,
+        "author": "anonymous",
+        "newInfo": "af7f58ee-ab6a-4dd7-83b0-45773f4ee213"
+      },
+      "96b295fc-5afa-4ce0-aaf8-52401e3f0bef": {
+        "timestamp": 1613379860747,
+        "author": "anonymous",
+        "newInfo": "0c40676c-d170-4b0d-8ced-839445ee8de8"
+      },
+      "0c40676c-d170-4b0d-8ced-839445ee8de8": {
+        "timestamp": 1613379896379,
+        "author": "anonymous",
+        "newInfo": "acac6b6c-31c9-4e1b-971b-2c6a70aa982f"
+      },
+      "af7f58ee-ab6a-4dd7-83b0-45773f4ee213": {
+        "timestamp": 1613380099398,
+        "author": "anonymous",
+        "newInfo": "5ec8eeff-dce3-4b4e-ae19-251566b50763"
+      },
+      "acac6b6c-31c9-4e1b-971b-2c6a70aa982f": {
+        "timestamp": 1613380199971,
+        "author": "anonymous",
+        "newInfo": "4f3fa1c5-96c0-4cca-8ea2-ba15a3252ca2"
+      },
+      "b6e2e687-0a93-452c-9e88-28f88a7fb75b": {
+        "timestamp": 1613380532087,
+        "author": "anonymous",
+        "newInfo": "33249ee8-84e0-41c7-8d04-2c9c7ec7b13d"
+      },
+      "7c9e8b3e-3550-4b8b-bb5a-4f293eaeab08": {
+        "timestamp": 1613380799150,
+        "author": "anonymous",
+        "newInfo": "2f3aadad-ca0a-4f81-8657-7411b0d16c65"
+      },
+      "4f3fa1c5-96c0-4cca-8ea2-ba15a3252ca2": {
+        "timestamp": 1613381005097,
+        "author": "anonymous",
+        "newInfo": "8f4c4f91-ba59-41b0-ae55-abd24e3c71b9"
+      },
+      "dad58fd0-2d35-4859-b747-791a5e80974b": {
+        "timestamp": 1613381530860,
+        "author": "anonymous",
+        "newInfo": "42a165d7-e6a9-41fa-b2b5-bd063b56c95f"
+      },
+      "5ec8eeff-dce3-4b4e-ae19-251566b50763": {
+        "timestamp": 1613381672992,
+        "author": "anonymous",
+        "newInfo": "7b5d250b-4857-4ec4-9c05-e2d542b0ab61"
+      },
+      "f579d5ff-7aa6-4db2-9d3a-1ed70552e1c9": {
+        "timestamp": 1613382015603,
+        "author": "anonymous"
+      },
+      "33249ee8-84e0-41c7-8d04-2c9c7ec7b13d": {
+        "timestamp": 1613417638173,
+        "author": "anonymous",
+        "newInfo": "79f208c6-eb12-4d45-b5b0-187c1007a217"
+      },
+      "79f208c6-eb12-4d45-b5b0-187c1007a217": {
+        "timestamp": 1613418291244,
+        "author": "anonymous"
+      }
+    },
+    "moved": {
+      "ad360189-4ebb-4f62-81ee-69b0bbfd0f76": {
+        "from": "1",
+        "to": "Com 2",
+        "timestamp": 1613421676483,
+        "author": "anonymous",
+        "newId": "05c8ba8d-6dfd-4d7c-b184-d088fb739fd6"
+      },
+      "05c8ba8d-6dfd-4d7c-b184-d088fb739fd6": {
+        "from": "Com 1",
+        "to": "2.1",
+        "timestamp": 1613421706537,
+        "author": "anonymous",
+        "newId": "cbe7b6eb-4661-4349-b577-6d2643305794"
+      }
+    },
+    "deleted": {
+      "cbe7b6eb-4661-4349-b577-6d2643305794": {
+        "timestamp": 1613421715006,
+        "author": "anonymous"
+      },
+      "e386c9f0-644e-457f-85e3-dfca2e667acd": {
+        "timestamp": 1613428121991,
+        "author": "anonymous"
+      }
+    }
+  },
+  {
+    "topicId": "afc81e1b-b4bf-4edd-b448-ed7f3ebb23f6",
+    "private": false,
+    "creator": "anonymous",
+    "title": "Roadmap",
+    "order": {
+      "comments": [
+        {
+          "id": "60e4831a-fbf3-4002-9188-5fe44da8aadb",
+          "comments": []
+        }
+      ],
+      "sections": [
+        {
+          "id": "8171e6c8-cd11-4090-9a9d-84f97712aaf3",
+          "comments": [
+            {
+              "id": "2796f922-ac4b-4105-92c2-063785253dab",
+              "comments": []
+            }
+          ],
+          "sections": [
+            {
+              "id": "d1b30afd-3dd0-437f-9c56-1d8bf0d9daf8",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "c1476384-9e45-4614-9a10-73808d72e607",
+              "comments": [
+                {
+                  "id": "22e7d587-c29a-4bb1-a313-21c093ca368a",
+                  "comments": []
+                }
+              ],
+              "sections": []
+            },
+            {
+              "id": "16472620-5479-41bf-8960-73936fbfdb2f",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "f4912516-0e61-4c4a-8442-bad14405a858",
+              "comments": [],
+              "sections": [
+                {
+                  "id": "6073d512-2b7d-4f81-8f18-d059cae9d472",
+                  "comments": [],
+                  "sections": []
+                }
+              ]
+            },
+            {
+              "id": "3a636192-c380-439c-8f7b-ff6fd8af0bb3",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "7996fb32-2ffb-4e40-9e4f-0d28efc9638d",
+              "comments": [],
+              "sections": []
+            }
+          ]
+        },
+        {
+          "id": "2c465fb6-d321-4651-bb42-5588b97d2a00",
+          "comments": [],
+          "sections": [
+            {
+              "id": "27ecca80-03a6-4ae3-8e84-f3d59ffbcbc6",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "bbf0a5d7-04d5-4ea5-87df-8f67a0560a97",
+              "comments": [
+                {
+                  "id": "61823f78-b177-4dc7-bff4-ca618bbc5148",
+                  "comments": []
+                }
+              ],
+              "sections": []
+            },
+            {
+              "id": "e8d5fcf9-7a7a-42c1-878f-20350487538d",
+              "comments": [
+                {
+                  "id": "acc79b2c-ddb5-46ab-8959-0352fcafbbc2",
+                  "comments": []
+                }
+              ],
+              "sections": []
+            },
+            {
+              "id": "02651f91-9375-4501-8488-9995a4c41fdc",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "62bd70b1-97d8-4190-8c79-ac2ba8dfe51d",
+              "comments": [
+                {
+                  "id": "2d037cfb-876a-47f5-9500-a260a3d9b8a3",
+                  "comments": []
+                }
+              ],
+              "sections": []
+            },
+            {
+              "id": "a2152779-31dc-4c55-8f88-86e1c36ec7ae",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "13b1d8d7-94ca-4b29-a4f2-5ff567bc795b",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "e13b8561-69c3-4990-8370-6f9360022a24",
+              "comments": [],
+              "sections": []
+            },
+            {
+              "id": "13e88e8c-f6ae-46ec-b299-e4d44abbc8cb",
+              "comments": [],
+              "sections": []
+            }
+          ]
+        }
+      ]
+    },
+    "infos": {
+      "95cbd2e1-c9e8-41c4-a2cc-60541dee3649": {
+        "id": "95cbd2e1-c9e8-41c4-a2cc-60541dee3649",
+        "author": "anonymous",
+        "timestamp": 1609973889348,
+        "content": "&lt;p&gt;got from web search&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;PRODUCT VISION &lt;/strong&gt;— what you want your final product to be&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;STRATEGY &lt;/strong&gt;— execution plan detailing what you need to do to meet the requirements&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;GOAL &lt;/strong&gt;— objective to be measured by specific metrics&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;INITIATIVE &lt;/strong&gt;— set of features to be implemented to achieve the GOAL&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;FEATURE &lt;/strong&gt;— a piece of a product: functionality or a 3rd party application&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;TIME FRAME&lt;/strong&gt; — time necessary (approximate value) for a certain goal/feature to be completed&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;STATUS MARKER&lt;/strong&gt; — used for work progress&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;METRICS &lt;/strong&gt;— measurement of goals, e.g. organic traffic or churn rate.&lt;/i&gt;&lt;/p&gt;"
+      },
+      "8171e6c8-cd11-4090-9a9d-84f97712aaf3": {
+        "id": "8171e6c8-cd11-4090-9a9d-84f97712aaf3",
+        "author": "anonymous",
+        "timestamp": 1609973893650,
+        "content": "&lt;p&gt;Critical&lt;/p&gt;"
+      },
+      "2c465fb6-d321-4651-bb42-5588b97d2a00": {
+        "id": "2c465fb6-d321-4651-bb42-5588b97d2a00",
+        "author": "anonymous",
+        "timestamp": 1609973906424,
+        "content": "&lt;p&gt;Improvements&lt;/p&gt;"
+      },
+      "d1b30afd-3dd0-437f-9c56-1d8bf0d9daf8": {
+        "id": "d1b30afd-3dd0-437f-9c56-1d8bf0d9daf8",
+        "author": "anonymous",
+        "timestamp": 1609973920201,
+        "content": "&lt;p&gt;Migrate to Vue 3&lt;/p&gt;"
+      },
+      "98c9b62d-0b04-490e-8901-50938784bc35": {
+        "id": "98c9b62d-0b04-490e-8901-50938784bc35",
+        "author": "anonymous",
+        "timestamp": 1609973940708,
+        "content": "&lt;p&gt;Do custom build for CKEditor&lt;/p&gt;"
+      },
+      "52729b9c-6b19-473a-b9dd-309233ec807e": {
+        "id": "52729b9c-6b19-473a-b9dd-309233ec807e",
+        "author": "anonymous",
+        "timestamp": 1609973967362,
+        "content": "&lt;p&gt;Do custom build for CKEditor5&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Add:&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;",
+        "overwritten": ["98c9b62d-0b04-490e-8901-50938784bc35"]
+      },
+      "407a100c-2424-41f3-99f3-c542a0a450c0": {
+        "id": "407a100c-2424-41f3-99f3-c542a0a450c0",
+        "author": "fernando",
+        "timestamp": 1609974251714,
+        "content": "&lt;p&gt;Do custom build for CKEditor5&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Add:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;background color / highlight&lt;/li&gt;&lt;li&gt;color&lt;/li&gt;&lt;li&gt;font-size (predetermined options instead of any number)&lt;/li&gt;&lt;li&gt;strikethrough&lt;/li&gt;&lt;li&gt;underline&lt;/li&gt;&lt;li&gt;is it possible to indent non-lists?&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "98c9b62d-0b04-490e-8901-50938784bc35",
+          "52729b9c-6b19-473a-b9dd-309233ec807e"
+        ]
+      },
+      "c1476384-9e45-4614-9a10-73808d72e607": {
+        "id": "c1476384-9e45-4614-9a10-73808d72e607",
+        "author": "fernando",
+        "timestamp": 1609974392262,
+        "content": "&lt;p&gt;Code housekeeping:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;separate js / css&nbsp;&lt;/li&gt;&lt;li&gt;use webpack and Vue files for components&lt;/li&gt;&lt;li&gt;make sane code instead of spaghetti&lt;/li&gt;&lt;/ul&gt;"
+      },
+      "f7833f27-7692-4164-96f0-9308072d38ab": {
+        "id": "f7833f27-7692-4164-96f0-9308072d38ab",
+        "author": "fernando",
+        "timestamp": 1609974620359,
+        "content": "&lt;p&gt;Pick database. Candidates:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;RethinkDB&lt;ul&gt;&lt;li&gt;Plus:&lt;ul&gt;&lt;li&gt;has good SQL support through ReQL&lt;/li&gt;&lt;li&gt;strong consistency&lt;/li&gt;&lt;li&gt;fully open source&lt;/li&gt;&lt;li&gt;different model, pushes updates to users&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;CouchBase&lt;ul&gt;&lt;li&gt;Plus:&lt;ul&gt;&lt;li&gt;strong consistency (CouchDB has only eventual consistency)&lt;/li&gt;&lt;li&gt;can be used as key-value store too&lt;/li&gt;&lt;li&gt;appears&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Cons:&nbsp;&lt;ul&gt;&lt;li&gt;community edition isn't valued as much as enterprise&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;"
+      },
+      "60e4831a-fbf3-4002-9188-5fe44da8aadb": {
+        "id": "60e4831a-fbf3-4002-9188-5fe44da8aadb",
+        "author": "fernando",
+        "timestamp": 1609974719445,
+        "content": "&lt;p&gt;got from 1st link retrieved from web search&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;PRODUCT VISION &lt;/strong&gt;— what you want your final product to be&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;STRATEGY &lt;/strong&gt;— execution plan detailing what you need to do to meet the requirements&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;GOAL &lt;/strong&gt;— objective to be measured by specific metrics&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;INITIATIVE &lt;/strong&gt;— set of features to be implemented to achieve the GOAL&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;FEATURE &lt;/strong&gt;— a piece of a product: functionality or a 3rd party application&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;TIME FRAME&lt;/strong&gt; — time necessary (approximate value) for a certain goal/feature to be completed&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;STATUS MARKER&lt;/strong&gt; — used for work progress&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;strong&gt;METRICS &lt;/strong&gt;— measurement of goals, e.g. organic traffic or churn rate.&lt;/i&gt;&lt;/p&gt;",
+        "overwritten": ["95cbd2e1-c9e8-41c4-a2cc-60541dee3649"]
+      },
+      "16472620-5479-41bf-8960-73936fbfdb2f": {
+        "id": "16472620-5479-41bf-8960-73936fbfdb2f",
+        "author": "fernando",
+        "timestamp": 1609974822048,
+        "content": "&lt;p&gt;Drastically improve CSS&lt;/p&gt;"
+      },
+      "f4912516-0e61-4c4a-8442-bad14405a858": {
+        "id": "f4912516-0e61-4c4a-8442-bad14405a858",
+        "author": "fernando",
+        "timestamp": 1609974837697,
+        "content": "&lt;p&gt;Finish all TODOs&lt;/p&gt;"
+      },
+      "e945e7a7-248f-43da-b5ac-c3df3b7fd1c9": {
+        "id": "e945e7a7-248f-43da-b5ac-c3df3b7fd1c9",
+        "author": "fernando",
+        "timestamp": 1609975148264,
+        "content": "&lt;p&gt;Make CSS transitions for opening columns, tabs, etc.&lt;/p&gt;"
+      },
+      "2704ea30-c932-41f6-8bb0-79c68ea386de": {
+        "id": "2704ea30-c932-41f6-8bb0-79c68ea386de",
+        "author": "fernando",
+        "timestamp": 1609975246899,
+        "content": "&lt;p&gt;TODOS to finish:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;topnav&lt;/li&gt;&lt;li&gt;home menu&lt;/li&gt;&lt;li&gt;zoom-out menu&lt;/li&gt;&lt;li&gt;zoom-in menu&lt;/li&gt;&lt;li&gt;zoom-out item (instead of just details)&lt;/li&gt;&lt;/ul&gt;"
+      },
+      "abec25b1-96e4-454d-8698-ee34918f4719": {
+        "id": "abec25b1-96e4-454d-8698-ee34918f4719",
+        "author": "fernando",
+        "timestamp": 1609976989367,
+        "content": "&lt;p&gt;TODOS to finish:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;topnav&lt;/li&gt;&lt;li&gt;home menu&lt;/li&gt;&lt;li&gt;zoom-out menu&lt;/li&gt;&lt;li&gt;zoom-in menu&lt;/li&gt;&lt;li&gt;zoom-out item (instead of just details)&lt;/li&gt;&lt;li&gt;zoom-in item bottombar&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": ["2704ea30-c932-41f6-8bb0-79c68ea386de"]
+      },
+      "3d5c4127-429a-4c03-903c-e27dfa13a748": {
+        "id": "3d5c4127-429a-4c03-903c-e27dfa13a748",
+        "author": "fernando",
+        "timestamp": 1609977027493,
+        "content": "&lt;p&gt;TODOS to finish:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;topnav&lt;/li&gt;&lt;li&gt;home menu&lt;/li&gt;&lt;li&gt;zoom-out menu&lt;/li&gt;&lt;li&gt;zoom-in menu&lt;/li&gt;&lt;li&gt;zoom-out item (instead of just details)&lt;/li&gt;&lt;li&gt;zoom-in item bottombar&lt;/li&gt;&lt;li&gt;zoom-in column, section, comments toolbar&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "2704ea30-c932-41f6-8bb0-79c68ea386de",
+          "abec25b1-96e4-454d-8698-ee34918f4719"
+        ]
+      },
+      "6073d512-2b7d-4f81-8f18-d059cae9d472": {
+        "id": "6073d512-2b7d-4f81-8f18-d059cae9d472",
+        "author": "fernando",
+        "timestamp": 1609977341007,
+        "content": "&lt;p&gt;TODOS to finish:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;topnav&lt;/li&gt;&lt;li&gt;FAQ&lt;/li&gt;&lt;li&gt;home menu&lt;/li&gt;&lt;li&gt;zoom-out menu&lt;/li&gt;&lt;li&gt;zoom-in menu&lt;/li&gt;&lt;li&gt;zoom-out item (instead of just details)&lt;/li&gt;&lt;li&gt;zoom-in item bottombar&lt;/li&gt;&lt;li&gt;zoom-in column, section, comments toolbar&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "2704ea30-c932-41f6-8bb0-79c68ea386de",
+          "abec25b1-96e4-454d-8698-ee34918f4719",
+          "3d5c4127-429a-4c03-903c-e27dfa13a748"
+        ]
+      },
+      "a7b09f04-fec2-48a7-b09d-a2f68e7ae844": {
+        "id": "a7b09f04-fec2-48a7-b09d-a2f68e7ae844",
+        "author": "anonymous",
+        "timestamp": 1609993781200,
+        "content": "&lt;p&gt;CKEditor5 has realtime features for commenting and colaborating. Maybe it's worth it to add here?&lt;/p&gt;"
+      },
+      "f9e1d7b8-f64f-4ea3-8512-c570a2380116": {
+        "id": "f9e1d7b8-f64f-4ea3-8512-c570a2380116",
+        "author": "anonymous",
+        "timestamp": 1610166914608,
+        "content": "Monitor changes (**websockets** (+ RethinkDB) / long polling)"
+      },
+      "08265204-7b0e-4e67-a41a-b222027115bd": {
+        "id": "08265204-7b0e-4e67-a41a-b222027115bd",
+        "author": "anonymous",
+        "timestamp": 1610168992227,
+        "content": "&lt;p&gt;Monitor changes (&lt;strong&gt;websockets&lt;/strong&gt; (+ RethinkDB) / long polling)&lt;/p&gt;",
+        "overwritten": ["f9e1d7b8-f64f-4ea3-8512-c570a2380116"]
+      },
+      "2796f922-ac4b-4105-92c2-063785253dab": {
+        "id": "2796f922-ac4b-4105-92c2-063785253dab",
+        "author": "Shannon",
+        "timestamp": 1610563490405,
+        "content": "&lt;p&gt;HELLO?&lt;/p&gt;"
+      },
+      "27ecca80-03a6-4ae3-8e84-f3d59ffbcbc6": {
+        "id": "27ecca80-03a6-4ae3-8e84-f3d59ffbcbc6",
+        "author": "anonymous",
+        "timestamp": 1610865225228,
+        "content": "&lt;p&gt;Make CSS transitions for opening columns, tabs, etc.&lt;/p&gt;"
+      },
+      "e2b01e8b-844c-4a14-b885-d149fbfd5beb": {
+        "id": "e2b01e8b-844c-4a14-b885-d149fbfd5beb",
+        "author": "anonymous",
+        "timestamp": 1611529675497,
+        "content": "&lt;p&gt;Monitor changes (&lt;strong&gt;websockets&lt;/strong&gt; (+ RethinkDB) / SSE)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Use &lt;i&gt;socket.io &lt;/i&gt;or &lt;i&gt;ws &lt;/i&gt;for websockets?&lt;/p&gt;",
+        "overwritten": [
+          "f9e1d7b8-f64f-4ea3-8512-c570a2380116",
+          "08265204-7b0e-4e67-a41a-b222027115bd"
+        ]
+      },
+      "6c765c53-6d5a-4d11-9476-d160049d17dc": {
+        "id": "6c765c53-6d5a-4d11-9476-d160049d17dc",
+        "author": "anonymous",
+        "timestamp": 1612062376829,
+        "content": "&lt;p&gt;decouple front and back into separate projects files&lt;/p&gt;"
+      },
+      "21389b40-2837-4e91-b13c-5329b28099fd": {
+        "id": "21389b40-2837-4e91-b13c-5329b28099fd",
+        "author": "anonymous",
+        "timestamp": 1612062436281,
+        "content": "&lt;p&gt;Decouple frontend from backend&lt;br&gt;- Create SPA&lt;/p&gt;"
+      },
+      "22e7d587-c29a-4bb1-a313-21c093ca368a": {
+        "id": "22e7d587-c29a-4bb1-a313-21c093ca368a",
+        "author": "anonymous",
+        "timestamp": 1612082750009,
+        "content": "&lt;p&gt;Add ES LINT:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Standard?&lt;/li&gt;&lt;/ul&gt;"
+      },
+      "bbf0a5d7-04d5-4ea5-87df-8f67a0560a97": {
+        "id": "bbf0a5d7-04d5-4ea5-87df-8f67a0560a97",
+        "author": "chris",
+        "timestamp": 1612122847481,
+        "content": "&lt;p&gt;Add Containerization&lt;/p&gt;"
+      },
+      "e8d5fcf9-7a7a-42c1-878f-20350487538d": {
+        "id": "e8d5fcf9-7a7a-42c1-878f-20350487538d",
+        "author": "anonymous",
+        "timestamp": 1612155331724,
+        "content": "&lt;p&gt;Integrate middleware → GraphQL/Apollo https://apollo.vuejs.org/guide/#what-is-graphql&lt;/p&gt;"
+      },
+      "375c4c42-884c-42bf-ab9a-f2379610b99f": {
+        "id": "375c4c42-884c-42bf-ab9a-f2379610b99f",
+        "author": "anonymous",
+        "timestamp": 1613425531407,
+        "content": "&lt;p&gt;&lt;strong&gt;— Done!&nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;CKEditor is bloated right now, and toolbar should also shrink&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;i&gt;Old to-do:&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Do custom build for CKEditor5&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Add:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;background color / highlight&lt;/li&gt;&lt;li&gt;color&lt;/li&gt;&lt;li&gt;font-size (predetermined options instead of any number)&lt;/li&gt;&lt;li&gt;strikethrough&lt;/li&gt;&lt;li&gt;underline&lt;/li&gt;&lt;li&gt;is it possible to indent non-lists?&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "98c9b62d-0b04-490e-8901-50938784bc35",
+          "52729b9c-6b19-473a-b9dd-309233ec807e",
+          "407a100c-2424-41f3-99f3-c542a0a450c0"
+        ]
+      },
+      "277dbca5-d5d6-46c1-ac65-6b5eca700d02": {
+        "id": "277dbca5-d5d6-46c1-ac65-6b5eca700d02",
+        "author": "fernando",
+        "timestamp": 1613425602714,
+        "content": "&lt;p&gt;&lt;strong&gt;— Done!&nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;And it was easy to create a custom CKEditor build. CKEditor is bloated right now, and toolbar should also shrink&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;i&gt;Old to-do:&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Do custom build for CKEditor5&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Add:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;background color / highlight&lt;/li&gt;&lt;li&gt;color&lt;/li&gt;&lt;li&gt;font-size (predetermined options instead of any number)&lt;/li&gt;&lt;li&gt;strikethrough&lt;/li&gt;&lt;li&gt;underline&lt;/li&gt;&lt;li&gt;is it possible to indent non-lists?&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "98c9b62d-0b04-490e-8901-50938784bc35",
+          "52729b9c-6b19-473a-b9dd-309233ec807e",
+          "407a100c-2424-41f3-99f3-c542a0a450c0",
+          "375c4c42-884c-42bf-ab9a-f2379610b99f"
+        ]
+      },
+      "a2152779-31dc-4c55-8f88-86e1c36ec7ae": {
+        "id": "a2152779-31dc-4c55-8f88-86e1c36ec7ae",
+        "author": "fernando",
+        "timestamp": 1613425698199,
+        "content": "&lt;p&gt;CKEditor5 has realtime features for commenting and colaborating. Maybe it's worth it to add here? (though they are paid, closed-source?, and could add too much complexity)&lt;/p&gt;",
+        "overwritten": ["a7b09f04-fec2-48a7-b09d-a2f68e7ae844"]
+      },
+      "61823f78-b177-4dc7-bff4-ca618bbc5148": {
+        "id": "61823f78-b177-4dc7-bff4-ca618bbc5148",
+        "author": "fernando",
+        "timestamp": 1613425755986,
+        "content": "&lt;p&gt;So this one I think you already nailed it, can we cross it from the list?&lt;/p&gt;"
+      },
+      "13e88e8c-f6ae-46ec-b299-e4d44abbc8cb": {
+        "id": "13e88e8c-f6ae-46ec-b299-e4d44abbc8cb",
+        "author": "anonymous",
+        "timestamp": 1613447904085,
+        "content": "&lt;p&gt;&lt;strong&gt;— Done!&nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;And it was easy to create a custom CKEditor build. CKEditor is bloated right now, and toolbar should also shrink&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;i&gt;Old to-do:&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;s&gt;Do custom build for CKEditor5&lt;/s&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;s&gt;Add:&lt;/s&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;s&gt;background color / highlight&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;color&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;font-size (predetermined options instead of any number)&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;strikethrough&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;underline&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;is it possible to indent non-lists? (yes)&lt;/s&gt;&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": [
+          "98c9b62d-0b04-490e-8901-50938784bc35",
+          "52729b9c-6b19-473a-b9dd-309233ec807e",
+          "407a100c-2424-41f3-99f3-c542a0a450c0",
+          "375c4c42-884c-42bf-ab9a-f2379610b99f",
+          "277dbca5-d5d6-46c1-ac65-6b5eca700d02"
+        ]
+      },
+      "3a636192-c380-439c-8f7b-ff6fd8af0bb3": {
+        "id": "3a636192-c380-439c-8f7b-ff6fd8af0bb3",
+        "author": "fernando",
+        "timestamp": 1613448342900,
+        "content": "&lt;p&gt;&lt;strong&gt;— Done!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Database chosen. RethinkDB FTW:)&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;i&gt;Old to-do:&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;s&gt;Pick database. Candidates:&lt;/s&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;s&gt;RethinkDB&lt;/s&gt;&lt;ul&gt;&lt;li&gt;&lt;s&gt;Plus:&lt;/s&gt;&lt;ul&gt;&lt;li&gt;&lt;s&gt;has good SQL support through ReQL&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;strong consistency&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;fully open source&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;different model, pushes updates to users&lt;/s&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;CouchBase&lt;/s&gt;&lt;ul&gt;&lt;li&gt;&lt;s&gt;Plus:&lt;/s&gt;&lt;ul&gt;&lt;li&gt;&lt;s&gt;strong consistency (CouchDB has only eventual consistency)&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;can be used as key-value store too&lt;/s&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;appears&lt;/s&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;s&gt;Cons:&lt;/s&gt;&lt;ul&gt;&lt;li&gt;&lt;s&gt;community edition isn't valued as much as enterprise&lt;/s&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;",
+        "overwritten": ["f7833f27-7692-4164-96f0-9308072d38ab"]
+      },
+      "7996fb32-2ffb-4e40-9e4f-0d28efc9638d": {
+        "id": "7996fb32-2ffb-4e40-9e4f-0d28efc9638d",
+        "author": "fernando",
+        "timestamp": 1613448429984,
+        "content": "&lt;p&gt;&lt;strong&gt;— Done!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;websockets will give realtime updates&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;i&gt;Old to-do:&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;s&gt;Monitor changes (&lt;strong&gt;websockets&lt;/strong&gt; (+ RethinkDB) / SSE)&lt;/s&gt;&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;&lt;s&gt;Use &lt;/s&gt;&lt;i&gt;&lt;s&gt;socket.io &lt;/s&gt;&lt;/i&gt;&lt;s&gt;or &lt;/s&gt;&lt;i&gt;&lt;s&gt;ws &lt;/s&gt;&lt;/i&gt;&lt;s&gt;for websockets?&lt;/s&gt;&lt;/p&gt;",
+        "overwritten": [
+          "f9e1d7b8-f64f-4ea3-8512-c570a2380116",
+          "08265204-7b0e-4e67-a41a-b222027115bd",
+          "e2b01e8b-844c-4a14-b885-d149fbfd5beb"
+        ]
+      },
+      "02651f91-9375-4501-8488-9995a4c41fdc": {
+        "id": "02651f91-9375-4501-8488-9995a4c41fdc",
+        "author": "fernando",
+        "timestamp": 1613448750073,
+        "content": "&lt;p&gt;Add keyboard shortcuts&lt;/p&gt;"
+      },
+      "acc79b2c-ddb5-46ab-8959-0352fcafbbc2": {
+        "id": "acc79b2c-ddb5-46ab-8959-0352fcafbbc2",
+        "author": "fernando",
+        "timestamp": 1613448839640,
+        "content": "&lt;p&gt;I think this is done? Can we cross this?&lt;/p&gt;"
+      },
+      "62bd70b1-97d8-4190-8c79-ac2ba8dfe51d": {
+        "id": "62bd70b1-97d8-4190-8c79-ac2ba8dfe51d",
+        "author": "fernando",
+        "timestamp": 1613449059232,
+        "content": "&lt;p&gt;Make comments visible in Zoom Out and visually show which sections have comments&lt;/p&gt;"
+      },
+      "4ea5f2c1-3e03-45c3-8532-b8f4c9ae3750": {
+        "id": "4ea5f2c1-3e03-45c3-8532-b8f4c9ae3750",
+        "author": "fernando",
+        "timestamp": 1613449083580,
+        "content": "&lt;p&gt;maybe it could be something like &lt;span style=\"background-color:hsl(0,75%,60%);\"&gt;red&lt;/span&gt; for child comments, &lt;span style=\"background-color:hsl(210,75%,60%);\"&gt;blue&lt;/span&gt; for child sections, &lt;span style=\"background-color:hsl(270,75%,60%);\"&gt;purple&lt;/span&gt; if it has both? Or some other easy way to &lt;span style=\"background-color:hsl(210,75%,60%);color:hsl(0,0%,90%);\"&gt;remember&lt;/span&gt;&lt;/p&gt;"
+      },
+      "2d037cfb-876a-47f5-9500-a260a3d9b8a3": {
+        "id": "2d037cfb-876a-47f5-9500-a260a3d9b8a3",
+        "author": "fernando",
+        "timestamp": 1613449121565,
+        "content": "&lt;p&gt;maybe it could be something like:&nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=\"background-color:hsl(0,75%,60%);\"&gt;red&lt;/span&gt; for child comments,&nbsp;&lt;/li&gt;&lt;li&gt;&lt;span style=\"background-color:hsl(210,75%,60%);\"&gt;blue&lt;/span&gt; for child sections,&nbsp;&lt;/li&gt;&lt;li&gt;&lt;span style=\"background-color:hsl(270,75%,60%);\"&gt;purple&lt;/span&gt; if it has both?&nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Or some other easy way to &lt;span style=\"background-color:hsl(210,75%,60%);color:hsl(0,0%,90%);\"&gt;remember&lt;/span&gt;&lt;/p&gt;",
+        "overwritten": ["4ea5f2c1-3e03-45c3-8532-b8f4c9ae3750"]
+      },
+      "13b1d8d7-94ca-4b29-a4f2-5ff567bc795b": {
+        "id": "13b1d8d7-94ca-4b29-a4f2-5ff567bc795b",
+        "author": "anonymous",
+        "timestamp": 1615350791352,
+        "content": "&lt;p&gt;Add citation tools&lt;/p&gt;"
+      },
+      "e13b8561-69c3-4990-8370-6f9360022a24": {
+        "id": "e13b8561-69c3-4990-8370-6f9360022a24",
+        "author": "anonymous",
+        "timestamp": 1615350836564,
+        "content": "&lt;p&gt;Add option for in-text link to info&lt;/p&gt;"
+      }
+    },
+    "overwritten": {
+      "98c9b62d-0b04-490e-8901-50938784bc35": {
+        "timestamp": 1609973967362,
+        "author": "anonymous"
+      },
+      "52729b9c-6b19-473a-b9dd-309233ec807e": {
+        "timestamp": 1609974251714,
+        "author": "fernando",
+        "newInfo": "407a100c-2424-41f3-99f3-c542a0a450c0"
+      },
+      "95cbd2e1-c9e8-41c4-a2cc-60541dee3649": {
+        "timestamp": 1609974719445,
+        "author": "fernando",
+        "newInfo": "60e4831a-fbf3-4002-9188-5fe44da8aadb"
+      },
+      "2704ea30-c932-41f6-8bb0-79c68ea386de": {
+        "timestamp": 1609976989367,
+        "author": "fernando",
+        "newInfo": "abec25b1-96e4-454d-8698-ee34918f4719"
+      },
+      "abec25b1-96e4-454d-8698-ee34918f4719": {
+        "timestamp": 1609977027493,
+        "author": "fernando",
+        "newInfo": "3d5c4127-429a-4c03-903c-e27dfa13a748"
+      },
+      "3d5c4127-429a-4c03-903c-e27dfa13a748": {
+        "timestamp": 1609977341007,
+        "author": "fernando"
+      },
+      "f9e1d7b8-f64f-4ea3-8512-c570a2380116": {
+        "timestamp": 1610168992227,
+        "author": "anonymous"
+      },
+      "08265204-7b0e-4e67-a41a-b222027115bd": {
+        "timestamp": 1611529675497,
+        "author": "anonymous"
+      },
+      "407a100c-2424-41f3-99f3-c542a0a450c0": {
+        "timestamp": 1613425531407,
+        "author": "anonymous",
+        "newInfo": "375c4c42-884c-42bf-ab9a-f2379610b99f"
+      },
+      "375c4c42-884c-42bf-ab9a-f2379610b99f": {
+        "timestamp": 1613425602714,
+        "author": "fernando",
+        "newInfo": "277dbca5-d5d6-46c1-ac65-6b5eca700d02"
+      },
+      "a7b09f04-fec2-48a7-b09d-a2f68e7ae844": {
+        "timestamp": 1613425698200,
+        "author": "fernando",
+        "newInfo": "a2152779-31dc-4c55-8f88-86e1c36ec7ae"
+      },
+      "277dbca5-d5d6-46c1-ac65-6b5eca700d02": {
+        "timestamp": 1613447904085,
+        "author": "anonymous"
+      },
+      "f7833f27-7692-4164-96f0-9308072d38ab": {
+        "timestamp": 1613448342900,
+        "author": "fernando",
+        "newInfo": "3a636192-c380-439c-8f7b-ff6fd8af0bb3"
+      },
+      "e2b01e8b-844c-4a14-b885-d149fbfd5beb": {
+        "timestamp": 1613448429984,
+        "author": "fernando",
+        "newInfo": "7996fb32-2ffb-4e40-9e4f-0d28efc9638d"
+      },
+      "4ea5f2c1-3e03-45c3-8532-b8f4c9ae3750": {
+        "timestamp": 1613449121565,
+        "author": "fernando"
+      }
+    },
+    "moved": {
+      "375c4c42-884c-42bf-ab9a-f2379610b99f": {
+        "from": "2.1",
+        "to": "2.999",
+        "timestamp": 1613425546982,
+        "author": "anonymous"
+      },
+      "a7b09f04-fec2-48a7-b09d-a2f68e7ae844": {
+        "from": "2.1",
+        "to": "2.4",
+        "timestamp": 1613425633654,
+        "author": "fernando"
+      },
+      "3a636192-c380-439c-8f7b-ff6fd8af0bb3": {
+        "from": "1.3",
+        "to": "1.999",
+        "timestamp": 1613448361163,
+        "author": "fernando"
+      },
+      "7996fb32-2ffb-4e40-9e4f-0d28efc9638d": {
+        "from": "1.4",
+        "to": "1.99",
+        "timestamp": 1613448442998,
+        "author": "fernando"
+      }
+    },
+    "deleted": {
+      "e945e7a7-248f-43da-b5ac-c3df3b7fd1c9": {
+        "timestamp": 1610864038010,
+        "author": "anonymous"
+      },
+      "6c765c53-6d5a-4d11-9476-d160049d17dc": {
+        "timestamp": 1612062385435,
+        "author": "anonymous"
+      },
+      "21389b40-2837-4e91-b13c-5329b28099fd": {
+        "timestamp": 1612082659303,
+        "author": "anonymous"
+      }
+    }
+  },
+  {
+    "topicId": "c9b7ef79-94c6-48c6-a95b-b59442265820",
+    "creator": "anonymous",
+    "title": "Good songs from 2010 onwards",
+    "order": {
+      "comments": [
+        {
+          "id": "f79e10b5-98df-4a39-a616-a22f4bb331d9",
+          "comments": []
+        }
+      ],
+      "sections": [
+        {
+          "id": "1b573360-8dae-454a-b2ed-96bca0efbde4",
+          "comments": [],
+          "sections": [
+            {
+              "id": "7855fad7-7e75-4553-b181-ab1e3cf876b0",
+              "comments": [],
+              "sections": []
+            }
+          ]
+        },
+        {
+          "id": "8f7118b0-47d1-4267-97dd-c6e127f0f26a",
+          "comments": [],
+          "sections": [
+            {
+              "id": "d5ec09f0-e249-41df-bd25-95bf19f93da9",
+              "comments": [],
+              "sections": []
+            }
+          ]
+        },
+        {
+          "id": "567bd8da-a50b-4439-a15b-402b3c47d61e",
+          "comments": [],
+          "sections": []
+        },
+        {
+          "id": "426d458d-1fe0-41f0-9c2c-b043b05dbb59",
+          "comments": [],
+          "sections": []
+        }
+      ]
+    },
+    "infos": {
+      "1b573360-8dae-454a-b2ed-96bca0efbde4": {
+        "id": "1b573360-8dae-454a-b2ed-96bca0efbde4",
+        "author": "anonymous",
+        "timestamp": 1610343936296,
+        "content": "&lt;p&gt;2010&lt;/p&gt;"
+      },
+      "8f7118b0-47d1-4267-97dd-c6e127f0f26a": {
+        "id": "8f7118b0-47d1-4267-97dd-c6e127f0f26a",
+        "author": "anonymous",
+        "timestamp": 1610343949162,
+        "content": "&lt;p&gt;2011&lt;/p&gt;"
+      },
+      "567bd8da-a50b-4439-a15b-402b3c47d61e": {
+        "id": "567bd8da-a50b-4439-a15b-402b3c47d61e",
+        "author": "anonymous",
+        "timestamp": 1610343961060,
+        "content": "&lt;p&gt;2012&lt;/p&gt;"
+      },
+      "426d458d-1fe0-41f0-9c2c-b043b05dbb59": {
+        "id": "426d458d-1fe0-41f0-9c2c-b043b05dbb59",
+        "author": "anonymous",
+        "timestamp": 1610343969719,
+        "content": "&lt;p&gt;2014&lt;/p&gt;"
+      },
+      "f79e10b5-98df-4a39-a616-a22f4bb331d9": {
+        "id": "f79e10b5-98df-4a39-a616-a22f4bb331d9",
+        "author": "anonymous",
+        "timestamp": 1610344141042,
+        "content": "&lt;p&gt;Why is there so much crap today? It's so hard finding anything worthwhile to listen to nowadays&lt;/p&gt;"
+      },
+      "7855fad7-7e75-4553-b181-ab1e3cf876b0": {
+        "id": "7855fad7-7e75-4553-b181-ab1e3cf876b0",
+        "author": "anonymous",
+        "timestamp": 1610344759087,
+        "content": "&lt;p&gt;No real order, additions would be nice:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Tame Impala - Innerspeaker (album)&lt;/li&gt;&lt;li&gt;The White Stripes - &nbsp;Under Great White Northern Lights (album)&lt;/li&gt;&lt;li&gt;The Thermals - Personal Life (album)&lt;/li&gt;&lt;li&gt;Boston Spaceships - Our Cubehouse Still Rocks (album)&lt;/li&gt;&lt;/ol&gt;"
+      },
+      "d5ec09f0-e249-41df-bd25-95bf19f93da9": {
+        "id": "d5ec09f0-e249-41df-bd25-95bf19f93da9",
+        "author": "anonymous",
+        "timestamp": 1610345321653,
+        "content": "&lt;ol&gt;&lt;li&gt;Kurt Vile - Smoke Ring for My Halo (album)&lt;/li&gt;&lt;li&gt;Sonic Youth - Simon Werner A Disparu (album)&lt;/li&gt;&lt;li&gt;Radiohead - The King of Limbs (album)&lt;/li&gt;&lt;li&gt;Mogwai - Hardcore Will Never Die, But You Will (album)&lt;/li&gt;&lt;li&gt;Foo Fighters - Wasting Light (album) (meh)&lt;/li&gt;&lt;/ol&gt;"
+      }
+    },
+    "overwritten": {},
+    "moved": {},
+    "deleted": {}
+  },
+  {
+    "topicId": "cc5f025c-8ac2-4f9d-a160-dd1357d4abb8",
+    "private": false,
+    "creator": "anonymous",
+    "title": "Topic's title",
+    "order": {
+      "comments": [],
+      "sections": [
+        {
+          "id": "13cabd3b-b233-4e32-96cc-05a6c06ad627",
+          "comments": [],
+          "sections": []
+        },
+        {
+          "id": "02ecf766-3d5e-4a71-8b86-801b7f6513b3",
+          "comments": [],
+          "sections": [
+            {
+              "id": "e3072af7-3c45-451b-8c21-2895cfe2d6fb",
+              "comments": [],
+              "sections": []
+            }
+          ]
+        }
+      ]
+    },
+    "infos": {
+      "13cabd3b-b233-4e32-96cc-05a6c06ad627": {
+        "id": "13cabd3b-b233-4e32-96cc-05a6c06ad627",
+        "author": "anonymous",
+        "timestamp": 1613249383366,
+        "content": "&lt;p&gt;The mathematicians&lt;/p&gt;"
+      },
+      "dfcfd71a-df90-476f-847d-b5542b67f36a": {
+        "id": "dfcfd71a-df90-476f-847d-b5542b67f36a",
+        "author": "anonymous",
+        "timestamp": 1613249446732,
+        "content": "&lt;p&gt;The Ones Drunk on Groove&lt;/p&gt;"
+      },
+      "e3072af7-3c45-451b-8c21-2895cfe2d6fb": {
+        "id": "e3072af7-3c45-451b-8c21-2895cfe2d6fb",
+        "author": "anonymous",
+        "timestamp": 1613249629550,
+        "content": "&lt;p&gt;NYC Jazz&lt;/p&gt;"
+      },
+      "02ecf766-3d5e-4a71-8b86-801b7f6513b3": {
+        "id": "02ecf766-3d5e-4a71-8b86-801b7f6513b3",
+        "author": "anonymous",
+        "timestamp": 1613253658674,
+        "content": "&lt;p&gt;The Ones overdosing on groove&lt;/p&gt;",
+        "overwritten": ["dfcfd71a-df90-476f-847d-b5542b67f36a"]
+      }
+    },
+    "overwritten": {
+      "dfcfd71a-df90-476f-847d-b5542b67f36a": {
+        "timestamp": 1613253658675,
+        "author": "anonymous"
+      }
+    },
+    "moved": {},
+    "deleted": {}
+  }
+]
