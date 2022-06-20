@@ -17,7 +17,8 @@ const writeFileIncrementing = (filename, data, increment = 0) => {
 	});
   }
 
-app.use(express.json());
+// Specify limit for file sizes being saved
+app.use(express.json({limit: '25mb'}));
 
 
 // Set homepage
